@@ -1,0 +1,158 @@
+:root {
+    --bg: #08080b;
+    --gold: #ffd21f;
+    --gold-soft: rgba(255, 210, 31, .16);
+    --card: rgba(30, 28, 22, .72);
+    --border: rgba(255, 224, 120, .16);
+    --text: #f6f1e3;
+    --muted: #a39d8a;
+    --error: #ff7a7a;
+}
+* { box-sizing: border-box; margin: 0; }
+
+body {
+    min-height: 100vh; display: grid; place-items: center; padding: 1rem;
+    font-family: Vazirmatn, Tahoma, sans-serif; color: var(--text);
+    background: var(--bg); overflow-x: hidden;
+}
+
+/* نور محیط وقتی چراغ روشن است */
+body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; opacity: 0;
+    background: radial-gradient(ellipse 60% 70% at 28% 55%, var(--gold-soft), transparent 70%);
+    transition: opacity 1.2s ease;
+}
+body.on::before { opacity: 1; }
+
+.stage {
+    position: relative; width: 100%; max-width: 980px;
+    display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem;
+    direction: ltr; /* چراغ سمت چپ، فرم سمت راست */
+}
+
+/* ---------- چراغ ---------- */
+.lamp-side { display: grid; justify-items: center; gap: 1rem; }
+.lamp-wrap {
+    position: relative; width: min(100%, 300px); aspect-ratio: 300 / 520;
+}
+.lamp-wrap svg { position: relative; z-index: 2; width: 100%; height: 100%; overflow: visible; touch-action: none; }
+
+#cordLine { stroke: #8d8a80; stroke-width: 2.5; }
+#bead { fill: #cfc6a8; }
+#hit { fill: transparent; cursor: grab; outline: none; }
+#hit:active { cursor: grabbing; }
+#hit:focus-visible { stroke: var(--gold); stroke-width: 2; stroke-dasharray: 4 4; }
+
+.pole { fill: #26262b; }
+.base { fill: #1d1d21; }
+#bulb { fill: #fff3b0; opacity: 0; transition: opacity .35s; filter: drop-shadow(0 0 14px var(--gold)); }
+body.on #bulb { opacity: 1; }
+
+/* مخروط نور */
+.cone {
+    position: absolute; z-index: 1; left: -15%; width: 130%; top: 22%; height: 72%;
+    clip-path: polygon(34.6% 0, 65.4% 0, 100% 100%, 0 100%);
+    background: linear-gradient(to bottom, rgba(255, 226, 120, .6), rgba(255, 210, 31, .12) 70%, transparent);
+    opacity: 0; transition: opacity .9s ease; filter: blur(3px);
+}
+body.on .cone { opacity: 1; animation: flicker .5s steps(2) 1; }
+
+@keyframes flicker {
+    0% { opacity: 0; } 20% { opacity: .9; } 35% { opacity: .2; } 55% { opacity: 1; } 70% { opacity: .5; } 100% { opacity: 1; }
+}
+
+/* کرم‌های شب‌تاب */
+#flies { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 1.4s .5s; pointer-events: none; }
+body.on #flies { opacity: 1; }
+.fly {
+    position: absolute; width: 4px; height: 4px; border-radius: 50%;
+    background: #ffe27a; box-shadow: 0 0 8px 2px rgba(255, 210, 31, .7);
+    animation: drift var(--d) ease-in-out var(--delay) infinite alternate;
+}
+@keyframes drift {
+    from { transform: translate(0, 0); opacity: .2; }
+    50% { opacity: 1; }
+    to { transform: translate(var(--x), var(--y)); opacity: .3; }
+}
+
+.hint { color: var(--muted); font-size: .9rem; transition: opacity .5s; direction: rtl; }
+body.on .hint { opacity: .0; }
+
+/* ---------- کارت فرم ---------- */
+.card {
+    direction: rtl; padding: 2rem; border-radius: 22px;
+    background: var(--card); border: 1px solid var(--border);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+
+    opacity: 0; visibility: hidden; transform: translateX(36px) scale(.97);
+    transition: opacity .6s, transform .6s, visibility 0s .6s;
+}
+body.on .card {
+    opacity: 1; visibility: visible; transform: none;
+    transition: opacity .9s .45s, transform .9s .45s, visibility 0s .45s;
+}
+
+h1 { font-size: 1.8rem; font-weight: 800; }
+.sub { color: var(--muted); font-size: .88rem; margin: .3rem 0 1.5rem; }
+
+.field { display: block; margin-bottom: 1rem; }
+.field > span { display: block; font-size: .85rem; margin-bottom: .4rem; color: var(--muted); }
+
+input[type=email], input[type=password], input[type=text] {
+    width: 100%; padding: .8rem 1rem; font: inherit; font-size: .95rem; color: var(--text);
+    background: rgba(255, 255, 255, .05); border: 1px solid var(--border);
+    border-radius: 12px; outline: none; transition: border-color .2s, box-shadow .2s;
+}
+input::placeholder { color: #6f6a5a; }
+input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(255, 210, 31, .2); }
+input.invalid { border-color: var(--error); }
+
+.pass { position: relative; }
+.pass input { padding-inline-end: 3rem; }
+.eye {
+    position: absolute; inset-inline-end: .8rem; top: 50%; transform: translateY(-50%);
+    border: 0; background: none; cursor: pointer; font-size: 1.05rem; opacity: .7;
+}
+
+.submit {
+    width: 100%; margin-top: .4rem; padding: .85rem; border: 0; border-radius: 12px; cursor: pointer;
+    background: var(--gold); color: #1b1600; font: inherit; font-weight: 800; font-size: 1rem;
+    transition: transform .15s, box-shadow .25s;
+}
+.submit:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 210, 31, .35); }
+.submit:disabled { cursor: wait; opacity: .85; }
+.submit.loading span::after {
+    content: ""; display: inline-block; width: .9em; height: .9em; margin-inline-start: .6em;
+    vertical-align: middle; border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, .25); border-top-color: #1b1600;
+    animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.msg { min-height: 1.3em; margin-top: .7rem; font-size: .85rem; text-align: center; color: var(--error); }
+.msg.ok { color: var(--gold); }
+
+.divider { display: flex; align-items: center; gap: .8rem; margin: 1.1rem 0; color: var(--muted); font-size: .8rem; }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+.social { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.social button {
+    padding: .7rem; border-radius: 12px; cursor: pointer; font: inherit; font-size: .9rem;
+    color: var(--text); background: rgba(255, 255, 255, .05); border: 1px solid var(--border);
+    transition: background .2s;
+}
+.social button:hover { background: rgba(255, 255, 255, .1); }
+button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* ---------- موبایل ---------- */
+@media (max-width: 760px) {
+    .stage { grid-template-columns: 1fr; gap: 1rem; }
+    .lamp-wrap { width: min(60%, 200px); }
+    .card { padding: 1.5rem; transform: translateY(24px) scale(.98); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fly, body.on .cone { animation: none; }
+    .card, body.on .card { transition-duration: .01s; transition-delay: 0s; }
+}
