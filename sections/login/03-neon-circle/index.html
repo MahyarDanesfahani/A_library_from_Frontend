@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود | Neon Circle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ring">
+    <div class="flipper" id="flipper">
+
+        <!-- ورود -->
+        <section class="face front">
+            <h1>خوش آمدید</h1>
+            <p class="sub">وارد حساب خود شوید</p>
+            <form class="form" id="loginForm" novalidate>
+                <input type="email" name="email" placeholder="ایمیل" autocomplete="email" required>
+                <div class="pass">
+                    <input type="password" name="password" placeholder="رمز عبور" minlength="6" autocomplete="current-password" required>
+                    <button type="button" class="eye" aria-label="نمایش رمز">👁</button>
+                </div>
+                <div class="row">
+                    <label class="check"><input type="checkbox"> مرا به خاطر بسپار</label>
+                    <a href="#">فراموشی رمز؟</a>
+                </div>
+                <button type="submit" class="btn"><span>ورود</span></button>
+                <p class="msg" role="alert"></p>
+            </form>
+            <p class="foot">حساب ندارید؟ <a href="#" data-flip>ثبت‌نام</a></p>
+        </section>
+
+        <!-- ثبت‌نام -->
+        <section class="face back">
+            <h1>ثبت‌نام</h1>
+            <p class="sub">حساب جدید بسازید</p>
+            <form class="form" id="signupForm" novalidate>
+                <input type="text" name="name" placeholder="نام کامل" autocomplete="name" required>
+                <input type="email" name="email" placeholder="ایمیل" autocomplete="email" required>
+                <div class="pass">
+                    <input type="password" name="password" placeholder="رمز عبور" minlength="6" autocomplete="new-password" required>
+                    <button type="button" class="eye" aria-label="نمایش رمز">👁</button>
+                </div>
+                <button type="submit" class="btn"><span>ساخت حساب</span></button>
+                <p class="msg" role="alert"></p>
+            </form>
+            <p class="foot">حساب دارید؟ <a href="#" data-flip>ورود</a></p>
+        </section>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+:root {
+    --size: min(92vw, 440px);
+    --cyan: #00f0ff;
+    --pink: #ff2bd6;
+    --bg: #04070d;
+    --text: #e8faff;
+    --muted: #7f93a8;
+    --error: #ff6b81;
+}
+* { box-sizing: border-box; margin: 0; }
+
+body {
+    min-height: 100vh; display: grid; place-items: center; padding: 1rem;
+    font-family: Vazirmatn, Tahoma, sans-serif; color: var(--text);
+    background: radial-gradient(circle at 50% 40%, #0a1424, var(--bg) 70%);
+}
+
+/* حلقه‌ی نئونی چرخان */
+.ring {
+    position: relative; width: var(--size); height: var(--size);
+    border-radius: 50%; perspective: 1200px;
+    font-size: calc(var(--size) / 30);
+}
+.ring::before, .ring::after {
+    content: ""; position: absolute; inset: 0; border-radius: 50%; z-index: 0;
+    background: conic-gradient(var(--cyan), #0b3a66, var(--pink), #0b3a66, var(--cyan));
+    animation: spin 5s linear infinite;
+}
+.ring::after { filter: blur(22px); opacity: .75; }
+
+/* کارت فلیپ‌شونده */
+.flipper {
+    position: absolute; inset: 5px; z-index: 1; border-radius: 50%;
+    transform-style: preserve-3d; transition: transform .8s cubic-bezier(.4,.1,.2,1);
+}
+.flipper.flipped { transform: rotateY(180deg); }
+
+.face {
+    position: absolute; inset: 0; border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 0 14%; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    background: radial-gradient(circle at 50% 25%, #111d31, #060a12 75%);
+}
+.back { transform: rotateY(180deg); }
+
+h1 {
+    font-size: 2em; letter-spacing: .05em; color: #eaffff;
+    text-shadow: 0 0 6px var(--cyan), 0 0 18px var(--cyan);
+}
+.sub { font-size: .8em; color: var(--muted); margin: .2em 0 1.1em; }
+
+.form { width: 100%; display: grid; gap: .7em; }
+
+input[type=text], input[type=email], input[type=password] {
+    width: 100%; padding: .8em 1.2em; font: inherit; font-size: .9em;
+    color: var(--text); background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1); border-radius: 999px; outline: none;
+    transition: border-color .2s, box-shadow .2s;
+}
+input::placeholder { color: var(--muted); }
+input:focus { border-color: var(--cyan); box-shadow: 0 0 12px rgba(0,240,255,.4); }
+input.invalid { border-color: var(--error); box-shadow: 0 0 10px rgba(255,107,129,.4); }
+
+.pass { position: relative; }
+.pass input { padding-inline-end: 3em; }
+.eye {
+    position: absolute; inset-inline-end: 1em; top: 50%; transform: translateY(-50%);
+    border: 0; background: none; cursor: pointer; font-size: 1em; opacity: .7;
+}
+
+.row { display: flex; justify-content: space-between; align-items: center; font-size: .75em; color: var(--muted); }
+.check { display: flex; align-items: center; gap: .4em; cursor: pointer; }
+a { color: var(--cyan); text-decoration: none; text-shadow: 0 0 8px rgba(0,240,255,.6); }
+
+/* دکمه */
+.btn {
+    position: relative; padding: .8em; font: inherit; font-weight: 700; letter-spacing: .05em;
+    color: var(--text); background: rgba(0,240,255,.08); cursor: pointer;
+    border: 2px solid var(--cyan); border-radius: 999px;
+    box-shadow: 0 0 14px rgba(0,240,255,.35), inset 0 0 12px rgba(0,240,255,.15);
+    transition: box-shadow .25s, transform .15s;
+}
+.btn:hover { box-shadow: 0 0 24px rgba(0,240,255,.7), inset 0 0 16px rgba(0,240,255,.25); transform: translateY(-1px); }
+.btn:disabled { cursor: wait; opacity: .85; }
+.btn.loading span::after {
+    content: ""; display: inline-block; width: 1em; height: 1em; margin-inline-start: .6em;
+    vertical-align: middle; border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.3); border-top-color: var(--cyan);
+    animation: spin .7s linear infinite;
+}
+
+.msg { min-height: 1.2em; font-size: .75em; text-align: center; color: var(--error); }
+.msg.ok { color: var(--cyan); }
+.foot { margin-top: .9em; font-size: .78em; color: var(--muted); }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .ring::before, .ring::after { animation-duration: 20s; }
+    .flipper { transition-duration: .01s; }
+}
