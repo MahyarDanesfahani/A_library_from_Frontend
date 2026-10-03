@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+    <h1>خوش آمدید</h1>
+    <p class="sub">برای ادامه وارد حساب خود شوید</p>
+    <form id="loginForm" novalidate>
+        <label>
+            ایمیل
+            <input type="email" name="email" placeholder="example@mail.com" required>
+        </label>
+        <label>
+            رمز عبور
+            <input type="password" name="password" placeholder="••••••••" minlength="6" required>
+        </label>
+        <div class="row">
+            <label class="check"><input type="checkbox"> مرا به خاطر بسپار</label>
+            <a href="#">فراموشی رمز؟</a>
+        </div>
+        <button type="submit">ورود</button>
+        <p id="msg" class="msg" role="alert"></p>
+    </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
