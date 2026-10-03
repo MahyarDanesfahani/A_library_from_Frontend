@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="تغییر تم">🌙</button>
+
+<main class="card">
+    <h1>ورود به حساب</h1>
+    <p class="sub">ایمیل و رمز عبور خود را وارد کنید</p>
+
+    <form id="loginForm" novalidate>
+        <div class="field">
+            <label for="email">ایمیل</label>
+            <input id="email" type="email" name="email" placeholder="example@mail.com" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+            <label for="password">رمز عبور</label>
+            <div class="pass-wrap">
+                <input id="password" type="password" name="password" placeholder="حداقل ۶ کاراکتر" minlength="6" autocomplete="current-password" required>
+                <button type="button" id="togglePass" class="eye" aria-label="نمایش رمز">👁</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="check"><input type="checkbox"> مرا به خاطر بسپار</label>
+            <a href="#">فراموشی رمز؟</a>
+        </div>
+
+        <button type="submit" class="submit">ورود</button>
+        <p id="msg" class="msg" role="alert"></p>
+    </form>
+
+    <p class="foot">حساب ندارید؟ <a href="#">ثبت‌نام</a></p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
