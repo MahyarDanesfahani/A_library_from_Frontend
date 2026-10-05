@@ -16,6 +16,7 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Login | 02 - Minimal (Dark/Light) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/02-minimal/) |
 | Login | 03 - Neon Circle (Login + Sign up) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/03-neon-circle/) |
 | Login | 04 - Lamp Pull (Interactive) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/04-lamp-pull/) |
+| Login | 05 - Radial Ticks (Progress ring) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/05-radial-ticks/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -27,6 +28,7 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Login 02 - Minimal
 - [x] Login 03 - Neon Circle
 - [x] Login 04 - Lamp Pull
+- [x] Login 05 - Radial Ticks
 - [ ] نسخه‌ی React و Vue
 - [ ] Register، Navbar، Pricing
 
