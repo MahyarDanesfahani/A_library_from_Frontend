@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود | حلقه‌ی نوری</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage" id="stage">
+    <div class="ring" id="ring" aria-hidden="true"></div>
+
+    <main class="card" id="card">
+        <h1>ورود</h1>
+
+        <form id="loginForm" novalidate>
+            <div class="field">
+                <input type="email" name="email" placeholder="ایمیل" autocomplete="email" aria-label="ایمیل" required>
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+
+            <div class="field">
+                <input type="password" name="password" placeholder="رمز عبور" minlength="6" autocomplete="current-password" aria-label="رمز عبور" required>
+                <button type="button" class="ico eye" id="eye" aria-label="نمایش رمز">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" fill="currentColor"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+            </div>
+
+            <a class="forgot" href="#">رمز عبور را فراموش کرده‌اید؟</a>
+
+            <button type="submit" class="login" id="loginBtn"><span>ورود</span></button>
+            <p class="msg" id="msg" role="alert"></p>
+        </form>
+
+        <p class="with">ورود با</p>
+        <div class="social">
+            <button type="button" class="s s1" aria-label="ورود با فیسبوک">f</button>
+            <button type="button" class="s s2" aria-label="ورود با ایکس">X</button>
+            <button type="button" class="s s3" aria-label="ورود با گوگل">G</button>
+        </div>
+
+        <a class="signup" href="#">ثبت‌نام</a>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
