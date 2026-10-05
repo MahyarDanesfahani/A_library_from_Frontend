@@ -18,6 +18,7 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Login | 04 - Lamp Pull (Interactive) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/04-lamp-pull/) |
 | Login | 05 - Radial Ticks (Progress ring) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/05-radial-ticks/) |
 | Login | 06 - Terminal (Typed prompts) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/06-terminal/) |
+| Login | 07 - Constellation (Interactive particles) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/07-constellation/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -31,6 +32,7 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Login 04 - Lamp Pull
 - [x] Login 05 - Radial Ticks
 - [x] Login 06 - Terminal
+- [x] Login 07 - Constellation
 - [ ] نسخه‌ی React و Vue
 - [ ] Register، Navbar، Pricing
 
