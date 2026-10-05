@@ -1,0 +1,57 @@
+:root { --bg: #070816; --a: #7c6cff; --b: #35d4ff; --text: #eef0ff; --muted: #9aa0c8; --err: #ff7a90; }
+* { box-sizing: border-box; margin: 0; }
+
+body {
+    min-height: 100vh; display: grid; place-items: center; padding: 1rem; overflow: hidden;
+    font-family: Vazirmatn, Tahoma, sans-serif; color: var(--text);
+    background: radial-gradient(circle at 30% 20%, #151a3d, var(--bg) 65%);
+}
+#bg { position: fixed; inset: 0; width: 100%; height: 100%; }
+
+/* کارت شیشه‌ای که با موس کج می‌شود */
+.card {
+    --mx: 50%; --my: 0%;
+    position: relative; width: min(100%, 380px); padding: 2rem; border-radius: 22px; overflow: hidden;
+    background: rgba(18, 20, 48, .55); border: 1px solid rgba(255, 255, 255, .14);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .55);
+    transition: transform .15s ease-out; will-change: transform;
+}
+.card::before { /* بازتاب نور دنبال موس */
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(260px circle at var(--mx) var(--my), rgba(255, 255, 255, .16), transparent 65%);
+}
+.card > * { position: relative; }
+
+h1 { font-size: 1.9rem; font-weight: 800; background: linear-gradient(90deg, var(--b), var(--a)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub { color: var(--muted); font-size: .88rem; margin: .3rem 0 1.5rem; }
+
+form { display: grid; gap: .85rem; }
+input {
+    width: 100%; padding: .8rem 1rem; font: inherit; font-size: .95rem; color: var(--text);
+    background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 12px; outline: none; transition: border-color .2s, box-shadow .2s;
+}
+input::placeholder { color: #6f75a0; }
+input:focus { border-color: var(--b); box-shadow: 0 0 0 3px rgba(53, 212, 255, .2); }
+input.invalid { border-color: var(--err); }
+
+button {
+    padding: .85rem; border: 0; border-radius: 12px; cursor: pointer; font: inherit; font-weight: 800; color: #fff;
+    background: linear-gradient(90deg, var(--a), var(--b)); background-size: 200% 100%;
+    transition: background-position .5s, transform .15s, box-shadow .25s;
+}
+button:hover { background-position: 100% 0; transform: translateY(-1px); box-shadow: 0 10px 28px rgba(124, 108, 255, .45); }
+button:disabled { cursor: wait; opacity: .85; }
+button.loading span::after {
+    content: ""; display: inline-block; width: .9em; height: .9em; margin-inline-start: .6em; vertical-align: middle;
+    border-radius: 50%; border: 2px solid rgba(255, 255, 255, .35); border-top-color: #fff; animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.msg { min-height: 1.2em; font-size: .82rem; text-align: center; color: var(--err); }
+.msg.ok { color: var(--b); }
+.link { display: block; margin-top: 1rem; text-align: center; font-size: .85rem; color: var(--muted); text-decoration: none; }
+.link:hover { color: var(--text); }
+
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }
