@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورود | کتابخانه مهر</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg">
+    <div class="shelf-top"></div>
+    <div class="light"></div>
+</div>
+<main class="wrapper">
+    <section class="login-card">
+        <div class="side-info">
+            <div class="logo-box">
+                <div class="logo-mark">📚</div>
+                <div>
+                    <h2>کتابخانه مهر</h2>
+                    <span>از ۱۳۴۵ در کنار عاشقان کتاب</span>
+                </div>
+            </div>
+            <h1>هر ورود،<br>شروع یک سفر تازه است.</h1>
+            <p class="desc">وارد حساب کاربری‌ات شو، کتاب امانت بگیر، رزرو کن و قفسه‌ی شخصی خودت را بساز.</p>
+            <ul class="features">
+                <li><i>📖</i> دسترسی به ۴۵٬۰۰۰+ کتاب چاپی و دیجیتال</li>
+                <li><i>⏳</i> تمدید آنلاین امانت بدون مراجعه</li>
+                <li><i>⭐</i> پیشنهاد هوشمند بر اساس سلیقه‌ی تو</li>
+            </ul>
+            <div class="quote-box">
+                <p>«کتابخانه، بهشت را برای ما تداعی می‌کند.»</p>
+                <span>— خورخه لوئیس بورخس</span>
+            </div>
+            <div class="stats">
+                <div><b>۱۲هزار</b><small>عضو فعال</small></div>
+                <div><b>۴.۹</b><small>رضایت اعضا</small></div>
+                <div><b>۲۴/۷</b><small>کتابخانه دیجیتال</small></div>
+            </div>
+        </div>
+        <div class="side-form">
+            <div class="mobile-brand">📚 کتابخانه مهر</div>
+            <h3>خوش برگشتی، کتاب‌دوست!</h3>
+            <p class="sub">لطفا برای ورود اطلاعاتت را وارد کن</p>
+            <div class="tabs">
+                <button class="tab active" id="tabLogin" type="button">ورود اعضا</button>
+                <button class="tab" id="tabRegister" type="button">عضویت جدید</button>
+            </div>
+            <form id="loginForm" novalidate>
+                <label>شماره عضویت یا ایمیل
+                    <input type="text" id="username" placeholder="مثلا 10245 یا ali@email.com" autocomplete="username" />
+                </label>
+                <label>رمز عبور
+                    <div class="pass-wrap">
+                        <input type="password" id="password" placeholder="رمزت را وارد کن" autocomplete="current-password" />
+                        <button type="button" id="togglePass" aria-label="نمایش رمز">👁</button>
+                    </div>
+                </label>
+                <div class="row">
+                    <label class="remember"><input type="checkbox" checked /> مرا به خاطر بسپار</label>
+                    <a href="#">فراموشی رمز؟</a>
+                </div>
+                <p class="error" id="errorMsg"></p>
+                <button class="btn-main" type="submit">ورود به قفسه‌ی من ←</button>
+                <div class="divider"><span>یا</span></div>
+                <div class="socials">
+                    <button type="button" class="btn-social">G ورود با گوگل</button>
+                    <button type="button" class="btn-social">📱 ورود با پیامک</button>
+                </div>
+                <p class="hint">مدیر یا کتابدار هستی؟ <a href="#">ورود پرسنل</a></p>
+            </form>
+            <form id="registerForm" class="hidden" novalidate>
+                <label>نام و نام خانوادگی
+                    <input type="text" id="regName" placeholder="نامت را بنویس" />
+                </label>
+                <label>شماره موبایل
+                    <input type="tel" id="regPhone" placeholder="0912..." />
+                </label>
+                <label>رمز عبور دلخواه
+                    <input type="password" id="regPass" placeholder="حداقل ۶ کاراکتر" />
+                </label>
+                <button class="btn-main" type="submit">ساخت کارت عضویت</button>
+                <p class="hint center">با ثبت‌نام، <a href="#">قوانین کتابخانه</a> را می‌پذیری</p>
+            </form>
+        </div>
+    </section>
+    <p class="footer">کتابخانه مهر • امانت، مطالعه، آرامش • نسخه ۲.۰</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
