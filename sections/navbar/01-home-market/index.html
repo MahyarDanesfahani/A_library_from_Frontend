@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خانه‌چین | لوازم خانه و آشپزخانه</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="topbar">
+    <p>🚚 ارسال رایگان سفارش‌های بالای ۲ میلیون تومان | 🎁 جشنواره جهیزیه تا ۳۰٪ تخفیف</p>
+</div>
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <button class="hamburger" id="hamburger" aria-label="منو">☰</button>
+
+        <a href="#" class="logo">
+            <span class="logo-icon">🏠</span>
+            <div>
+                <b>خانه‌چین</b>
+                <small>خانه و آشپزخانه</small>
+            </div>
+        </a>
+
+        <nav class="links" id="mobileMenu">
+            <a href="#" class="active">خانه</a>
+            <div class="has-mega">
+                <a href="#">آشپزخانه ▾</a>
+                <div class="mega">
+                    <div class="mega-col">
+                        <h4>پخت‌وپز</h4>
+                        <a href="#">قابلمه و تابه</a>
+                        <a href="#">سرویس چاقو</a>
+                        <a href="#">زودپز و بخارپز</a>
+                        <a href="#">ظروف مسی</a>
+                    </div>
+                    <div class="mega-col">
+                        <h4>برقی آشپزخانه</h4>
+                        <a href="#">غذاساز و مخلوط‌کن</a>
+                        <a href="#">قهوه‌ساز و چای‌ساز</a>
+                        <a href="#">سرخ‌کن بدون روغن</a>
+                        <a href="#">مایکروویو و فر</a>
+                    </div>
+                    <div class="mega-col">
+                        <h4>سرو و پذیرایی</h4>
+                        <a href="#">سرویس چینی</a>
+                        <a href="#">لیوان و استکان</a>
+                        <a href="#">سینی و دیس</a>
+                        <a href="#">کلمن و فلاسک</a>
+                    </div>
+                    <div class="mega-offer">
+                        <p>🔥 پیشنهاد شگفت‌انگیز</p>
+                        <b>سرویس ۸ نفره چینی</b>
+                        <span>۴٬۹۰۰٬۰۰۰ تومان</span>
+                        <button>مشاهده</button>
+                    </div>
+                </div>
+            </div>
+            <a href="#">لوازم خانگی</a>
+            <a href="#">دکوراسیون</a>
+            <a href="#">خواب و حمام</a>
+            <a href="#">تخفیف‌ها <em class="badge">٪</em></a>
+        </nav>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="دنبال چی می‌گردی؟ قابلمه، جاروبرقی..." />
+            <button>🔍</button>
+            <div class="search-result" id="searchResult"></div>
+        </div>
+
+        <div class="actions">
+            <button class="icon-btn" id="themeBtn" title="حالت شب">🌙</button>
+            <button class="icon-btn" title="علاقه‌مندی‌ها">♡<span class="count">۳</span></button>
+            <button class="icon-btn cart" id="cartBtn" title="سبد خرید">🛒<span class="count" id="cartCount">۲</span></button>
+            <button class="login-btn">ورود | ثبت‌نام</button>
+        </div>
+    </div>
+    <div class="progress" id="progress"></div>
+</header>
+
+<div class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+        <b>سبد خرید شما (۲)</b>
+        <button id="closeCart">✕</button>
+    </div>
+    <div class="cart-items">
+        <div class="cart-item">
+            <span class="ci-emoji">🍲</span>
+            <div><b>قابلمه گرانیتی ۵ پارچه</b><small>۲٬۴۵۰٬۰۰۰ تومان</small></div>
+            <button>🗑</button>
+        </div>
+        <div class="cart-item">
+            <span class="ci-emoji">☕</span>
+            <div><b>قهوه‌ساز مباشی مدل ECM2010</b><small>۵٬۹۰۰٬۰۰۰ تومان</small></div>
+            <button>🗑</button>
+        </div>
+    </div>
+    <div class="cart-foot">
+        <div><span>جمع سبد:</span><b>۸٬۳۵۰٬۰۰۰ تومان</b></div>
+        <button class="checkout">ادامه خرید و تسویه حساب</button>
+    </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main class="hero">
+    <h1>خونه‌ات رو با <span>خانه‌چین</span> بچین 🏡</h1>
+    <p>از قابلمه تا مبلمان؛ همه‌چیز برای یک خانه گرم و مدرن</p>
+    <div class="hero-btns">
+        <button>مشاهده جشنواره آشپزخانه</button>
+        <button class="ghost">راهنمای جهیزیه</button>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
