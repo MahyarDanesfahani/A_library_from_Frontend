@@ -27,6 +27,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Navbar | 01 - Matrix Academy (Announcement bar + Ctrl+K search) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/01-matrix-academy/) |
 | Navbar | 02 - Amber Lamp Shop (Sticky + cart badge) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/02-amber-lamp-shop/) |
 | Navbar | 03 - Home Market (Search bar + wishlist + cart) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/03-home-market/) |
+| Navbar | 04 - Book Haven (Reading progress bar) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/04-book-haven/) |
+| Navbar | 05 - Auto Parts (Vehicle selector) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/05-auto-parts/) |
+| Navbar | 06 - Restaurant Shop (Open status + live cart) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/06-restaurant-shop/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -51,6 +54,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Navbar 01 - Matrix Academy
 - [x] Navbar 02 - Amber Lamp Shop
 - [x] Navbar 03 - Home Market
+- [x] Navbar 04 - Book Haven
+- [x] Navbar 05 - Auto Parts
+- [x] Navbar 06 - Restaurant Shop
 - [ ] Register
 - [ ] Pricing
 
