@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود | گالری بانو ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sparkles" aria-hidden="true">
+    <span>✨</span><span>🎀</span><span>💖</span><span>✨</span><span>🌸</span><span>💎</span>
+</div>
+
+<div class="container">
+    <!-- پنل تصویری -->
+    <aside class="hero-panel">
+        <div class="hero-content">
+            <div class="logo">🎀 بانو</div>
+            <h1>به دنیای خوشگلِ اکسسوری خوش اومدی!</h1>
+            <p>گل‌سرقفلی، ساعت، نیم‌ست و هر چیزی که دخترانه‌ست… اینجاست 💝</p>
+            <ul class="perks">
+                <li>🌸 ارسال سریع به سراسر کشور</li>
+                <li>💎 ضمانت اصل بودن کالا</li>
+                <li>🎁 جعبه هدیه رایگان</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- فرم ورود -->
+    <main class="form-panel">
+        <div class="tabs">
+            <button class="tab active" data-tab="login">ورود</button>
+            <button class="tab" data-tab="signup">ثبت‌نام</button>
+            <span class="tab-glider"></span>
+        </div>
+
+        <!-- فرم ورود -->
+        <form id="login-form" class="form active" novalidate>
+            <h2>دوباره ببینمت عزیزم! 🌷</h2>
+            <div class="field">
+                <input type="email" id="login-email" placeholder=" " required>
+                <label for="login-email">ایمیل یا شماره موبایل</label>
+                <span class="icon">💌</span>
+            </div>
+            <div class="field">
+                <input type="password" id="login-pass" placeholder=" " required minlength="6">
+                <label for="login-pass">رمز عبور</label>
+                <span class="icon">🔒</span>
+                <button type="button" class="toggle-pass" aria-label="نمایش رمز">👁️</button>
+            </div>
+            <div class="row">
+                <label class="remember"><input type="checkbox" checked> یادم بمون</label>
+                <a href="#" class="link">رمزم یادم رفت 🥺</a>
+            </div>
+            <button type="submit" class="btn-submit">ورود به بهشت اکسسوری 💖</button>
+            <div class="divider"><span>یا با</span></div>
+            <div class="socials">
+                <button type="button" class="social google">G</button>
+                <button type="button" class="social apple"></button>
+                <button type="button" class="social telegram">✈</button>
+            </div>
+        </form>
+
+        <!-- فرم ثبت‌نام -->
+        <form id="signup-form" class="form" novalidate>
+            <h2>به خانواده بانو بپیوند! 🎀</h2>
+            <div class="field">
+                <input type="text" id="su-name" placeholder=" " required>
+                <label for="su-name">نام و نام خانوادگی</label>
+                <span class="icon">🌸</span>
+            </div>
+            <div class="field">
+                <input type="email" id="su-email" placeholder=" " required>
+                <label for="su-email">ایمیل</label>
+                <span class="icon">💌</span>
+            </div>
+            <div class="field">
+                <input type="password" id="su-pass" placeholder=" " required minlength="6">
+                <label for="su-pass">رمز عبور</label>
+                <span class="icon">🔒</span>
+                <button type="button" class="toggle-pass" aria-label="نمایش رمز">👁️</button>
+            </div>
+            <div class="strength"><div class="strength-bar"></div></div>
+            <label class="remember"><input type="checkbox" required> قوانین فروشگاه رو خوندم و قبول دارم 💕</label>
+            <button type="submit" class="btn-submit">ساخت حساب دخترانه ✨</button>
+        </form>
+
+        <p class="footer-note">با ❤️ ساخته شده برای دخترهای باحال — گالری بانو ©</p>
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورود | توت‌فرنگی | اکسسوری دخترونه</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg-blobs">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span id="sparkles"></span>
+</div>
+
+<main class="container">
+    <section class="card">
+        <div class="card-right">
+            <div class="brand">
+                <span class="logo">♡</span>
+                <h2>توت‌فرنگی</h2>
+                <p>اکسسوری‌های دخترونه و خاص</p>
+            </div>
+            <div class="illustration">
+                <div class="float-item f1">💍</div>
+                <div class="float-item f2">🎀</div>
+                <div class="float-item f3">👜</div>
+                <div class="float-item f4">✨</div>
+                <div class="float-item f5">💅</div>
+                <div class="main-emoji">💖</div>
+                <h3>بدرخش، مثل خودت!</h3>
+                <p>جدیدترین گردنبندها، گوشواره‌ها، کلیپس‌ها و کیف‌های ترند اینجاست.</p>
+                <div class="mini-cards">
+                    <div>٪۱۵ تخفیف اولین ورود</div>
+                    <div>ارسال رایگان بالای ۵۰۰ هزار</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-left">
+            <h1>خوش برگشتی قشنگم!</h1>
+            <p class="sub">وارد شو تا دنیای اکسسوریت رو ببینی</p>
+
+            <div class="tabs">
+                <button class="tab active" id="tabLogin">ورود</button>
+                <button class="tab" id="tabRegister">ثبت‌نام</button>
+            </div>
+
+            <form id="loginForm">
+                <label>ایمیل یا موبایل
+                    <input type="text" id="username" placeholder="مثلا sara@gmail.com" required />
+                </label>
+                <label>رمز عبور
+                    <div class="pass-wrap">
+                        <input type="password" id="password" placeholder="••••••••" required />
+                        <button type="button" id="togglePass">👁</button>
+                    </div>
+                </label>
+
+                <div class="row">
+                    <label class="remember"><input type="checkbox" checked /> مرا به خاطر بسپار</label>
+                    <a href="#">فراموش کردم!</a>
+                </div>
+
+                <p id="errorMsg"></p>
+
+                <button type="submit" class="btn-main">ورود به دنیای صورتی ✨</button>
+
+                <div class="divider"><span>یا</span></div>
+
+                <button type="button" class="btn-google">ورود با گوگل G</button>
+
+                <p class="switch-text">هنوز عضو نیستی؟ <a href="#" id="goRegister">بسازش، یک دقیقه‌ست!</a></p>
+            </form>
+
+            <form id="registerForm" class="hidden">
+                <label>اسم قشنگت
+                    <input type="text" id="regName" placeholder="مثلا سارا" required />
+                </label>
+                <label>موبایل
+                    <input type="tel" id="regPhone" placeholder="0912..." required />
+                </label>
+                <label>رمز عبور
+                    <input type="password" id="regPass" placeholder="یه رمز خوشگل انتخاب کن" required />
+                </label>
+                <button type="submit" class="btn-main">عضویت و دریافت تخفیف 🎀</button>
+                <p class="switch-text">عضوی؟ <a href="#" id="goLogin">بزن بریم ورود</a></p>
+            </form>
+        </div>
+    </section>
+    <p class="footer">ساخته شده با 💗 برای دخترای خوش‌سلیقه ایرانی</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
