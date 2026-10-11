@@ -21,6 +21,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Login | 07 - Constellation (Interactive particles) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/07-constellation/) |
 | Login | 08 - Girls' accessories | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/08-Girls'_accessories/) |
 | Login | 09 - Girls' accessories2 | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/09-Girls'_accessories2/) |
+| Login | 10 - Simple and minimalist | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/10-Simple_and_minimalist/) |
+| Login | 11 - Library_related | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/11-Library_related/) |
+
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -37,6 +40,8 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Login 07 - Constellation
 - [x] Login 08 - Girls' accessories
 - [x] Login 09 - Girls' accessories2
+- [x] Login 10 - Simple and minimalist
+- [x] Login 11 - Library_related
 - [ ] نسخه‌ی React و Vue
 - [ ] Register، Navbar، Pricing
 
