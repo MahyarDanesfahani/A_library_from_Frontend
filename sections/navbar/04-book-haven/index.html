@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>برگ‌نما | کتابخانه و کتابفروشی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+    <div class="bar">
+        <a class="brand" href="#"><span class="logo">📖</span><b>برگ‌نما</b><small>کتابخانه و کتابفروشی</small></a>
+        <button class="burger" id="burger" aria-label="منو" aria-expanded="false" aria-controls="menu">☰</button>
+
+        <nav class="menu" id="menu">
+            <a href="#" class="on">خانه</a>
+            <div class="dd">
+                <button class="dd-btn" aria-expanded="false">دسته‌بندی‌ها ▾</button>
+                <div class="panel">
+                    <a href="#">رمان</a><a href="#">شعر</a><a href="#">تاریخ</a>
+                    <a href="#">روان‌شناسی</a><a href="#">برنامه‌نویسی</a><a href="#">کودک و نوجوان</a>
+                </div>
+            </div>
+            <a href="#">پرفروش‌ها</a>
+            <a href="#">امانت کتاب <em>جدید</em></a>
+            <a href="#">وبلاگ</a>
+        </nav>
+
+        <form class="search" role="search">
+            <select aria-label="نوع جستجو"><option>همه</option><option>کتاب</option><option>نویسنده</option></select>
+            <input type="search" placeholder="نام کتاب یا نویسنده..." aria-label="جستجو">
+            <button aria-label="جستجو">🔍</button>
+        </form>
+
+        <div class="tools">
+            <a class="ic" href="#" aria-label="نشان‌شده‌ها">🔖<i>۵</i></a>
+            <a class="ic" href="#" aria-label="سبد خرید">🛒<i>۲</i></a>
+            <a class="btn" href="#">ورود | ثبت‌نام</a>
+        </div>
+    </div>
+    <div class="progress" id="progress"></div>
+</header>
+
+<main class="hero">
+    <h1>کتابی بخوان که <span>زندگی‌ات</span> را عوض کند</h1>
+    <p>برای دیدن «نوار مطالعه» زیر نوبار، صفحه را اسکرول کن ↓</p>
+</main>
+<section class="filler"></section>
+<script src="script.js"></script>
+</body>
+</html>
