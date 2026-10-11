@@ -1,0 +1,273 @@
+:root{
+    --bg:#05070a;
+    --panel:#0a0f14;
+    --line:#12301c;
+    --green:#00ff9c;
+    --green-dim:#0f8f5f;
+    --green-dark:#0a2f1f;
+    --red:#ff3355;
+    --red-dim:#8f1f33;
+    --amber:#ffb020;
+    --text:#c9e8d6;
+    --muted:#4f7a63;
+    --mono:'JetBrains Mono',monospace;
+    --fa:'Vazirmatn',Tahoma,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    background:var(--bg);color:var(--text);
+    font-family:var(--fa),var(--mono);
+    overflow-x:hidden;
+}
+
+/* ---------- لایه‌های جو ---------- */
+#matrix{position:fixed;inset:0;z-index:0;opacity:.16}
+.scanlines{
+    position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.5;
+    background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(0,0,0,.28) 2px 4px);
+}
+.vignette{
+    position:fixed;inset:0;z-index:2;pointer-events:none;
+    background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,.75) 100%);
+}
+.flicker-layer{
+    position:fixed;inset:0;z-index:2;pointer-events:none;background:rgba(0,255,156,.02);
+    animation:screen-flicker 7s infinite;
+}
+@keyframes screen-flicker{
+    0%,100%{opacity:.4}3%{opacity:.9}6%{opacity:.3}54%{opacity:.5}55%{opacity:.15}56%{opacity:.6}
+}
+
+/* صورت شبح مرموز در پس‌زمینه */
+.glitch-face{
+    position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+    font-size:min(46vw,420px);z-index:0;pointer-events:none;
+    color:rgba(0,255,156,.03);user-select:none;
+    animation:face-glitch 9s infinite steps(1);
+}
+@keyframes face-glitch{
+    0%,93%,100%{opacity:1;transform:translate(-50%,-50%)}
+    94%{opacity:.9;transform:translate(-50.3%,-50%) skewX(6deg)}
+    95%{opacity:1;transform:translate(-49.7%,-49.6%) skewX(-8deg)}
+    96%{opacity:.5}
+}
+
+/* ---------- ترمینال ---------- */
+.terminal{
+    position:relative;z-index:3;width:min(560px,94vw);
+    background:rgba(10,15,20,.92);
+    border:1px solid var(--line);
+    border-radius:12px;
+    box-shadow:0 0 0 1px rgba(0,255,156,.06),0 0 42px rgba(0,255,156,.1),inset 0 0 90px rgba(0,20,10,.7);
+    backdrop-filter:blur(4px);
+    animation:term-in.7s cubic-bezier(.2,.9,.3,1.2);
+}
+@keyframes term-in{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:none}}
+
+.term-head{
+    display:flex;align-items:center;gap:12px;
+    background:#0d141b;border-bottom:1px solid var(--line);
+    padding:11px 16px;border-radius:12px 12px 0 0;
+}
+.dots{display:flex;gap:6px}
+.d{width:11px;height:11px;border-radius:50%;display:inline-block}
+.d.red{background:#ff5f56}.d.yellow{background:#ffbd2e}.d.green{background:#27c93f}
+.term-title{font-family:var(--mono);font-size:12px;color:var(--muted);direction:ltr}
+.status{
+    margin-inline-start:auto;font-family:var(--mono);font-size:10px;direction:ltr;
+    color:var(--green);border:1px solid var(--green-dim);padding:2px 10px;border-radius:99px;
+    animation:pulse 2.4s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+.term-body{padding:30px 34px 24px;position:relative}
+
+/* ---------- بوت ---------- */
+.boot{
+    font-family:var(--mono);direction:ltr;text-align:left;
+    font-size:10px;color:var(--green-dim);min-height:0;
+    margin-bottom:14px;line-height:1.7;white-space:pre-wrap;
+}
+.boot.ok{color:var(--green)}
+.boot.warn{color:var(--amber)}
+.boot.err{color:var(--red)}
+
+/* ---------- برند ---------- */
+.brand{text-align:center;margin-bottom:26px}
+.brand h1{
+    font-family:var(--mono);direction:ltr;font-size:30px;font-weight:800;letter-spacing:4px;
+    color:var(--green);text-shadow:0 0 18px rgba(0,255,156,.5);
+    position:relative;display:inline-block;
+}
+.glitch::before,.glitch::after{
+    content:attr(data-text);position:absolute;inset:0;overflow:hidden;
+}
+.glitch::before{color:var(--red);clip-path:inset(20% 0 55% 0);animation:gl1 3.4s infinite steps(1)}
+.glitch::after{color:#29d8ff;clip-path:inset(62% 0 12% 0);animation:gl2 2.9s infinite steps(1)}
+@keyframes gl1{0%,92%,100%{transform:none;opacity:0}93%{transform:translate(-4px,-2px);opacity:.85}96%{transform:translate(3px,1px);opacity:.7}}
+@keyframes gl2{0%,90%,100%{transform:none;opacity:0}91%{transform:translate(4px,2px);opacity:.8}94%{transform:translate(-3px,-1px);opacity:.6}}
+.brand.sub{font-size:12px;color:var(--muted);margin-top:8px;letter-spacing:.5px}
+
+/* ---------- تب‌ها ---------- */
+.tabs{
+    position:relative;display:flex;background:#0d141b;
+    border:1px solid var(--line);border-radius:8px;padding:4px;margin-bottom:26px;
+}
+.tab{
+    flex:1;z-index:1;border:none;background:none;cursor:pointer;
+    font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:2px;direction:ltr;
+    color:var(--muted);padding:9px;border-radius:6px;transition:color.3s;
+}
+.tab.active{color:#04120a;text-shadow:none}
+.tab-glider{
+    position:absolute;top:4px;bottom:4px;width:calc(50% - 4px);
+    right:4px;background:var(--green);border-radius:6px;
+    transition:right.3s cubic-bezier(.5,1.4,.5,1);
+    box-shadow:0 0 16px rgba(0,255,156,.45);
+}
+.tabs.signup.tab-glider{right:calc(50%)}
+
+/* ---------- فیلدها ---------- */
+.field{position:relative;margin-bottom:20px}
+.field input{
+    width:100%;padding:14px 46px 14px 42px;
+    background:#070c10;border:1px solid #163825;border-radius:8px;
+    color:var(--green);font-family:var(--mono);font-size:14px;direction:ltr;text-align:left;
+    caret-color:var(--green);
+    transition:border.25s, box-shadow.25s, background.25s;
+}
+.field input::placeholder{color:#1d3a2b}
+.field input:focus{
+    outline:none;border-color:var(--green);
+    box-shadow:0 0 0 3px rgba(0,255,156,.1),0 0 18px rgba(0,255,156,.18);
+    background:#081109;
+}
+.field label{
+    position:absolute;right:46px;top:50%;transform:translateY(-50%);
+    color:var(--muted);font-size:13px;pointer-events:none;transition:all.2s;
+}
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label{
+    top:-8px;font-size:10px;color:var(--green);background:var(--panel);padding:0 6px;
+}
+.field.icon{
+    position:absolute;right:14px;top:50%;transform:translateY(-50%);
+    font-family:var(--mono);color:var(--green-dim);font-size:13px;direction:ltr;
+}
+.toggle-pass{
+    position:absolute;left:10px;top:50%;transform:translateY(-50%);
+    border:none;background:none;cursor:pointer;color:var(--green-dim);
+    font-size:14px;font-family:var(--mono);transition:color.2s;
+}
+.toggle-pass:hover{color:var(--green)}
+
+/* ---------- ردیف گزینه‌ها ---------- */
+.row{display:flex;justify-content:space-between;align-items:center;margin:16px 0 20px;font-size:12px}
+.remember{display:flex;align-items:center;gap:8px;color:var(--muted);cursor:pointer}
+.remember input{accent-color:#00ff9c;width:14px;height:14px;cursor:pointer}
+.link{color:var(--amber);text-decoration:none;font-size:12px}
+.link:hover{text-decoration:underline;text-shadow:0 0 8px rgba(255,176,32,.5)}
+
+/* ---------- کد رمزی ---------- */
+.crypt-box{
+    display:flex;align-items:center;gap:12px;margin-bottom:22px;
+    border:1px dashed var(--green-dim);border-radius:8px;padding:10px 14px;background:#081109;
+}
+.crypt-label{font-family:var(--mono);font-size:9px;direction:ltr;color:var(--muted);letter-spacing:1px}
+.crypt-code{
+    font-family:var(--mono);direction:ltr;font-size:16px;font-weight:800;letter-spacing:5px;
+    color:var(--green);text-shadow:0 0 10px rgba(0,255,156,.4);
+    background:repeating-linear-gradient(45deg,#0c1a12 0 4px,#0a1510 4px 8px);
+    padding:6px 12px;border-radius:6px;user-select:none;cursor:pointer;
+    transition:opacity.2s;
+}
+.crypt-code:hover{opacity:.8}
+.crypt-input{
+    flex:1;background:transparent;border:none;border-bottom:1px solid #163825;
+    color:var(--text);font-family:var(--mono);font-size:13px;direction:ltr;
+    padding:6px 4px;outline:none;
+}
+.crypt-input:focus{border-color:var(--green)}
+
+/* ---------- دکمه ---------- */
+.btn-submit{
+    width:100%;padding:14px;border:1px solid var(--green);border-radius:8px;cursor:pointer;
+    background:linear-gradient(180deg,rgba(0,255,156,.16),rgba(0,255,156,.05));
+    color:var(--green);font-family:var(--fa),var(--mono);
+    font-size:15px;font-weight:700;letter-spacing:1px;
+    box-shadow:0 0 20px rgba(0,255,156,.14),inset 0 0 24px rgba(0,255,156,.05);
+    transition:all.25s;position:relative;overflow:hidden;
+}
+.btn-submit::before{
+    content:"";position:absolute;top:0;inset-inline-start:-80%;width:50%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(0,255,156,.22),transparent);
+    animation:sweep 3.2s infinite;
+}
+@keyframes sweep{0%{inset-inline-start:-80%}60%,100%{inset-inline-start:130%}}
+.btn-submit:hover{
+    background:var(--green);color:#04120a;transform:translateY(-2px);
+    box-shadow:0 0 34px rgba(0,255,156,.45);
+}
+.btn-submit.arrow{font-family:var(--mono);margin-inline-start:8px;display:inline-block;animation:arrow 1.2s infinite}
+@keyframes arrow{0%,100%{transform:translateX(0)}50%{transform:translateX(-5px)}}
+
+.warn{
+    margin-top:16px;font-size:10.5px;color:#6b4a20;text-align:center;
+    font-family:var(--mono);letter-spacing:.3px;
+}
+
+/* ---------- قدرت رمز ---------- */
+.strength{height:5px;background:#0d141b;border-radius:99px;margin:-6px 0 18px;position:relative;overflow:visible}
+.strength-bar{height:100%;width:0;border-radius:99px;background:var(--green);transition:width.3s,background.3s;box-shadow:0 0 8px rgba(0,255,156,.5)}
+.strength-text{
+    position:absolute;left:0;top:-20px;font-family:var(--mono);font-size:9px;
+    direction:ltr;color:var(--muted);letter-spacing:1px;
+}
+
+/* ---------- فرم‌ها ---------- */
+.form{display:none}
+.form.active{display:block;animation:form-in.35s ease}
+@keyframes form-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.foot{
+    display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    margin-top:26px;padding-top:16px;border-top:1px solid #0f2418;
+    font-family:var(--mono);font-size:10px;color:var(--muted);direction:ltr;
+}
+.foot-flicker{animation:foot-f 4s infinite}
+@keyframes foot-f{0%,88%,100%{opacity:1}89%{opacity:.2}90%{opacity:.9}92%{opacity:.35}}
+
+/* ---------- توست ---------- */
+.toast{
+    position:fixed;bottom:30px;left:50%;transform:translate(-50%,90px);
+    background:#0a0f14;border:1px solid var(--green);color:var(--green);
+    padding:13px 28px;border-radius:8px;font-size:13px;font-weight:600;
+    box-shadow:0 0 26px rgba(0,255,156,.25);opacity:0;z-index:99;white-space:nowrap;
+    transition:all.4s cubic-bezier(.4,1.3,.5,1);font-family:var(--fa),var(--mono);
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast.error{border-color:var(--red);color:var(--red);box-shadow:0 0 26px rgba(255,51,85,.3)}
+
+/* ---------- فلش‌های قبول/رد ---------- */
+.deny-flash{
+    position:fixed;inset:0;z-index:50;pointer-events:none;opacity:0;
+    background:radial-gradient(circle,transparent 30%,rgba(255,51,85,.4));
+}
+.deny-flash.go{animation:deny.5s ease}
+@keyframes deny{0%{opacity:0}25%{opacity:1}100%{opacity:0}}
+.allow-flash{
+    position:fixed;inset:0;z-index:50;pointer-events:none;opacity:0;
+    background:radial-gradient(circle,transparent 20%,rgba(0,255,156,.35));
+}
+.allow-flash.go{animation:allow.8s ease}
+@keyframes allow{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
+
+/* ---------- ریسپانسیو ---------- */
+@media (max-width:520px){
+    .term-body{padding:24px 20px 18px}
+    .brand h1{font-size:22px;letter-spacing:2px}
+    .crypt-box{flex-wrap:wrap}
+    .crypt-input{min-width:100%}
+    .foot{justify-content:center}
+}

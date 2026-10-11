@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARK//SHELL — SECURE ACCESS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div class="flicker-layer"></div>
+<canvas id="matrix" aria-hidden="true"></canvas>
+<div class="glitch-face" aria-hidden="true">☠</div>
+
+<main class="terminal">
+    <div class="term-head">
+        <span class="dots"><i class="d red"></i><i class="d yellow"></i><i class="d green"></i></span>
+        <span class="term-title">root@dark-shell: ~/access</span>
+        <span class="status">● SECURE</span>
+    </div>
+
+    <div class="term-body">
+
+        <div class="boot" id="boot" aria-hidden="true"></div>
+
+        <header class="brand">
+            <h1 class="glitch" data-text="DARK//SHELL">DARK//SHELL</h1>
+            <p class="sub">// پشت این دروازه، کدهای مرده آرام می‌گیرند</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="login">AUTH</button>
+            <button class="tab" data-tab="signup">INIT</button>
+            <span class="tab-glider"></span>
+        </div>
+
+        <!-- ورود -->
+        <form id="login-form" class="form active" autocomplete="off" novalidate>
+            <div class="field">
+                <input type="text" id="login-user" placeholder=" " required>
+                <label for="login-user">شناسه یا ایمیل</label>
+                <span class="icon">&gt;_</span>
+            </div>
+            <div class="field">
+                <input type="password" id="login-pass" placeholder=" " required minlength="6">
+                <label for="login-pass">رمز عبور</label>
+                <span class="icon">#</span>
+                <button type="button" class="toggle-pass" aria-label="نمایش رمز">◉</button>
+            </div>
+            <div class="row">
+                <label class="remember"><input type="checkbox"> <span>جلسه‌ی پایدار</span></label>
+                <a href="#" class="link" id="forgot">رمز گم شد؟</a>
+            </div>
+            <div class="crypt-box">
+                <span class="crypt-label">TRANS-GATE</span>
+                <div class="crypt-code" id="crypt-code">A7#K9</div>
+                <input type="text" class="crypt-input" id="crypt-in" placeholder="کد را وارد کنید" maxlength="5" autocomplete="off">
+            </div>
+            <button type="submit" class="btn-submit">نفوذ به سیستم <span class="arrow">▶</span></button>
+            <p class="warn">⚠ تمام تلاش‌های دسترسی ثبت و رصد می‌شود.</p>
+        </form>
+
+        <!-- ثبت‌نام -->
+        <form id="signup-form" class="form" autocomplete="off" novalidate>
+            <div class="field">
+                <input type="text" id="su-name" placeholder=" " required>
+                <label for="su-name">نام کاربری</label>
+                <span class="icon">&gt;_</span>
+            </div>
+            <div class="field">
+                <input type="email" id="su-email" placeholder=" " required>
+                <label for="su-email">ایمیل</label>
+                <span class="icon">@</span>
+            </div>
+            <div class="field">
+                <input type="password" id="su-pass" placeholder=" " required minlength="6">
+                <label for="su-pass">رمز عبور</label>
+                <span class="icon">#</span>
+                <button type="button" class="toggle-pass" aria-label="نمایش رمز">◉</button>
+            </div>
+            <div class="strength"><div class="strength-bar"></div><span class="strength-text" id="strength-text">—</span></div>
+            <label class="remember"><input type="checkbox" required> <span>قوانین سایه را می‌پذیرم</span></label>
+            <button type="submit" class="btn-submit">ساخت شناسنامه‌ی سایه</button>
+        </form>
+
+        <footer class="foot">
+            <span id="clock">00:00:00</span>
+            <span id="ip">IP: ●.●.●.●</span>
+            <span class="foot-flicker">DARK//SHELL © — no trace left behind</span>
+        </footer>
+
+    </div>
+</main>
+
+<div class="toast" id="toast"></div>
+<div class="deny-flash" id="deny-flash"></div>
+<div class="allow-flash" id="allow-flash"></div>
+
+<script src="script.js"></script>
+</body>
+</html
