@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روشنا | فروشگاه چراغ و لوازم نوری</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ▂▂▂ نوبار ▂▂▂ -->
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+
+        <!-- لوگو -->
+        <a href="#" class="brand">
+            <svg class="bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 3z"/>
+            </svg>
+            <span class="brand-text">
+        <strong>روشنا</strong>
+        <small>چراغ و لوازم نوری</small>
+      </span>
+        </a>
+
+        <!-- منوی اصلی -->
+        <nav class="nav-menu" aria-label="منوی اصلی">
+            <ul>
+                <li><a href="#" class="nav-link active">خانه</a></li>
+                <li class="has-mega">
+                    <a href="#" class="nav-link">محصولات <span class="chev">▾</span></a>
+                    <!-- مگامنو -->
+                    <div class="mega">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                                <h4>🏮 چراغ‌های داخلی</h4>
+                                <a href="#">لوستر و چراغ سقفی</a>
+                                <a href="#">آباژور و چراغ مطالعه</a>
+                                <a href="#">چراغ دیواری و آویز</a>
+                                <a href="#">اسپات و هالوژن</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>🌙 نورپردازی محیط</h4>
+                                <a href="#">چراغ حیاط و باغ</a>
+                                <a href="#">دیوارکوب بیرونی</a>
+                                <a href="#">نورپردازی نما و ویلا</a>
+                                <a href="#">چراغ‌های خورشیدی</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>⚡ روشنایی هوشمند</h4>
+                                <a href="#">ریسه و نوار LED</a>
+                                <a href="#">لامپ‌های هوشمند WiFi</a>
+                                <a href="#">سنسور حرکت و دیمر</a>
+                                <a href="#">کلید و پریز لمسی</a>
+                            </div>
+                            <a href="#" class="mega-promo">
+                                <span class="promo-badge">٪۴۰</span>
+                                <strong>حراج نور پاییزه</strong>
+                                <small>تا ۴۰٪ تخفیف روی لوسترها</small>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="nav-link">جدیدترین‌ها</a></li>
+                <li><a href="#" class="nav-link">پیشنهاد شگفت‌انگیز <span class="hot">٪</span></a></li>
+                <li><a href="#" class="nav-link">وبلاگ</a></li>
+                <li><a href="#" class="nav-link">تماس با ما</a></li>
+            </ul>
+        </nav>
+
+        <!-- اکشن‌ها -->
+        <div class="nav-actions">
+            <!-- جستجو -->
+            <div class="search-box" id="searchBox">
+                <input type="text" id="searchInput" placeholder="جستجوی محصول…" aria-label="جستجو">
+                <button class="icon-btn" id="searchBtn" aria-label="جستجو">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                </button>
+            </div>
+
+            <!-- کلید چراغ (تم روشن/تاریک نوبار) -->
+            <button class="light-switch on" id="lightSwitch" aria-pressed="true" aria-label="روشنایی صفحه">
+                <span class="switch-track"><span class="switch-knob">💡</span></span>
+            </button>
+
+            <!-- سبد خرید -->
+            <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9H8L6 3H3"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+                <span class="cart-badge">۳</span>
+            </button>
+
+            <!-- حساب کاربری -->
+            <button class="icon-btn" id="userBtn" aria-label="حساب کاربری">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+            </button>
+
+            <!-- همبرگر موبایل -->
+            <button class="hamburger" id="hamburger" aria-label="منو" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+    <div class="glow-bar"></div>
+</header>
+
+<!-- ▂▂▂ کشوی موبایل ▂▂▂ -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer" aria-label="منوی موبایل">
+    <div class="drawer-head">
+        <span class="drawer-title">☕ منوی روشنا</span>
+        <button class="drawer-close" id="drawerClose" aria-label="بستن">✕</button>
+    </div>
+    <div class="drawer-search">
+        <input type="text" placeholder="جستجوی محصول…">
+        <button aria-label="جستجو">🔍</button>
+    </div>
+    <nav class="drawer-nav">
+        <a href="#" class="drawer-link active">خانه</a>
+        <div class="drawer-group">
+            <button class="drawer-link has-sub">محصولات <span class="chev">▾</span></button>
+            <div class="drawer-sub">
+                <a href="#">لوستر و چراغ سقفی</a>
+                <a href="#">آباژور و چراغ مطالعه</a>
+                <a href="#">چراغ حیاط و باغ</a>
+                <a href="#">ریسه و نوار LED</a>
+                <a href="#">لامپ‌های هوشمند</a>
+            </div>
+        </div>
+        <a href="#" class="drawer-link">جدیدترین‌ها</a>
+        <a href="#" class="drawer-link">پیشنهاد شگفت‌انگیز <span class="hot">٪</span></a>
+        <a href="#" class="drawer-link">وبلاگ</a>
+        <a href="#" class="drawer-link">تماس با ما</a>
+    </nav>
+    <a href="#" class="drawer-login">ورود / ثبت‌نام</a>
+</aside>
+
+<!-- ▂▂▂ محتوای نمایشی ▂▂▂ -->
+<main class="demo">
+    <section class="hero">
+        <span class="hero-bulb" aria-hidden="true">💡</span>
+        <h1>نوری که خانه‌ات را <em>جادویی</em> می‌کند</h1>
+        <p>از لوسترهای کلاسیک تا روشنایی هوشمند — همه چیز در یک فروشگاه</p>
+        <a href="#" class="hero-btn">مشاهده محصولات</a>
+    </section>
+    <section class="placeholder">
+        <p>↓ برای دیدن رفتار چسبنده‌ی نوبار، اسکرول کن ↓</p>
+    </section>
+    <section class="placeholder tall"></section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
