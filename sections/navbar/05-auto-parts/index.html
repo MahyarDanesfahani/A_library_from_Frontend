@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>اتوپارت | لوازم یدکی خودرو</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top">🚚 ارسال رایگان قطعات بالای ۳ میلیون تومان &nbsp;|&nbsp; ضمانت اصالت کالا</div>
+
+<header class="nav" id="nav">
+    <div class="bar">
+        <a class="brand" href="#"><span class="logo">⚙</span><span><b>اتوپارت</b><small>لوازم یدکی و جانبی</small></span></a>
+        <button class="burger" id="burger" aria-label="منو" aria-expanded="false" aria-controls="menu">☰</button>
+
+        <nav class="menu" id="menu">
+            <span class="ind" id="ind"></span>
+            <a href="#" class="on">خانه</a>
+            <div class="dd">
+                <button class="dd-btn" aria-expanded="false">قطعات ▾</button>
+                <div class="panel">
+                    <a href="#">موتور</a><a href="#">ترمز و کلاچ</a><a href="#">تعلیق و جلوبندی</a>
+                    <a href="#">برق و باتری</a><a href="#">بدنه و چراغ</a><a href="#">خنک‌کاری</a>
+                </div>
+            </div>
+            <a href="#">روغن و فیلتر</a>
+            <a href="#">لاستیک</a>
+            <a href="#">لوازم جانبی</a>
+            <a href="#">پیگیری سفارش</a>
+        </nav>
+
+        <!-- انتخاب خودرو: قطعات بر اساس این انتخاب فیلتر می‌شوند -->
+        <div class="dd veh">
+            <button class="dd-btn veh-btn" id="vehBtn" aria-expanded="false">🚗 <span id="vehText">خودروی شما؟</span></button>
+            <div class="panel">
+                <label>برند<select id="brand"></select></label>
+                <label>مدل<select id="model" disabled></select></label>
+                <button class="apply" id="apply" type="button">اعمال فیلتر</button>
+            </div>
+        </div>
+
+        <div class="tools">
+            <a class="phone" href="tel:02100000000">📞 ۰۲۱-۰۰۰۰۰۰۰۰</a>
+            <a class="ic" href="#" aria-label="سبد خرید">🛒<i>۴</i></a>
+        </div>
+    </div>
+</header>
+
+<main class="hero">
+    <h1>قطعه‌ی <span>درست</span>، برای ماشین <span>شما</span></h1>
+    <p>اول خودرو را انتخاب کن تا فقط قطعات سازگار را ببینی.</p>
+</main>
+<section class="filler"></section>
+<script src="script.js"></script>
+</body>
+</html>
