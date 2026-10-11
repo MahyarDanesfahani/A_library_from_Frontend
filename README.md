@@ -24,6 +24,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Login | 10 - Simple and minimalist | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/10-Simple_and_minimalist/) |
 | Login | 11 - Library_related | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/11-Library_related/) |
 | Login | 12 - Dark_Shell | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/12-Dark_Shell/) |
+| Navbar | 01 - Matrix Academy (Announcement bar + Ctrl+K search) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/01-matrix-academy/) |
+| Navbar | 02 - Amber Lamp Shop (Sticky + cart badge) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/02-amber-lamp-shop/) |
+| Navbar | 03 - Home Market (Search bar + wishlist + cart) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/03-home-market/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -45,7 +48,11 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Login 12 - Dark_Shell
 
 - [ ] نسخه‌ی React و Vue
-- [ ] Register، Navbar، Pricing
+- [x] Navbar 01 - Matrix Academy
+- [x] Navbar 02 - Amber Lamp Shop
+- [x] Navbar 03 - Home Market
+- [ ] Register
+- [ ] Pricing
 
 ## 📄 لایسنس
 MIT
