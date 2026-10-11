@@ -23,7 +23,7 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Login | 09 - Girls' accessories2 | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/09-Girls'_accessories2/) |
 | Login | 10 - Simple and minimalist | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/10-Simple_and_minimalist/) |
 | Login | 11 - Library_related | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/11-Library_related/) |
-
+| Login | 12 - Dark_Shell | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/12-Dark_Shell/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -42,6 +42,8 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Login 09 - Girls' accessories2
 - [x] Login 10 - Simple and minimalist
 - [x] Login 11 - Library_related
+- [x] Login 12 - Dark_Shell
+
 - [ ] نسخه‌ی React و Vue
 - [ ] Register، Navbar، Pricing
 
