@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود | بکش و وارد شو</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card" id="card">
+    <h1>ورود</h1>
+    <form id="f" novalidate>
+        <label>ایمیل<input type="email" name="email" placeholder="you@mail.com" autocomplete="email" required></label>
+        <label>رمز عبور<input type="password" name="password" placeholder="حداقل ۶ کاراکتر" minlength="6" autocomplete="current-password" required></label>
+
+        <div class="track" id="track" dir="ltr">
+            <div class="fill" id="fill"></div>
+            <span class="label" id="label">برای ورود بکشید</span>
+            <div class="handle" id="handle" role="button" tabindex="0" aria-label="برای ورود بکشید یا Enter بزنید">›››</div>
+        </div>
+        <p class="msg" id="msg" role="alert"></p>
+    </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
