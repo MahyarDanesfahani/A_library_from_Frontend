@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ترنج | رستوران و فروشگاه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+    <div class="bar">
+        <a class="brand" href="#"><span class="logo">🍊</span><span><b>ترنج</b><small>رستوران و فروشگاه</small></span></a>
+        <button class="burger" id="burger" aria-label="منو" aria-expanded="false" aria-controls="menu">☰</button>
+
+        <nav class="menu" id="menu">
+            <a href="#" class="on">منو</a>
+            <a href="#">رزرو میز</a>
+            <div class="dd">
+                <button class="dd-btn" aria-expanded="false">فروشگاه ▾</button>
+                <div class="panel">
+                    <a href="#">نان و شیرینی</a><a href="#">سس‌ها</a><a href="#">ادویه‌جات</a>
+                    <a href="#">چای و دمنوش</a><a href="#">کارت هدیه</a><a href="#">باکس مهمانی</a>
+                </div>
+            </div>
+            <a href="#">شعبه‌ها</a>
+            <a href="#">درباره‌ی ما</a>
+        </nav>
+
+        <div class="tools">
+            <span class="status" id="status"><i></i><span id="statusText">...</span></span>
+
+            <div class="seg" role="radiogroup" aria-label="نحوه‌ی دریافت">
+                <button role="radio" aria-checked="true" class="act" data-m="ارسال">🛵 ارسال</button>
+                <button role="radio" aria-checked="false" data-m="حضوری">🏪 حضوری</button>
+            </div>
+
+            <button class="cart" id="cart" aria-label="سبد خرید">🛍 <b id="count">۰</b> <span id="total">۰ تومان</span></button>
+        </div>
+    </div>
+</header>
+
+<main class="hero">
+    <h1>طعم خانه، <span>با یک کلیک</span></h1>
+    <p>روی دکمه بزن و رفتار سبد خرید را ببین (تعداد و مبلغ به‌روز می‌شود).</p>
+    <button class="add" id="add">+ افزودن پیتزا مخصوص (۲۴۵٬۰۰۰ تومان)</button>
+    <p class="mode" id="mode">نحوه‌ی دریافت: ارسال</p>
+</main>
+<section class="filler"></section>
+<script src="script.js"></script>
+</body>
+</html>
