@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کدگیت | آکادمی مهندسی نرم‌افزار</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="matrix"></canvas>
+<div class="glow g1"></div>
+<div class="glow g2"></div>
+
+<div class="top-strip">
+    <span class="pulse"></span>
+    <p>ترم بهار‌ه‌ک: بوت‌کمپ فول‌استک با ۴۰٪ تخفیف + مدرک + پروژه‌محور <a href="#">ثبت‌نام</a></p>
+</div>
+
+<header class="navbar" id="navbar">
+    <div class="nav-inner">
+        <button class="burger" id="burger">☰</button>
+
+        <a href="#" class="logo">
+            <span class="logo-box">&lt;/&gt;</span>
+            <div class="logo-text">
+                <b>کدگیت<span>.</span></b>
+                <small>CODEGATE • مهندسی نرم‌افزار</small>
+            </div>
+        </a>
+
+        <nav class="links" id="mobileMenu">
+            <a href="#" class="active">خانه</a>
+            <div class="has-mega">
+                <a href="#">دوره‌ها <i class="arrow">▾</i></a>
+                <div class="mega">
+                    <div class="mega-grid">
+                        <div class="mega-col">
+                            <h4>🧱 فرانت‌اند</h4>
+                            <a href="#">React + Next.js <em>پرفروش</em></a>
+                            <a href="#">Vue.js 3</a>
+                            <a href="#">تخصصی TypeScript</a>
+                            <a href="#">Tailwind و طراحی سیستم</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>⚙️ بک‌اند</h4>
+                            <a href="#">Node.js و NestJS</a>
+                            <a href="#">Python و Django</a>
+                            <a href="#">Go برای میکروسرویس <em class="new">جدید</em></a>
+                            <a href="#">PostgreSQL و Redis</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>🤖 هوش مصنوعی و داده</h4>
+                            <a href="#">یادگیری ماشین با پایتون</a>
+                            <a href="#">LLM و RAG</a>
+                            <a href="#">مهندسی پرامپت</a>
+                            <a href="#">دیتا انجینیرینگ</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>🛡️ دواپس و امنیت</h4>
+                            <a href="#">Docker و Kubernetes</a>
+                            <a href="#">CI/CD و گیت‌لب</a>
+                            <a href="#">امنیت وب و تست نفوذ</a>
+                            <a href="#">لینوکس مهندسی</a>
+                        </div>
+                    </div>
+                    <div class="mega-foot">
+                        <div class="terminal-mini"><span>~</span> git push origin future 🚀</div>
+                        <a href="#" class="all-courses">مشاهده همه ۱۲۰+ دوره ←</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#">مسیرهای یادگیری</a>
+            <a href="#">بوت‌کمپ‌ها</a>
+            <a href="#">بلاگ فنی</a>
+            <a href="#">استخدام</a>
+        </nav>
+
+        <div class="search" id="searchBox">
+            <span class="kbd">Ctrl K</span>
+            <input type="text" id="searchInput" placeholder="جست‌وجوی دوره، مثلا React..." />
+            <span class="s-icon">⌕</span>
+            <div class="s-drop" id="searchDrop"></div>
+        </div>
+
+        <div class="actions">
+            <button class="icon-btn" id="themeBtn" title="تم">◐</button>
+            <button class="icon-btn" title="گیت‌هاب">⎋</button>
+            <button class="login">ورود</button>
+            <button class="cta">شروع رایگان ✦</button>
+        </div>
+    </div>
+    <div class="scrollbar" id="scrollbar"></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<main class="hero">
+    <div class="terminal-tag">engineer@codegate:~$ ./become-senior --mode=project-based</div>
+    <h1>مهندس شو، <span class="grad">نه فقط کدنویس</span></h1>
+    <p>مسیر صفر تا استخدام برای مهندس کامپیوتر: فرانت، بک، دیتابیس، دواپس و هوش مصنوعی — با منتور، کدریویو و پروژه واقعی.</p>
+    <div class="hero-btns">
+        <button class="cta big">انتخاب مسیر یادگیری</button>
+        <button class="ghost">▶ مشاهده کاتالوگ دوره‌ها</button>
+    </div>
+    <div class="chips">
+        <span>▣ ۱۲۰+ دوره</span>
+        <span>★ ۴.۹ از ۱۸هزار نظر</span>
+        <span>◉ منتورینگ ۱‌به‌۱</span>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
