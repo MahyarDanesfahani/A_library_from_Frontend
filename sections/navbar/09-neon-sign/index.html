@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>بار نئون | تابلوی نئونی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+    <div class="bar">
+        <a class="brand" href="#">بار نئون</a>
+
+        <nav class="tubes" id="tubes" aria-label="منوی اصلی">
+            <a href="#" class="tube on">خانه</a>
+            <a href="#" class="tube">منو</a>
+            <a href="#" class="tube">رویدادها</a>
+            <a href="#" class="tube">گالری</a>
+            <a href="#" class="tube">رزرو</a>
+        </nav>
+
+        <div class="ctl">
+            <div class="dots" role="radiogroup" aria-label="رنگ نئون">
+                <button class="dot" data-c="#ff2bd6" style="--d:#ff2bd6" role="radio" aria-label="صورتی"></button>
+                <button class="dot" data-c="#19f9ff" style="--d:#19f9ff" role="radio" aria-label="آبی"></button>
+                <button class="dot" data-c="#b6ff3b" style="--d:#b6ff3b" role="radio" aria-label="سبز"></button>
+            </div>
+            <button class="power" id="power" role="switch" aria-checked="true" aria-label="خاموش و روشن کردن تابلو"><i></i></button>
+        </div>
+    </div>
+</header>
+
+<main class="hero">
+    <h1 class="sign">OPEN</h1>
+    <p id="msg">تابلو روشنه. کلید سمت چپ بالا رو بزن!</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

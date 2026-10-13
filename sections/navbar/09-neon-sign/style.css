@@ -1,0 +1,59 @@
+:root { --neon: #ff2bd6; }
+* { box-sizing: border-box; margin: 0; }
+body {
+    min-height: 100vh; color: #fff; font-family: Vazirmatn, Tahoma, sans-serif; background-color: #140f1b;
+    background-image: linear-gradient(rgba(0,0,0,.4) 2px, transparent 2px), linear-gradient(90deg, rgba(0,0,0,.4) 2px, transparent 2px);
+    background-size: 90px 44px;
+}
+/* نور تابلو روی دیوار */
+body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; transition: opacity .6s;
+    background: radial-gradient(ellipse 70% 50% at 50% 0%, color-mix(in srgb, var(--neon) 30%, transparent), transparent 70%);
+}
+body.off::before { opacity: 0; }
+
+.nav { position: sticky; top: 0; z-index: 50; background: rgba(12,8,18,.88); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 2px solid #000; box-shadow: 0 2px 0 rgba(255,255,255,.05); }
+.bar { max-width: 1200px; margin: auto; padding: .7rem 1.2rem; display: flex; align-items: center; gap: 1.2rem; }
+
+/* متن نئونی */
+.brand, .sign, .tube { color: #fff; text-shadow: 0 0 4px #fff, 0 0 10px var(--neon), 0 0 22px var(--neon), 0 0 44px var(--neon); transition: color .4s, text-shadow .4s, border-color .4s, box-shadow .4s; }
+.brand { font-size: 1.6rem; font-weight: 900; text-decoration: none; white-space: nowrap; }
+
+.tubes { display: flex; gap: .7rem; margin-inline: auto; overflow-x: auto; padding: .6rem .4rem; scrollbar-width: none; }
+.tubes::-webkit-scrollbar { display: none; }
+.tube {
+    flex: none; padding: .4rem 1.1rem; font-size: .95rem; font-weight: 700; text-decoration: none; border-radius: 999px;
+    border: 2px solid var(--neon);
+    box-shadow: 0 0 6px var(--neon), 0 0 16px var(--neon), inset 0 0 8px color-mix(in srgb, var(--neon) 60%, transparent);
+}
+.tube:hover, .tube.on { background: color-mix(in srgb, var(--neon) 22%, transparent); }
+.tube:focus-visible { outline: 2px dashed #fff; outline-offset: 4px; }
+.tube.flk, .sign.flk { animation: flick .5s; }
+@keyframes flick { 0%, 19%, 23%, 55% { opacity: .25; } 20%, 30%, 60%, 100% { opacity: 1; } 21% { opacity: .1; } }
+
+/* وقتی تابلو خاموشه */
+body.off .brand, body.off .sign, body.off .tube { color: #4b4357; text-shadow: none; }
+body.off .tube { border-color: #3a3344; box-shadow: none; }
+body.off .tube:hover { color: #fff; border-color: var(--neon); text-shadow: 0 0 8px var(--neon); box-shadow: 0 0 10px var(--neon); }
+body.off .tube.on { background: none; }
+
+.ctl { display: flex; align-items: center; gap: .9rem; }
+.dots { display: flex; gap: .45rem; }
+.dot { width: 1.15rem; height: 1.15rem; border-radius: 50%; border: 2px solid #1b1424; background: var(--d); cursor: pointer; box-shadow: 0 0 8px var(--d); transition: transform .2s; }
+.dot:hover { transform: scale(1.2); }
+.dot[aria-checked="true"] { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* کلید برق */
+.power { position: relative; width: 2.6rem; height: 1.5rem; border-radius: 8px; border: 2px solid #3a3344; background: #0d0913; cursor: pointer; }
+.power i { position: absolute; top: 2px; inset-inline-start: 2px; width: 1.05rem; height: 1rem; border-radius: 5px; background: var(--neon); box-shadow: 0 0 10px var(--neon); transition: transform .25s, background .25s, box-shadow .25s; }
+.power[aria-checked="true"] i { transform: translateX(-1.05rem); }
+body.off .power i { background: #4b4357; box-shadow: none; }
+html[dir="rtl"] .power[aria-checked="false"] i { transform: none; }
+.power:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+.hero { min-height: 80vh; display: grid; place-content: center; text-align: center; padding: 1rem; }
+.sign { font: 900 clamp(4rem, 16vw, 9rem)/1 "Courier New", monospace; letter-spacing: .08em; }
+.hero p { margin-top: 1.5rem; opacity: .7; }
+
+@media (max-width: 760px) { .bar { flex-wrap: wrap; } .tubes { order: 3; width: 100%; margin: 0; } .brand { font-size: 1.3rem; } .ctl { margin-inline-start: auto; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

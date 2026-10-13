@@ -1,0 +1,51 @@
+* { box-sizing: border-box; margin: 0; }
+body {
+    min-height: 100vh; color: #eaf6ff; font-family: Vazirmatn, Tahoma, sans-serif; overflow-x: hidden;
+    background:
+            radial-gradient(circle at 15% 20%, rgba(255,43,214,.22), transparent 40%),
+            radial-gradient(circle at 85% 70%, rgba(25,249,255,.18), transparent 40%), #07070f;
+}
+
+/* دَک شناور */
+.dock {
+    position: fixed; top: 16px; left: 50%; translate: -50% 0; z-index: 50;
+    display: flex; align-items: flex-start; gap: .55rem; padding: .55rem .8rem; height: 70px;
+    background: rgba(14,14,30,.7); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,.12); border-radius: 26px;
+    box-shadow: 0 0 40px rgba(140,123,255,.25), inset 0 0 20px rgba(255,255,255,.03);
+}
+.sep { width: 1px; align-self: stretch; margin: .3rem .1rem; background: rgba(255,255,255,.15); }
+
+.it {
+    position: relative; flex: none; width: 48px; height: 48px; display: grid; place-items: center;
+    font-size: 1.5rem; text-decoration: none; border-radius: 15px; background: rgba(255,255,255,.04);
+    border: 1.5px solid color-mix(in srgb, var(--n) 70%, transparent);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--n) 55%, transparent), inset 0 0 10px color-mix(in srgb, var(--n) 22%, transparent);
+    transform-origin: top center; transition: transform .12s ease-out;
+    animation: boot 1s both; animation-delay: calc(var(--i) * .18s);
+}
+.it > * , .it { filter: drop-shadow(0 0 5px var(--n)); }
+
+/* برچسب زیر آیکون */
+.it::after {
+    content: attr(data-label); position: absolute; top: calc(100% + 10px); left: 50%; translate: -50% 0;
+    padding: .2rem .6rem; font-size: .72rem; white-space: nowrap; color: var(--n); background: rgba(10,10,24,.92);
+    border: 1px solid var(--n); border-radius: 8px; box-shadow: 0 0 10px var(--n);
+    opacity: 0; pointer-events: none; transition: opacity .15s;
+}
+.it:hover::after, .it:focus-visible::after { opacity: 1; }
+.it:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+/* نقطه‌ی بخش فعال */
+.it.on::before { content: ""; position: absolute; bottom: -9px; left: 50%; width: 6px; height: 6px; translate: -50% 0; border-radius: 50%; background: var(--n); box-shadow: 0 0 8px 2px var(--n); }
+
+/* روشن شدن نئون با سوسو */
+@keyframes boot { 0%, 18%, 24%, 52% { opacity: .12; } 20%, 30%, 60%, 100% { opacity: 1; } }
+
+.hero { min-height: 100vh; display: grid; place-content: center; text-align: center; padding: 1rem; }
+.tag { color: #8c7bff; font-size: .85rem; letter-spacing: .02em; }
+.hero h1 { font-size: clamp(3rem, 12vw, 6rem); font-weight: 900; color: #fff; text-shadow: 0 0 8px var(--g, #19f9ff), 0 0 28px var(--g, #19f9ff), 0 0 60px var(--g, #19f9ff); transition: text-shadow .3s; }
+.hint { margin-top: 1.2rem; opacity: .6; font-size: .9rem; max-width: 340px; }
+
+@media (max-width: 420px) { .dock { gap: .35rem; padding-inline: .5rem; } .it { width: 42px; height: 42px; font-size: 1.3rem; } }
+@media (prefers-reduced-motion: reduce) { .it { animation: none; transition: none; } }
