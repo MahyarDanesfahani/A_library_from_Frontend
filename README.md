@@ -30,6 +30,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Navbar | 04 - Book Haven (Reading progress bar) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/04-book-haven/) |
 | Navbar | 05 - Auto Parts (Vehicle selector) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/05-auto-parts/) |
 | Navbar | 06 - Restaurant Shop (Open status + live cart) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/06-restaurant-shop/) |
+| Navbar | 07 - Sticker Pop (Peel + emoji burst) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/07-sticker-pop/) |
+| Navbar | 08 - Neon Dock (Magnification) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/08-neon-dock/) |
+| Navbar | 09 - Neon Sign (Power switch + color picker) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/09-neon-sign/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -57,6 +60,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Navbar 04 - Book Haven
 - [x] Navbar 05 - Auto Parts
 - [x] Navbar 06 - Restaurant Shop
+- [x] Navbar 07 - Sticker Pop
+- [x] Navbar 08 - Neon Dock
+- [x] Navbar 09 - Neon Sign
 - [ ] Register
 - [ ] Pricing
 
