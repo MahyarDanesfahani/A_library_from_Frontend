@@ -1,0 +1,43 @@
+:root { --bg: #0a0a14; --text: #f4f3ff; --g1: #7c5cff; --g2: #ff4fa3; --g3: #ffb347; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--text); background: var(--bg); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+/* شفق متحرک پشت صفحه */
+.aurora { position: fixed; inset: 0; z-index: -1; filter: blur(70px); opacity: .55; }
+.aurora i { position: absolute; width: 38vmax; height: 38vmax; border-radius: 50%; animation: drift 18s ease-in-out infinite alternate; }
+.aurora i:nth-child(1) { background: var(--g1); top: -12%; left: -8%; }
+.aurora i:nth-child(2) { background: var(--g2); bottom: -20%; right: -10%; animation-delay: -6s; }
+.aurora i:nth-child(3) { background: var(--g3); top: 35%; left: 40%; width: 24vmax; height: 24vmax; opacity: .5; animation-delay: -11s; }
+@keyframes drift { to { transform: translate(8vmax, 6vmax) scale(1.15); } }
+
+.nav { position: sticky; top: 12px; z-index: 50; padding: 0 1rem; transition: transform .4s cubic-bezier(.3,1,.4,1); }
+.nav.hide { transform: translateY(-130%); }
+.bar { max-width: 1100px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem .6rem .5rem 1rem; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+
+.brand { display: flex; align-items: center; gap: .6rem; font-weight: 900; font-size: 1.25rem; padding-inline-start: .5rem; }
+.drop { width: 1.5rem; height: 1.5rem; background: linear-gradient(135deg, var(--g1), var(--g2)); animation: morph 6s ease-in-out infinite; }
+@keyframes morph { 0%, 100% { border-radius: 50% 50% 50% 50%; } 25% { border-radius: 60% 40% 55% 45%; } 50% { border-radius: 40% 60% 45% 55%; } 75% { border-radius: 55% 45% 40% 60%; } }
+
+.pill { position: relative; display: flex; gap: .1rem; padding: .3rem; border-radius: 999px; background: rgba(255,255,255,.05); overflow-x: auto; scrollbar-width: none; }
+.pill::-webkit-scrollbar { display: none; }
+.pill > a { position: relative; z-index: 1; flex: none; padding: .55rem 1.1rem; border-radius: 999px; font-size: .92rem; font-weight: 600; opacity: .8; transition: opacity .2s; will-change: transform; }
+.pill > a:hover, .pill > a.on { opacity: 1; }
+
+/* قطره‌های چسبنده: دو قطره با سرعت متفاوت، فیلتر آن‌ها را به هم می‌چسباند */
+.goo { position: absolute; inset: 0; filter: url(#goo); pointer-events: none; }
+.blob { position: absolute; top: .3rem; bottom: .3rem; left: 0; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--g1), var(--g2)); }
+.blob.a { transition: left .3s cubic-bezier(.3,1.2,.5,1), width .3s; }
+.blob.b { transition: left .55s cubic-bezier(.3,1.2,.5,1) .04s, width .55s .04s; }
+
+.cta { padding: .65rem 1.3rem; border-radius: 999px; font-weight: 800; font-size: .9rem; color: #1a1020; background: linear-gradient(90deg, var(--g3), #ffd98a); box-shadow: 0 8px 24px rgba(255,179,71,.35); transition: transform .2s, box-shadow .2s; white-space: nowrap; }
+.cta:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 12px 30px rgba(255,179,71,.5); }
+
+.hero { max-width: 720px; margin: auto; padding: 22vh 1.2rem 8vh; text-align: center; }
+.hero h1 { font-size: clamp(2.2rem, 7vw, 4rem); line-height: 1.4; }
+.hero span { background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { margin-top: 1rem; opacity: .7; line-height: 1.9; }
+.filler { height: 160vh; }
+
+@media (max-width: 720px) { .cta { display: none; } .bar { padding-inline-end: 1rem; } .pill { max-width: 70vw; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

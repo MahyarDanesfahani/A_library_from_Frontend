@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>پلی‌نما | پلتفرم ویدیو</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+    <div class="bar">
+        <button class="ic" aria-label="منوی کناری">☰</button>
+        <a class="brand" href="#"><span class="play"></span><span class="bt">پلی‌نما</span></a>
+
+        <form class="search" id="search" role="search" autocomplete="off">
+            <input id="q" type="search" placeholder="جستجو در ویدیوها..." aria-label="جستجو" aria-controls="sug" aria-expanded="false">
+            <kbd>/</kbd>
+            <button type="button" class="mic" id="mic" aria-label="جستجوی صوتی">🎙</button>
+            <ul class="sug" id="sug" role="listbox"></ul>
+        </form>
+
+        <div class="right">
+            <div class="dd">
+                <button class="up dd-btn" aria-expanded="false">＋ <span class="bt">بارگذاری</span></button>
+                <div class="panel">
+                    <a href="#">🎬 آپلود ویدیو</a><a href="#">🔴 پخش زنده</a><a href="#">✂️ ساخت کلیپ کوتاه</a><a href="#">📝 پست جامعه</a>
+                </div>
+            </div>
+            <div class="dd">
+                <button class="ic dd-btn" aria-label="اعلان‌ها" aria-expanded="false">🔔<i id="bell">۳</i></button>
+                <div class="panel notes">
+                    <p class="nh">اعلان‌ها <button type="button" id="readAll">خوانده شد</button></p>
+                    <a href="#" class="un"><b>ویدیوی جدید از «آموزش‌خونه»</b><small>CSS مدرن در ۱۰ دقیقه</small></a>
+                    <a href="#" class="un"><b>پخش زنده شروع شد</b><small>گفتگو با یک مهندس ارشد</small></a>
+                    <a href="#" class="un"><b>۱۲۰ نفر ویدیوی تو را دیدند</b><small>در ۲۴ ساعت گذشته</small></a>
+                </div>
+            </div>
+            <button class="avatar" aria-label="حساب کاربری">م</button>
+        </div>
+    </div>
+
+    <div class="moods" role="radiogroup" aria-label="حال‌وهوای امروز">
+        <span class="q">حال‌وهوات چیه؟</span>
+        <button role="radio" aria-checked="true" data-ac="#ff3d6e" data-t="همه‌چیز">🎲 همه</button>
+        <button role="radio" aria-checked="false" data-ac="#ffc933" data-t="خنده">😂 خنده</button>
+        <button role="radio" aria-checked="false" data-ac="#4da3ff" data-t="یادگیری">🧠 یادگیری</button>
+        <button role="radio" aria-checked="false" data-ac="#3ddc97" data-t="آرامش">😌 آرامش</button>
+        <button role="radio" aria-checked="false" data-ac="#ff6a3d" data-t="هیجان">🔥 هیجان</button>
+        <button role="radio" aria-checked="false" data-ac="#b07bff" data-t="موزیک">🎵 موزیک</button>
+    </div>
+</header>
+
+<main class="hero">
+    <p class="tag">امشب می‌خوای ببینی</p>
+    <h1 id="mood">همه‌چیز</h1>
+    <p class="hint">با انتخاب حال‌وهوا، رنگ نوبار هم تغییر می‌کنه. کلید <kbd>/</kbd> هم می‌پره روی جستجو.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

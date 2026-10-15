@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مایع | نوبار قطره‌ای</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- فیلتر چسبندگی (Gooey): قطره‌ها هنگام حرکت به هم می‌چسبند -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <filter id="goo" x="-20%" y="-60%" width="140%" height="220%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/>
+        <feColorMatrix in="b" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -8"/>
+    </filter>
+</svg>
+
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="nav" id="nav">
+    <div class="bar">
+        <a class="brand" href="#"><span class="drop"></span>مایع</a>
+
+        <nav class="pill" id="pill" aria-label="منوی اصلی">
+            <div class="goo" aria-hidden="true"><span class="blob a" id="a"></span><span class="blob b" id="b"></span></div>
+            <a href="#" class="on">خانه</a>
+            <a href="#">خدمات</a>
+            <a href="#">نمونه‌کارها</a>
+            <a href="#">وبلاگ</a>
+            <a href="#">تماس</a>
+        </nav>
+
+        <a class="cta" href="#">بزن بریم ✦</a>
+    </div>
+</header>
+
+<main class="hero">
+    <h1>روان، <span>چسبناک</span>، زنده</h1>
+    <p>موس رو روی منو ببر: قطره می‌کشه و می‌چسبه. پایین بری نوبار قایم میشه، بالا بیای برمی‌گرده.</p>
+</main>
+<section class="filler"></section>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ساختمان‌یار | مدیریت ساختمان</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+    <div class="bar">
+        <a class="brand" href="#">
+            <span class="lg"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#fff"><rect x="3" y="14" width="8" height="15" rx="1"/><rect x="12" y="5" width="9" height="24" rx="1"/><rect x="22" y="17" width="7" height="12" rx="1"/></g><g class="win"><rect x="5" y="17" width="3" height="3"/><rect x="14.5" y="9" width="4" height="3"/><rect x="14.5" y="15" width="4" height="3"/><rect x="24" y="20" width="3" height="3"/></g></svg></span>
+            <span><b>ساختمان‌یار</b><small>مجتمع نیلوفر، بلوک A</small></span>
+        </a>
+
+        <nav class="menu" id="menu" aria-label="منوی اصلی"></nav>
+
+        <div class="ctl">
+            <div class="dd">
+                <button class="unit dd-btn" aria-expanded="false">🏢 <span id="unitName">واحد ۱۲</span> ▾</button>
+                <div class="panel" id="units"></div>
+            </div>
+            <div class="seg" role="radiogroup" aria-label="نقش کاربری">
+                <button role="radio" aria-checked="true" data-r="admin">مدیر</button>
+                <button role="radio" aria-checked="false" data-r="res">ساکن</button>
+            </div>
+            <span class="avatar" aria-hidden="true">م</span>
+        </div>
+    </div>
+</header>
+
+<main class="hero">
+    <h1 id="hello">سلام مدیر عزیز 👋</h1>
+    <p>روی آیکون‌ها بروید تا زنده شوند. با کلید «مدیر / ساکن» منو عوض می‌شود.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
