@@ -36,6 +36,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Navbar | 10 - Video Hub (Mood accent + smart search) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/10-video-hub/) |
 | Navbar | 11 - Building Icons (Animated SVG icons + role switch) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/11-building-icons/) |
 | Navbar | 12 - Liquid Blob (Gooey indicator) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/12-liquid-blob/) |
+| Register | 01 - Step Wizard (3 steps + password strength) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/01-step-wizard/) |
+| Register | 02 - Chat Signup (Conversational) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/02-chat-signup/) |
+| Register | 03 - Live Card (3D membership card) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/03-live-card/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -69,7 +72,11 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Navbar 10 - Video Hub
 - [x] Navbar 11 - Building Icons
 - [x] Navbar 12 - Liquid Blob
-- [ ] Register
+
+
+- [x] Register 01 - Step Wizard
+- [x] Register 02 - Chat Signup
+- [x] Register 03 - Live Card
 - [ ] Pricing
 
 ## 📄 لایسنس
