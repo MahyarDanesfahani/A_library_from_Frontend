@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ثبت‌نام | سه قدم تا شروع</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card" id="card">
+    <div class="steps" id="steps">
+        <div class="line"><i id="fill"></i></div>
+        <div class="s on"><span>۱</span><small>حساب</small></div>
+        <div class="s"><span>۲</span><small>امنیت</small></div>
+        <div class="s"><span>۳</span><small>علاقه‌ها</small></div>
+    </div>
+
+    <form id="f" novalidate>
+        <section class="pane">
+            <h1>بیا شروع کنیم 👋</h1>
+            <p class="sub">اول خودت را معرفی کن</p>
+            <label>نام و نام خانوادگی<input name="name" autocomplete="name" placeholder="مثلاً سارا احمدی"></label>
+            <label>ایمیل<input name="email" type="email" autocomplete="email" placeholder="you@mail.com"></label>
+        </section>
+
+        <section class="pane" hidden>
+            <h1>رمز امن بساز 🔐</h1>
+            <p class="sub">هر چه قوی‌تر، بهتر</p>
+            <label>رمز عبور
+                <div class="pw"><input name="password" type="password" autocomplete="new-password" placeholder="حداقل ۸ کاراکتر"><button type="button" class="eye" id="eye" aria-label="نمایش رمز">👁</button></div>
+            </label>
+            <div class="meter" id="meter" data-s="0"><i></i><i></i><i></i><i></i><b id="mlabel"></b></div>
+            <ul class="rules">
+                <li data-r="len">حداقل ۸ کاراکتر</li>
+                <li data-r="num">حداقل یک عدد</li>
+                <li data-r="case">حروف بزرگ و کوچک انگلیسی</li>
+                <li data-r="sym">یک نماد (مثل ! یا @) برای امتیاز بیشتر</li>
+            </ul>
+            <label>تکرار رمز عبور<input name="pass2" type="password" autocomplete="new-password" placeholder="رمز را دوباره بنویس"></label>
+        </section>
+
+        <section class="pane" hidden>
+            <h1>به چی علاقه داری؟ ✨</h1>
+            <p class="sub">هر چندتا که خواستی انتخاب کن</p>
+            <div class="chips">
+                <label class="chip"><input type="checkbox"><span>🎨 طراحی</span></label>
+                <label class="chip"><input type="checkbox"><span>💻 برنامه‌نویسی</span></label>
+                <label class="chip"><input type="checkbox"><span>📈 کسب‌وکار</span></label>
+                <label class="chip"><input type="checkbox"><span>🎵 موزیک</span></label>
+                <label class="chip"><input type="checkbox"><span>📚 کتاب</span></label>
+                <label class="chip"><input type="checkbox"><span>🎮 بازی</span></label>
+            </div>
+            <label class="check"><input type="checkbox" name="terms"> قوانین و حریم خصوصی را می‌پذیرم</label>
+        </section>
+
+        <p class="msg" id="msg" role="alert"></p>
+        <div class="actions">
+            <button type="button" class="back" id="back" hidden>→ قبلی</button>
+            <button type="submit" class="next" id="next">بعدی ←</button>
+        </div>
+    </form>
+
+    <section class="done" id="done" hidden>
+        <div class="tick">✓</div>
+        <h1 id="hello">خوش آمدی!</h1>
+        <p class="sub">حسابت ساخته شد و آماده‌ای.</p>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

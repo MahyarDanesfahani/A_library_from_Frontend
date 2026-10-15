@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ثبت‌نام | کارت عضویت زنده</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <section class="stage" id="stage" aria-label="پیش‌نمایش کارت">
+        <div class="card3d" id="card3d">
+            <div class="inner" id="inner">
+                <div class="face front">
+                    <div class="top"><span class="logo">NEXA</span><span class="chip"></span></div>
+                    <div class="av" id="av">😎</div>
+                    <h2 id="cn">نام شما</h2>
+                    <p id="ce">email@example.com</p>
+                    <div class="meta"><span id="cid">NX-0000</span><span id="cd"></span></div>
+                    <div class="gloss"></div>
+                    <div class="stamp" id="stamp">صادر شد ✓</div>
+                </div>
+                <div class="face back">
+                    <div class="mag"></div>
+                    <p class="bl">قدرت رمز عبور</p>
+                    <div class="bar"><i id="bfill"></i></div>
+                    <small id="blabel">هنوز چیزی ننوشته‌ای</small>
+                </div>
+            </div>
+        </div>
+        <p class="tip">روی کارت حرکت کن؛ موقع نوشتن رمز، کارت برمی‌گرده 🔄</p>
+    </section>
+
+    <form class="form" id="f" novalidate>
+        <h1>کارت عضویتت را بساز</h1>
+        <label>نام<input name="name" autocomplete="name" placeholder="نام و نام خانوادگی" maxlength="28"></label>
+        <label>ایمیل<input name="email" type="email" autocomplete="email" placeholder="you@mail.com"></label>
+        <label>رمز عبور<input name="password" type="password" autocomplete="new-password" placeholder="حداقل ۸ کاراکتر"></label>
+
+        <div class="grp"><span>آواتار</span><div class="pick" id="avs" role="radiogroup" aria-label="آواتار"></div></div>
+        <div class="grp"><span>رنگ کارت</span><div class="pick" id="sw" role="radiogroup" aria-label="رنگ کارت"></div></div>
+
+        <p class="msg" id="msg" role="alert"></p>
+        <button class="go" type="submit">صدور کارت</button>
+    </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
