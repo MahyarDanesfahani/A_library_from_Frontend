@@ -33,6 +33,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Navbar | 07 - Sticker Pop (Peel + emoji burst) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/07-sticker-pop/) |
 | Navbar | 08 - Neon Dock (Magnification) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/08-neon-dock/) |
 | Navbar | 09 - Neon Sign (Power switch + color picker) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/09-neon-sign/) |
+| Navbar | 10 - Video Hub (Mood accent + smart search) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/10-video-hub/) |
+| Navbar | 11 - Building Icons (Animated SVG icons + role switch) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/11-building-icons/) |
+| Navbar | 12 - Liquid Blob (Gooey indicator) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/12-liquid-blob/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -63,6 +66,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Navbar 07 - Sticker Pop
 - [x] Navbar 08 - Neon Dock
 - [x] Navbar 09 - Neon Sign
+- [x] Navbar 10 - Video Hub
+- [x] Navbar 11 - Building Icons
+- [x] Navbar 12 - Liquid Blob
 - [ ] Register
 - [ ] Pricing
 
