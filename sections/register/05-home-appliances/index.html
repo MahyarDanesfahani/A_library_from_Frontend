@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ثبت‌نام | خانه‌نو، لوازم خانگی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <aside class="side">
+        <div class="brand">🏠 خانه‌نو</div>
+        <h2>خونه‌ات رو هوشمند کن</h2>
+        <p>با ثبت‌نام، کد تخفیف اولین خرید و اطلاع از حراج لوازم موردعلاقه‌ات رو می‌گیری.</p>
+        <ul>
+            <li>ارسال رایگان خرید بالای ۲ میلیون تومان</li>
+            <li>گارانتی اصالت و ۷ روز بازگشت کالا</li>
+            <li>نصب رایگان یخچال، لباسشویی و کولر</li>
+        </ul>
+        <div class="deco" id="deco" aria-hidden="true"></div>
+    </aside>
+
+    <form class="card" id="f" novalidate>
+        <h1>ثبت‌نام در خانه‌نو</h1>
+        <label>نام و نام خانوادگی<input name="name" autocomplete="name" placeholder="مثلاً مریم رضایی"></label>
+        <label>شماره موبایل<input name="phone" inputmode="numeric" autocomplete="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" maxlength="11" dir="ltr"></label>
+        <label>رمز عبور<input name="password" type="password" autocomplete="new-password" placeholder="حداقل ۸ کاراکتر و یک عدد"></label>
+
+        <div class="grp">
+            <span>به کدوم لوازم علاقه داری؟ <small>(برای پیشنهاد ویژه)</small></span>
+            <div class="apps" id="apps"></div>
+        </div>
+
+        <label class="check"><input type="checkbox" name="terms"> قوانین فروشگاه را می‌پذیرم</label>
+        <p class="msg" id="msg" role="alert"></p>
+        <button class="go" type="submit">ثبت‌نام و دریافت کد تخفیف</button>
+
+        <div class="coupon" id="coupon" hidden>
+            <small>کد تخفیف اولین خرید شما</small>
+            <b id="code"></b>
+            <span id="cnote"></span>
+        </div>
+    </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>افتتاح حساب آنلاین | بانک نیلگون</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ribbon"><span>🔒 اتصال امن و رمزنگاری‌شده</span><span>زمان نشست: <b id="sess">۱۰:۰۰</b></span></div>
+
+<main class="wrap">
+    <aside class="side">
+        <div class="logo"><span>◆</span> بانک نیلگون</div>
+        <h2>افتتاح حساب آنلاین<br>در سه گام امن</h2>
+        <ol>
+            <li class="cur" data-s="0"><b>۱</b><span>احراز هویت<small>کد ملی و موبایل</small></span></li>
+            <li data-s="1"><b>۲</b><span>تایید موبایل<small>کد یک‌بارمصرف</small></span></li>
+            <li data-s="2"><b>۳</b><span>تعیین رمز<small>و نوع حساب</small></span></li>
+        </ol>
+        <p class="tip">⚠ بانک هرگز رمز دوم یا کد تایید شما را تلفنی نمی‌پرسد.</p>
+    </aside>
+
+    <section class="card">
+        <h1>افتتاح حساب آنلاین</h1>
+        <form id="f" novalidate autocomplete="off">
+
+            <div class="step" id="s0">
+                <label>کد ملی<input name="nid" inputmode="numeric" maxlength="10" placeholder="۱۰ رقم" dir="ltr"></label>
+                <label>شماره موبایل<input name="phone" inputmode="numeric" maxlength="11" placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr"></label>
+                <button class="btn" type="button" id="send">ارسال کد تایید</button>
+            </div>
+
+            <div class="step" id="s1" hidden>
+                <p class="lead">کد ۶ رقمی به <b id="shown"></b> ارسال شد.</p>
+                <div class="otp" id="otp" dir="ltr">
+                    <input inputmode="numeric" maxlength="1" aria-label="رقم ۱"><input inputmode="numeric" maxlength="1" aria-label="رقم ۲"><input inputmode="numeric" maxlength="1" aria-label="رقم ۳"><input inputmode="numeric" maxlength="1" aria-label="رقم ۴"><input inputmode="numeric" maxlength="1" aria-label="رقم ۵"><input inputmode="numeric" maxlength="1" aria-label="رقم ۶">
+                </div>
+                <p class="timer"><span id="tm">۰۱:۳۰</span> <button type="button" id="resend" class="link" disabled>ارسال مجدد کد</button></p>
+                <p class="demo">(در نسخه‌ی دمو کد درست ۱۲۳۴۵۶ است)</p>
+                <button class="btn" type="button" id="verify">تایید کد</button>
+            </div>
+
+            <div class="step" id="s2" hidden>
+                <label>رمز عبور
+                    <div class="pw"><input name="password" type="password" placeholder="حداقل ۸ کاراکتر" autocomplete="new-password"><button type="button" class="eye" id="eye" aria-label="نمایش رمز">👁</button></div>
+                </label>
+                <div class="meter" id="meter" data-s="0"><i></i><i></i><i></i><i></i></div>
+                <label>تکرار رمز عبور<input name="pass2" type="password" placeholder="رمز را دوباره بنویس" autocomplete="new-password"></label>
+                <fieldset class="types"><legend>نوع حساب</legend>
+                    <label class="ty"><input type="radio" name="type" value="سپرده کوتاه‌مدت" checked><span>💳 جاری</span></label>
+                    <label class="ty"><input type="radio" name="type" value="پس‌انداز"><span>🏦 پس‌انداز</span></label>
+                    <label class="ty"><input type="radio" name="type" value="قرض‌الحسنه"><span>🤝 قرض‌الحسنه</span></label>
+                </fieldset>
+                <label class="check"><input type="checkbox" name="terms"> شرایط و قوانین افتتاح حساب را می‌پذیرم</label>
+                <button class="btn" type="submit">ثبت نهایی و افتتاح حساب</button>
+            </div>
+
+            <p class="msg" id="msg" role="alert"></p>
+        </form>
+
+        <div class="done" id="done" hidden>
+            <div class="seal">✓</div>
+            <h2>درخواست شما ثبت شد</h2>
+            <p>کد رهگیری: <b id="track"></b></p>
+            <small>تاریخ ثبت: <span id="date"></span> | نوع حساب: <span id="atype"></span></small>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

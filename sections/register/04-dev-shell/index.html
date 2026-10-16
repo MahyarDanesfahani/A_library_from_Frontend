@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>register.sh | ثبت‌نام برنامه‌نویس</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="ide">
+    <div class="tabs">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="tab on">register.sh</span>
+        <span class="tab">package.json</span>
+    </div>
+
+    <div class="body">
+        <form class="pane" id="f" novalidate autocomplete="off">
+            <p class="cmt"># ساخت حساب جدید، فقط چند خط!</p>
+            <p class="ps"><span class="u">dev@shell</span><span class="p">:~</span>$ <b>register --new</b></p>
+
+            <label><span class="k">--name</span><input name="name" placeholder="your-name" maxlength="30" aria-label="نام"></label>
+            <label><span class="k">--email</span><input name="email" type="email" placeholder="you@dev.io" aria-label="ایمیل"></label>
+            <label><span class="k">--password</span><input name="password" type="password" placeholder="min 8 chars" aria-label="رمز عبور"></label>
+            <p class="strength" id="strength">[........] <span>-</span></p>
+
+            <div class="stack" role="group" aria-label="زبان‌های مورد علاقه">
+                <span class="k">--stack</span>
+                <button type="button" class="tg" data-k="js" aria-pressed="false">JavaScript</button>
+                <button type="button" class="tg" data-k="ts" aria-pressed="false">TypeScript</button>
+                <button type="button" class="tg" data-k="py" aria-pressed="false">Python</button>
+                <button type="button" class="tg" data-k="java" aria-pressed="false">Java</button>
+                <button type="button" class="tg" data-k="go" aria-pressed="false">Go</button>
+                <button type="button" class="tg" data-k="rust" aria-pressed="false">Rust</button>
+            </div>
+
+            <label class="chk"><input type="checkbox" name="news"><span class="k">--newsletter</span></label>
+            <button class="run" type="submit">↵ اجرا <small>Ctrl+Enter</small></button>
+        </form>
+
+        <section class="pane right" aria-label="پیش‌نمایش زنده">
+            <p class="cmt">// پیش‌نمایش زنده‌ی حسابت</p>
+            <pre id="json"></pre>
+            <div class="out" id="out" aria-live="polite"></div>
+        </section>
+    </div>
+
+    <footer class="status"><span>● main</span><span>UTF-8</span><span id="st">آماده</span></footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
