@@ -39,6 +39,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Register | 01 - Step Wizard (3 steps + password strength) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/01-step-wizard/) |
 | Register | 02 - Chat Signup (Conversational) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/02-chat-signup/) |
 | Register | 03 - Live Card (3D membership card) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/03-live-card/) |
+| Register | 04 - Dev Shell (Live JSON preview) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/04-dev-shell/) |
+| Register | 05 - Home Appliances (Animated appliance icons) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/05-home-appliances/) |
+| Register | 06 - Bank Secure (National ID + OTP + session timer) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/06-bank-secure/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -77,6 +80,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Register 01 - Step Wizard
 - [x] Register 02 - Chat Signup
 - [x] Register 03 - Live Card
+- [x] Register 04 - Dev Shell
+- [x] Register 05 - Home Appliances
+- [x] Register 06 - Bank Secure
 - [ ] Pricing
 
 ## 📄 لایسنس
