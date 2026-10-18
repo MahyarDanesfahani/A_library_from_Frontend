@@ -46,6 +46,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Register | 08 - Rocket Launch (Fuel gauge + countdown) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/08-rocket-launch/) |
 | Register | 09 - Cube Steps (3D rotating cube) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/09-cube-steps/) |
 
+
+| Footer | 01 - Hack Vibe (Matrix rain + interactive terminal) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/01-hack-vibe/) |
+| Footer | 02 - Electro Store (Circuit spark + battery coupon) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/02-electro-store/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -89,6 +92,10 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Register 07 - Boarding Ticket
 - [x] Register 08 - Rocket Launch
 - [x] Register 09 - Cube Steps
+
+
+- [x] Footer 01 - Hack Vibe
+- [x] Footer 02 - Electro Store
 - [ ] Pricing
 
 ## 📄 لایسنس
