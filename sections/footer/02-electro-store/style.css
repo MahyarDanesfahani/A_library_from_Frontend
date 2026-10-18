@@ -1,0 +1,70 @@
+:root { --bg: #0a0f1f; --card: #111933; --line: #1f2b52; --txt: #dbe4ff; --dim: #7f8db8; --y: #ffd400; --b: #2d8cff; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; display: flex; flex-direction: column; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: #0d1326; }
+a { color: inherit; text-decoration: none; }
+.demo { flex: 1; min-height: 80vh; display: grid; place-content: center; text-align: center; padding: 2rem; }
+.demo p { margin-top: .8rem; color: var(--dim); }
+
+.ft { position: relative; background: radial-gradient(ellipse at 50% 0%, rgba(45,140,255,.16), transparent 60%), var(--bg); border-top: 1px solid var(--line); }
+.trust { max-width: 1200px; margin: auto; padding: 1.6rem 1.2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.trust div { display: grid; grid-template-columns: auto 1fr; column-gap: .8rem; align-items: center; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.03); transition: .25s; }
+.trust div:hover { border-color: var(--y); transform: translateY(-3px); box-shadow: 0 0 24px rgba(255,212,0,.15); }
+.trust span { grid-row: span 2; display: grid; place-items: center; width: 2.6rem; height: 2.6rem; font-size: 1.3rem; border-radius: 12px; background: rgba(255,212,0,.12); }
+.trust div:hover span { animation: zap .5s; }
+.trust b { font-size: .92rem; } .trust small { color: var(--dim); font-size: .75rem; }
+@keyframes zap { 25% { transform: rotate(-12deg) scale(1.2); } 60% { transform: rotate(8deg) scale(.95); } }
+
+/* برد مدار با جرقه‌ی متحرک */
+.circuit { display: block; width: 100%; height: 40px; }
+.wire, .spark { fill: none; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.wire { stroke: #223261; stroke-width: 3; }
+.spark { stroke: var(--y); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 6 94; filter: drop-shadow(0 0 6px var(--y)); animation: run 3.5s linear infinite; }
+@keyframes run { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+
+.grid { max-width: 1200px; margin: auto; padding: 2rem 1.2rem; display: grid; grid-template-columns: 1.2fr 1.2fr 1fr; gap: 2rem; }
+.logo { display: inline-flex; align-items: center; gap: .5rem; font-size: 1.6rem; font-weight: 900; color: var(--y); }
+.logo svg, #up svg { width: 1.5rem; fill: var(--y); filter: drop-shadow(0 0 6px var(--y)); }
+.logo:hover svg { animation: flick .5s; }
+@keyframes flick { 20%, 60% { opacity: .2; } 40%, 80% { opacity: 1; } }
+.about p { margin: .7rem 0; color: var(--dim); font-size: .88rem; line-height: 2; }
+.contact { list-style: none; display: grid; gap: .4rem; font-size: .86rem; }
+.contact b { font-variant-numeric: tabular-nums; }
+#copy { margin-inline-start: .4rem; padding: .1rem .7rem; border: 1px solid var(--line); border-radius: 8px; background: none; color: var(--b); font: inherit; font-size: .75rem; cursor: pointer; transition: .2s; }
+#copy:hover { border-color: var(--b); background: rgba(45,140,255,.12); }
+.st { display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; background: var(--dim); vertical-align: middle; }
+.st.open { background: #3ddc84; box-shadow: 0 0 10px #3ddc84; animation: pulse 1.6s infinite; }
+@keyframes pulse { 50% { opacity: .4; } }
+
+.links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.links h3, .charge h3 { margin-bottom: .7rem; font-size: 1rem; color: #fff; }
+.links a { position: relative; display: block; width: fit-content; padding: .2rem 0; color: var(--dim); font-size: .88rem; transition: color .2s; }
+.links a::after { content: ""; position: absolute; inset-inline: 0; bottom: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--y), transparent); transform: scaleX(0); transition: transform .3s; }
+.links a:hover { color: var(--y); } .links a:hover::after { transform: scaleX(1); }
+
+/* شارژ باتری کد تخفیف */
+.charge { padding: 1.2rem; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+.charge p { color: var(--dim); font-size: .82rem; margin-bottom: .8rem; }
+.batt { display: flex; gap: .25rem; width: 100%; height: 2rem; padding: .25rem; margin-bottom: .8rem; border: 2px solid #34437a; border-radius: 8px; position: relative; }
+.batt::after { content: ""; position: absolute; inset-inline-start: -8px; top: 30%; width: 6px; height: 40%; border-radius: 2px 0 0 2px; background: #34437a; }
+.batt i { flex: 1; border-radius: 3px; background: #1a2447; transition: background .25s, box-shadow .25s; }
+.batt i.on { background: var(--y); box-shadow: 0 0 10px var(--y); }
+.row { display: flex; gap: .5rem; }
+.row input { flex: 1; min-width: 0; padding: .65rem .9rem; font: inherit; font-size: .88rem; color: var(--txt); background: #0a1124; border: 1px solid var(--line); border-radius: 10px; outline: none; transition: .2s; }
+.row input:focus { border-color: var(--y); box-shadow: 0 0 0 3px rgba(255,212,0,.15); }
+.row input.invalid { border-color: #ff6b81; }
+.row button { padding: .65rem 1rem; border: 0; border-radius: 10px; font: inherit; font-weight: 800; color: #1a1400; cursor: pointer; background: linear-gradient(90deg, var(--y), #ffb300); transition: .2s; white-space: nowrap; }
+.row button:hover:not(:disabled) { box-shadow: 0 0 20px rgba(255,212,0,.5); transform: translateY(-1px); }
+.row button:disabled { opacity: .6; cursor: wait; }
+.msg { margin: .6rem 0 0 !important; min-height: 1.3em; color: #ff8a9b !important; }
+.msg.ok { color: var(--y) !important; font-weight: 700; }
+.msg b { font: 900 1rem "Courier New", monospace; letter-spacing: .1em; padding: .1rem .5rem; border: 1px dashed var(--y); border-radius: 6px; direction: ltr; display: inline-block; }
+
+.bottom { max-width: 1200px; margin: auto; padding: 1rem 1.2rem 1.4rem; display: flex; flex-wrap: wrap; gap: .8rem 1.5rem; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); font-size: .8rem; color: var(--dim); }
+.badges { display: flex; gap: .5rem; }
+.badges em { font-style: normal; padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 8px; font-size: .72rem; }
+#up { display: inline-flex; align-items: center; gap: .3rem; padding: .4rem .9rem; border: 1px solid var(--y); border-radius: 999px; background: transparent; color: var(--y); font: inherit; font-size: .78rem; cursor: pointer; transition: .2s; }
+#up svg { width: 1rem; } #up:hover { background: rgba(255,212,0,.12); } #up:hover svg { animation: flick .5s; }
+
+@media (max-width: 960px) { .trust { grid-template-columns: 1fr 1fr; } .grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .trust { grid-template-columns: 1fr; } .links { grid-template-columns: 1fr 1fr; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

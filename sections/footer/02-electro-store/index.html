@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>فوتر | برق‌یار، فروشگاه لوازم برقی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="demo">
+    <h1>فروشگاه برق‌یار</h1>
+    <p>برای دیدن فوتر اسکرول کن ↓</p>
+</main>
+
+<footer class="ft">
+    <div class="trust">
+        <div><span>🛡</span><b>گارانتی اصالت</b><small>تمام کالاها اورجینال</small></div>
+        <div><span>🚚</span><b>ارسال سریع</b><small>تحویل در همان روز</small></div>
+        <div><span>🔧</span><b>نصب رایگان</b><small>تابلو برق و روشنایی</small></div>
+        <div><span>🎧</span><b>پشتیبانی ۲۴ ساعته</b><small>مشاوره‌ی فنی رایگان</small></div>
+    </div>
+
+    <svg class="circuit" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+        <path class="wire" d="M0 20H220L244 6H470L494 34H760L784 20H1200" />
+        <path class="spark" pathLength="100" d="M0 20H220L244 6H470L494 34H760L784 20H1200" />
+    </svg>
+
+    <div class="grid">
+        <div class="about">
+            <a class="logo" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6z"/></svg>برق‌یار</a>
+            <p>مرجع خرید لوازم برقی ساختمانی، روشنایی، کابل و ابزار برقی با مشاوره‌ی تخصصی.</p>
+            <ul class="contact">
+                <li>📞 <b id="phone" dir="ltr">021-12345678</b> <button type="button" id="copy">کپی</button></li>
+                <li>📍 تهران، خیابان ولیعصر، پلاک ۱۲۰</li>
+                <li><span class="st" id="st"></span> <small id="stt"></small></li>
+            </ul>
+        </div>
+
+        <nav class="links" aria-label="پیوندهای فوتر">
+            <div><h3>دسته‌بندی‌ها</h3>
+                <a href="#">کلید و پریز</a><a href="#">لامپ و روشنایی</a><a href="#">کابل و سیم</a><a href="#">تابلو و فیوز</a><a href="#">ابزار برقی</a></div>
+            <div><h3>خدمات مشتریان</h3>
+                <a href="#">پیگیری سفارش</a><a href="#">گارانتی و بازگشت</a><a href="#">راهنمای خرید</a><a href="#">مشاوره‌ی رایگان</a><a href="#">تماس با ما</a></div>
+        </nav>
+
+        <form class="charge" id="cf" novalidate>
+            <h3>⚡ شارژ کد تخفیف</h3>
+            <p>ایمیلت رو بده تا باتری کد تخفیفت شارژ بشه.</p>
+            <div class="batt" id="batt" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="row">
+                <input id="em" type="email" placeholder="you@mail.com" dir="ltr" aria-label="ایمیل">
+                <button id="chg" type="submit">شارژ کن</button>
+            </div>
+            <p class="msg" id="msg" role="alert"></p>
+        </form>
+    </div>
+
+    <div class="bottom">
+        <span id="cp"></span>
+        <span class="badges"><em>نماد اعتماد</em><em>ساماندهی</em><em>کد اقتصادی</em></span>
+        <button type="button" id="up" aria-label="بازگشت به بالا"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6z"/></svg> رفتن به بالا</button>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
