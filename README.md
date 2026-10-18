@@ -42,6 +42,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Register | 04 - Dev Shell (Live JSON preview) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/04-dev-shell/) |
 | Register | 05 - Home Appliances (Animated appliance icons) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/05-home-appliances/) |
 | Register | 06 - Bank Secure (National ID + OTP + session timer) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/06-bank-secure/) |
+| Register | 07 - Boarding Ticket (Passenger transport) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/07-boarding-ticket/) |
+| Register | 08 - Rocket Launch (Fuel gauge + countdown) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/08-rocket-launch/) |
+| Register | 09 - Cube Steps (3D rotating cube) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/09-cube-steps/) |
 
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
@@ -83,6 +86,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Register 04 - Dev Shell
 - [x] Register 05 - Home Appliances
 - [x] Register 06 - Bank Secure
+- [x] Register 07 - Boarding Ticket
+- [x] Register 08 - Rocket Launch
+- [x] Register 09 - Cube Steps
 - [ ] Pricing
 
 ## 📄 لایسنس
