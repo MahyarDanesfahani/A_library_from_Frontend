@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ثبت‌نام | پرتاب به فضا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars" id="stars" aria-hidden="true"></div>
+<div class="count" id="cd" aria-live="assertive"></div>
+
+<main class="stage">
+    <section class="card" id="card">
+        <form id="f" novalidate autocomplete="off">
+            <h1>ثبت‌نام فضانورد 🧑‍🚀</h1>
+            <p class="sub">فرم را کامل کن تا موشک سوخت‌گیری شود.</p>
+            <label>نام<input name="name" placeholder="نام فضانورد" autocomplete="name"></label>
+            <label>ایمیل<input name="email" type="email" placeholder="astro@space.io" dir="ltr"></label>
+            <label>رمز عبور<input name="password" type="password" placeholder="حداقل ۸ کاراکتر و یک عدد" autocomplete="new-password"></label>
+            <label>تکرار رمز<input name="pass2" type="password" placeholder="دوباره بنویس" autocomplete="new-password"></label>
+
+            <div class="grp"><span>مقصد ماموریت</span>
+                <div class="dest" id="dest" role="radiogroup" aria-label="مقصد">
+                    <button type="button" role="radio" aria-checked="false" data-d="ماه">🌙 ماه</button>
+                    <button type="button" role="radio" aria-checked="false" data-d="مریخ">🔴 مریخ</button>
+                    <button type="button" role="radio" aria-checked="false" data-d="زحل">🪐 زحل</button>
+                </div>
+            </div>
+            <button class="go" id="go" type="submit" disabled>🚀 شروع شمارش معکوس</button>
+        </form>
+
+        <div class="done" id="done" hidden>
+            <h1>ماموریت آغاز شد!</h1>
+            <p id="dmsg"></p>
+            <button class="go" id="again" type="button">پرتاب دوباره</button>
+        </div>
+    </section>
+
+    <aside class="pad">
+        <ul class="mis" id="mis">
+            <li>نام ثبت شد</li><li>ایمیل معتبر است</li><li>رمز امن است</li><li>تکرار رمز یکسان است</li><li>مقصد انتخاب شد</li>
+        </ul>
+        <div class="gauge"><i id="gfill"></i><span id="glabel">سوخت: ۰٪</span></div>
+
+        <div class="rocket" id="rocket" style="--f:0" aria-hidden="true">
+            <svg viewBox="0 0 80 175">
+                <g class="flame"><path d="M30 122 Q40 178 50 122Z" fill="#ffb347"/><path d="M34 122 Q40 160 46 122Z" fill="#fff3b0"/></g>
+                <path d="M40 4C60 28 62 70 58 120H22C18 70 20 28 40 4Z" fill="#f4f6ff" stroke="#9aa7d6" stroke-width="2"/>
+                <circle cx="40" cy="58" r="12" fill="#4da3ff" stroke="#9aa7d6" stroke-width="3"/>
+                <path d="M22 96 6 130l16-10Z" fill="#ff4d6d"/><path d="M58 96l16 34-16-10Z" fill="#ff4d6d"/>
+                <rect x="30" y="120" width="20" height="8" rx="2" fill="#7c86b8"/>
+            </svg>
+        </div>
+        <div class="base"></div>
+    </aside>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

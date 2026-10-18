@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ثبت‌نام | سفرنو، کارت مسافر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <form class="ticket" id="f" novalidate>
+        <div class="main">
+            <header><span class="logo">🧭 سفرنو</span><span class="cls">صدور کارت مسافر</span></header>
+
+            <div class="modes" id="modes" role="radiogroup" aria-label="نوع سفر">
+                <button type="button" role="radio" aria-checked="true" data-e="🚌">🚌 اتوبوس</button>
+                <button type="button" role="radio" aria-checked="false" data-e="🚆">🚆 قطار</button>
+                <button type="button" role="radio" aria-checked="false" data-e="✈️">✈️ هواپیما</button>
+            </div>
+
+            <div class="route">
+                <label>مبدأ<select name="from"></select></label>
+                <button type="button" class="swap" id="swap" aria-label="جابجایی مبدأ و مقصد">⇄</button>
+                <label>مقصد<select name="to"></select></label>
+            </div>
+            <div class="road" aria-hidden="true"><span class="veh" id="veh">🚌</span></div>
+
+            <div class="grid">
+                <label>نام مسافر<input name="name" autocomplete="name" placeholder="نام و نام خانوادگی"></label>
+                <label>کد ملی<input name="nid" inputmode="numeric" maxlength="10" dir="ltr" placeholder="۱۰ رقم"></label>
+                <label>موبایل<input name="phone" inputmode="numeric" maxlength="11" dir="ltr" placeholder="۰۹۱۲۳۴۵۶۷۸۹"></label>
+                <label>رمز عبور<input name="password" type="password" autocomplete="new-password" placeholder="حداقل ۸ کاراکتر و عدد"></label>
+            </div>
+            <label class="check"><input type="checkbox" name="terms"> قوانین و شرایط سفر را می‌پذیرم</label>
+            <p class="msg" id="msg" role="alert"></p>
+            <button class="go" type="submit">صدور کارت مسافر</button>
+        </div>
+
+        <div class="stub" aria-label="پیش‌نمایش کارت">
+            <small>BOARDING PASS</small>
+            <b class="codes" id="codes">THR → MHD</b>
+            <div class="bars" id="bars" aria-hidden="true"></div>
+            <p class="pn" id="pn">نام مسافر</p>
+            <div class="seat"><small>صندلی</small><b id="seat">--</b></div>
+            <div class="stamp" id="stamp">صادر شد ✓</div>
+        </div>
+    </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+:root { --bg: #e8eef7; --ink: #14284b; --muted: #6a7b99; --line: #d5deed; --pri: #0f5fd7; --acc: #ffb020; --err: #d93a49; --ok: #12875a; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; display: grid; place-items: center; padding: 1rem; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--ink); background: radial-gradient(circle at 15% 10%, #cfe0ff, transparent 45%), var(--bg); }
+.wrap { width: min(100%, 940px); }
+
+/* خود بلیت با دو شکاف سوراخ‌دار */
+.ticket { display: grid; grid-template-columns: 1fr 230px; background: #fff; border-radius: 22px; box-shadow: 0 28px 60px rgba(15,95,215,.2); }
+.ticket.shake { animation: shake .4s; }
+@keyframes shake { 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+.main { padding: 1.6rem 1.8rem; display: grid; gap: .9rem; align-content: start; }
+header { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.3rem; font-weight: 900; color: var(--pri); }
+.cls { font-size: .78rem; padding: .2rem .7rem; border-radius: 999px; background: #fff4d6; color: #8a5a00; font-weight: 700; }
+
+.modes { display: flex; gap: .5rem; }
+.modes button { flex: 1; padding: .55rem; border: 2px solid var(--line); border-radius: 12px; background: #fff; font: inherit; font-size: .85rem; cursor: pointer; transition: .2s; }
+.modes button:hover { transform: translateY(-2px); }
+.modes [aria-checked="true"] { border-color: var(--pri); background: #eaf2ff; color: var(--pri); font-weight: 800; }
+
+label { display: grid; gap: .3rem; font-size: .8rem; font-weight: 600; }
+select, input:not([type=checkbox]) { width: 100%; padding: .7rem .9rem; font: inherit; color: var(--ink); background: #f5f8ff; border: 2px solid transparent; border-radius: 12px; outline: none; transition: .2s; }
+select:focus, input:not([type=checkbox]):focus { border-color: var(--pri); background: #fff; }
+input.invalid, select.invalid { border-color: var(--err) !important; }
+.route { display: grid; grid-template-columns: 1fr auto 1fr; gap: .6rem; align-items: end; }
+.swap { width: 2.6rem; height: 2.6rem; margin-bottom: .1rem; border: 0; border-radius: 50%; background: var(--pri); color: #fff; font-size: 1.1rem; cursor: pointer; transition: transform .4s cubic-bezier(.3,1.6,.5,1); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+
+/* مسیر و وسیله‌ی در حال حرکت */
+.road { position: relative; height: 1.8rem; border-bottom: 3px dashed var(--line); }
+.veh { position: absolute; bottom: -4px; right: 0; font-size: 1.5rem; animation: go 6s linear infinite; }
+.road.rev .veh { animation-direction: reverse; transform: scaleX(-1); }
+@keyframes go { to { right: calc(100% - 1.8rem); } }
+.veh.plane { animation-name: fly; }
+@keyframes fly { 0% { right: 0; bottom: -4px; } 50% { bottom: 8px; } 100% { right: calc(100% - 1.8rem); bottom: -4px; } }
+
+.check { display: flex; align-items: center; gap: .5rem; font-weight: 500; }
+.msg { min-height: 1.2em; font-size: .82rem; color: var(--err); } .msg.ok { color: var(--ok); }
+.go { padding: .85rem; border: 0; border-radius: 12px; font: inherit; font-weight: 800; color: #fff; cursor: pointer; background: linear-gradient(90deg, var(--pri), #3a85ff); box-shadow: 0 10px 22px rgba(15,95,215,.3); transition: transform .15s; }
+.go:hover { transform: translateY(-2px); }
+
+/* قسمت کنده‌شونده‌ی بلیت */
+.stub { position: relative; padding: 1.4rem 1.2rem; display: grid; gap: .7rem; align-content: start; justify-items: center; text-align: center; color: #fff; background: linear-gradient(160deg, var(--pri), #0a3d94); border-radius: 22px 0 0 22px; border-inline-start: 3px dashed rgba(255,255,255,.55); overflow: hidden; }
+.stub::before, .stub::after { content: ""; position: absolute; inset-inline-end: -14px; width: 28px; height: 28px; border-radius: 50%; background: var(--bg); }
+.stub::before { top: -14px; } .stub::after { bottom: -14px; }
+.stub small { font-size: .68rem; letter-spacing: .2em; opacity: .8; }
+.codes { font: 900 1.4rem "Courier New", monospace; letter-spacing: .05em; direction: ltr; }
+.bars { display: flex; align-items: stretch; height: 3.2rem; padding: .4rem .6rem; border-radius: 8px; background: #fff; direction: ltr; }
+.bars i { display: block; background: #111; margin-inline-end: 2px; }
+.pn { font-size: .95rem; font-weight: 700; min-height: 1.6em; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.seat { padding: .4rem 1.2rem; border-radius: 12px; background: rgba(255,255,255,.15); } .seat b { display: block; font: 900 1.5rem "Courier New", monospace; }
+.stamp { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.4rem; font-weight: 900; color: #fff; background: rgba(8,50,130,.6); opacity: 0; transform: rotate(-14deg) scale(2); pointer-events: none; }
+.ticket.issued .stamp { animation: stamp .6s cubic-bezier(.3,1.5,.5,1) forwards; }
+@keyframes stamp { to { opacity: 1; transform: rotate(-14deg) scale(1); } }
+
+@media (max-width: 760px) {
+    .ticket { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; }
+    .stub { border-radius: 0 0 22px 22px; border-inline-start: 0; border-top: 3px dashed rgba(255,255,255,.55); }
+    .stub::before, .stub::after { inset-inline-end: auto; top: -14px; } .stub::before { inset-inline-start: -14px; } .stub::after { inset-inline-end: -14px; bottom: auto; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .ticket.issued .stamp { opacity: 1; transform: rotate(-14deg); } }

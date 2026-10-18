@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ثبت‌نام | مکعب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blobs" aria-hidden="true"><i></i><i></i></div>
+<main class="scene">
+    <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+    <form class="cube" id="f" novalidate autocomplete="off">
+        <section class="face f0">
+            <h1>سلام! 👋</h1><p class="sub">اول خودت را معرفی کن</p>
+            <label>نام و نام خانوادگی<input name="name" autocomplete="name" placeholder="مثلاً علی محمدی"></label>
+            <label>ایمیل<input name="email" type="email" autocomplete="email" placeholder="you@mail.com" dir="ltr"></label>
+            <p class="msg" role="alert"></p>
+            <div class="act"><button type="button" class="nx" data-go="1">ادامه ←</button></div>
+        </section>
+
+        <section class="face f1" inert>
+            <h1>راه ارتباطی 📱</h1><p class="sub">برای اطلاع‌رسانی‌های مهم</p>
+            <label>شماره موبایل<input name="phone" inputmode="numeric" maxlength="11" placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr"></label>
+            <label>شهر<select name="city"><option value="">انتخاب کنید</option><option>تهران</option><option>مشهد</option><option>اصفهان</option><option>شیراز</option><option>تبریز</option><option>سایر</option></select></label>
+            <p class="msg" role="alert"></p>
+            <div class="act"><button type="button" class="bk" data-go="0">→ قبلی</button><button type="button" class="nx" data-go="2">ادامه ←</button></div>
+        </section>
+
+        <section class="face f2" inert>
+            <h1>قفل امن 🔐</h1><p class="sub">یک رمز قوی انتخاب کن</p>
+            <label>رمز عبور<input name="password" type="password" autocomplete="new-password" placeholder="حداقل ۸ کاراکتر و عدد"></label>
+            <div class="meter" id="meter" data-s="0"><i></i><i></i><i></i><i></i></div>
+            <label>تکرار رمز<input name="pass2" type="password" autocomplete="new-password" placeholder="دوباره بنویس"></label>
+            <label class="check"><input type="checkbox" name="terms"> قوانین را می‌پذیرم</label>
+            <p class="msg" role="alert"></p>
+            <div class="act"><button type="button" class="bk" data-go="1">→ قبلی</button><button type="submit" class="nx">ساخت حساب ✓</button></div>
+        </section>
+
+        <section class="face f3" inert>
+            <div class="tick">✓</div>
+            <h1 id="hello">خوش آمدی!</h1>
+            <p class="sub" id="sum"></p>
+            <div class="act"><button type="button" class="bk" id="again">شروع دوباره</button></div>
+        </section>
+    </form>
+    <div class="floor" aria-hidden="true"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
