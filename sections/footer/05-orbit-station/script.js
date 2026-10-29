@@ -1,0 +1,1 @@
+document.querySelector('#form').onsubmit=e=>{e.preventDefault();document.querySelector('#msg').textContent='اتصال برقرار شد؛ پیام بعدی از مدار می‌آید ✦';e.target.reset()};document.querySelector('#top').onclick=()=>scrollTo({top:0,behavior:'smooth'});
