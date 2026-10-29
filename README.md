@@ -1,102 +1,158 @@
 # 🎨 Frontend UI Library
 
-مجموعه‌ای از بخش‌های آماده‌ی رابط کاربری با طرح‌های مختلف، قابل کپی و استفاده در هر پروژه.
-A collection of ready-to-use front-end sections with multiple designs.
+مجموعه‌ای از کامپوننت‌ها و بخش‌های آماده‌ی رابط کاربری با طراحی‌های متنوع، تعاملی و قابل استفاده در پروژه‌های مختلف.
+
+> نمونه‌های مستقل HTML، CSS و JavaScript برای الهام گرفتن، یادگیری و استفاده‌ی سریع در پروژه‌های فرانت‌اند.
 
 ## ✨ ویژگی‌ها
-- هر طرح مستقل است؛ فقط پوشه را کپی کنید
-- پشتیبانی از فارسی و RTL
+
+- نمونه‌های مستقل و قابل کپی
+- بدون نیاز به فریم‌ورک یا نصب وابستگی
 - طراحی ریسپانسیو
+- پشتیبانی از رابط‌های فارسی و راست‌به‌چپ در نمونه‌های مربوط
+- انیمیشن‌ها و تعاملات کاربردی با JavaScript خالص
 
-## 📦 بخش‌ها
+## 📁 ساختار پروژه
 
-| بخش | طرح | تکنولوژی | دمو |
-|-----|-----|----------|-----|
-| Login | 01 - Glassmorphism | HTML/CSS/JS | [مشاهده](https://USERNAME.github.io/REPO-NAME/sections/login/01-glassmorphism/) |
-| Login | 02 - Minimal (Dark/Light) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/02-minimal/) |
-| Login | 03 - Neon Circle (Login + Sign up) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/03-neon-circle/) |
-| Login | 04 - Lamp Pull (Interactive) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/04-lamp-pull/) |
-| Login | 05 - Radial Ticks (Progress ring) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/05-radial-ticks/) |
-| Login | 06 - Terminal (Typed prompts) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/06-terminal/) |
-| Login | 07 - Constellation (Interactive particles) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/07-constellation/) |
-| Login | 08 - Girls' accessories | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/08-Girls'_accessories/) |
-| Login | 09 - Girls' accessories2 | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/09-Girls'_accessories2/) |
-| Login | 10 - Simple and minimalist | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/10-Simple_and_minimalist/) |
-| Login | 11 - Library_related | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/11-Library_related/) |
-| Login | 12 - Dark_Shell | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/12-Dark_Shell/) |
-| Navbar | 01 - Matrix Academy (Announcement bar + Ctrl+K search) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/01-matrix-academy/) |
-| Navbar | 02 - Amber Lamp Shop (Sticky + cart badge) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/02-amber-lamp-shop/) |
-| Navbar | 03 - Home Market (Search bar + wishlist + cart) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/03-home-market/) |
-| Navbar | 04 - Book Haven (Reading progress bar) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/04-book-haven/) |
-| Navbar | 05 - Auto Parts (Vehicle selector) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/05-auto-parts/) |
-| Navbar | 06 - Restaurant Shop (Open status + live cart) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/06-restaurant-shop/) |
-| Navbar | 07 - Sticker Pop (Peel + emoji burst) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/07-sticker-pop/) |
-| Navbar | 08 - Neon Dock (Magnification) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/08-neon-dock/) |
-| Navbar | 09 - Neon Sign (Power switch + color picker) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/09-neon-sign/) |
-| Navbar | 10 - Video Hub (Mood accent + smart search) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/10-video-hub/) |
-| Navbar | 11 - Building Icons (Animated SVG icons + role switch) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/11-building-icons/) |
-| Navbar | 12 - Liquid Blob (Gooey indicator) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/12-liquid-blob/) |
-| Register | 01 - Step Wizard (3 steps + password strength) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/01-step-wizard/) |
-| Register | 02 - Chat Signup (Conversational) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/02-chat-signup/) |
-| Register | 03 - Live Card (3D membership card) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/03-live-card/) |
-| Register | 04 - Dev Shell (Live JSON preview) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/04-dev-shell/) |
-| Register | 05 - Home Appliances (Animated appliance icons) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/05-home-appliances/) |
-| Register | 06 - Bank Secure (National ID + OTP + session timer) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/06-bank-secure/) |
-| Register | 07 - Boarding Ticket (Passenger transport) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/07-boarding-ticket/) |
-| Register | 08 - Rocket Launch (Fuel gauge + countdown) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/08-rocket-launch/) |
-| Register | 09 - Cube Steps (3D rotating cube) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/09-cube-steps/) |
+```text
+sections/
+├── footer/    # فوترهای تعاملی
+├── login/     # فرم‌ها و صفحات ورود
+├── navbar/    # نوارهای پیمایش و هدرها
+└── register/  # فرم‌ها و صفحات ثبت‌نام
+```
 
+هر نمونه در پوشه‌ی جداگانه قرار دارد و معمولاً شامل `index.html`، `style.css` و `script.js` است.
 
-| Footer | 01 - Hack Vibe (Matrix rain + interactive terminal) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/01-hack-vibe/) |
-| Footer | 02 - Electro Store (Circuit spark + battery coupon) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/02-electro-store/) |
-## 🚀 نحوه‌ی استفاده
-1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
-2. فایل `index.html` را در مرورگر باز کنید
-3. ظاهر و رنگ‌ها را از طریق متغیرهای `:root` در `style.css` تغییر دهید
+## 🧩 نمونه‌ها
 
-## 🗺️ نقشه‌ی راه
-- [x] Login 01 - Glassmorphism
-- [x] Login 02 - Minimal
-- [x] Login 03 - Neon Circle
-- [x] Login 04 - Lamp Pull
-- [x] Login 05 - Radial Ticks
-- [x] Login 06 - Terminal
-- [x] Login 07 - Constellation
-- [x] Login 08 - Girls' accessories
-- [x] Login 09 - Girls' accessories2
-- [x] Login 10 - Simple and minimalist
-- [x] Login 11 - Library_related
-- [x] Login 12 - Dark_Shell
+### Login
 
-- [ ] نسخه‌ی React و Vue
-- [x] Navbar 01 - Matrix Academy
-- [x] Navbar 02 - Amber Lamp Shop
-- [x] Navbar 03 - Home Market
-- [x] Navbar 04 - Book Haven
-- [x] Navbar 05 - Auto Parts
-- [x] Navbar 06 - Restaurant Shop
-- [x] Navbar 07 - Sticker Pop
-- [x] Navbar 08 - Neon Dock
-- [x] Navbar 09 - Neon Sign
-- [x] Navbar 10 - Video Hub
-- [x] Navbar 11 - Building Icons
-- [x] Navbar 12 - Liquid Blob
+| نمونه | توضیح | دمو |
+|---|---|---|
+| Glassmorphism | فرم ورود شیشه‌ای | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/01-glassmorphism/) |
+| Minimal | طراحی مینیمال روشن/تیره | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/02-minimal/) |
+| Neon Circle | ورود و ثبت‌نام با افکت نئونی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/03-neon-circle/) |
+| Lamp Pull | فرم تعاملی با چراغ | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/04-lamp-pull/) |
+| Radial Ticks | حلقه‌ی پیشرفت شعاعی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/05-radial-ticks/) |
+| Terminal | فرم با پرامپت‌های تایپ‌شونده | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/06-terminal/) |
+| Constellation | ذرات و خطوط تعاملی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/07-constellation/) |
+| Girls' Accessories | طراحی فروشگاهی اکسسوری | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/08-Girls%27_accessories/) |
+| Girls' Accessories 2 | نسخه‌ی دوم طراحی اکسسوری | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/09-Girls%27_accessories2/) |
+| Simple and Minimalist | طراحی ساده و مینیمال | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/10-Simple_and_minimalist/) |
+| Library Related | طراحی با حال‌وهوای کتابخانه | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/11-Library_related/) |
+| Dark Shell | فرم ورود با پوسته‌ی تیره | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/12-Dark_Shell/) |
 
+### Navbar
 
-- [x] Register 01 - Step Wizard
-- [x] Register 02 - Chat Signup
-- [x] Register 03 - Live Card
-- [x] Register 04 - Dev Shell
-- [x] Register 05 - Home Appliances
-- [x] Register 06 - Bank Secure
-- [x] Register 07 - Boarding Ticket
-- [x] Register 08 - Rocket Launch
-- [x] Register 09 - Cube Steps
+| نمونه | توضیح | دمو |
+|---|---|---|
+| Home Market | فروشگاه خانگی با جست‌وجو و سبد خرید | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/01-home-market/) |
+| Amber Lamp Shop | فروشگاه چراغ با نشانگر سبد خرید | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/02-amber-lamp-shop/) |
+| Matrix Academy | نوار اطلاع‌رسانی و جست‌وجوی Ctrl+K | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/03-matrix-academy/) |
+| Book Haven | نوار پیشرفت مطالعه | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/04-book-haven/) |
+| Auto Parts | انتخاب‌گر خودرو | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/05-auto-parts/) |
+| Restaurant Shop | وضعیت باز بودن و سبد خرید زنده | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/06-restaurant-shop/) |
+| Sticker Pop | افکت جدا شدن برچسب و انفجار ایموجی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/07-sticker-pop/) |
+| Neon Dock | بزرگ‌نمایی آیتم‌های نوار | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/08-neon-dock/) |
+| Neon Sign | کلید روشن/خاموش و انتخاب رنگ | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/09-neon-sign/) |
+| Video Hub | جست‌وجوی هوشمند و تغییر حال‌وهوا | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/10-Video%20Hub/) |
+| Building Icons | آیکن‌های SVG متحرک و تغییر نقش | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/11-Building%20Icons/) |
+| Building Icons 2 | نسخه‌ی دوم نوار آیکن‌ها | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/12-Building%20Icons/) |
+
+### Register
+
+| نمونه | توضیح | دمو |
+|---|---|---|
+| Step Wizard | فرم چندمرحله‌ای | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/1-Step%20Wizard/) |
+| Chat Signup | ثبت‌نام مکالمه‌ای | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/2-Chat%20Signup/) |
+| Live Card | کارت عضویت سه‌بعدی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/3-Live%20Card/) |
+| Dev Shell | پیش‌نمایش زنده‌ی JSON | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/04-dev-shell/) |
+| Home Appliances | آیکن‌های متحرک لوازم خانگی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/05-home-appliances/) |
+| Bank Secure | شناسه ملی، OTP و تایمر نشست | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/06-bank-secure/) |
+| Boarding Ticket | فرم اطلاعات مسافر | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/07-Boarding_Ticket/) |
+| Rocket Launch | سنجش سوخت و شمارش معکوس | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/08-Rocket_Launch/) |
+| Cube Steps | فرم چندمرحله‌ای با مکعب سه‌بعدی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/09-Cube_Steps/) |
+
+### Footer
+
+| نمونه | توضیح | دمو |
+|---|---|---|
+| Hack Vibe | فوتر گلیچی با بارش ماتریکس و ترمینال تعاملی | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/01-hack-vibe/) |
+| Electro Store | فوتر فروشگاهی با افکت مدار و کوپن | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/02-electro-store/) |
+
+تمام نمونه‌ها با HTML، CSS و JavaScript خالص ساخته شده‌اند.
+
+## 🚀 استفاده
+
+1. مخزن را کلون کنید یا پوشه‌ی نمونه‌ی موردنظر را دانلود کنید.
+2. وارد پوشه‌ی نمونه شوید.
+3. فایل `index.html` را مستقیماً در مرورگر باز کنید.
+4. رنگ‌ها و ظاهر را از متغیرهای `:root` در `style.css` شخصی‌سازی کنید.
+
+```bash
+git clone https://github.com/mahyardanesfahani/A_library_from_Frontend.git
+cd A_library_from_Frontend
+```
 
 
-- [x] Footer 01 - Hack Vibe
-- [x] Footer 02 - Electro Store
-- [ ] Pricing
 
-## 📄 لایسنس
-MIT
+# 🎨 Frontend UI Library — English
+
+A collection of ready-to-use, interactive frontend sections built with vanilla HTML, CSS, and JavaScript.
+
+## ✨ Features
+
+- Independent, copy-ready examples
+- No framework or dependency installation required
+- Responsive layouts
+- Persian and RTL support where applicable
+- Interactive animations with vanilla JavaScript
+
+## 📁 Project Structure
+
+```text
+sections/
+├── footer/    # Interactive footers
+├── login/     # Login forms and pages
+├── navbar/    # Navigation bars and headers
+└── register/  # Registration forms and pages
+```
+
+Each example lives in its own folder and usually contains `index.html`, `style.css`, and `script.js`.
+
+## 🧩 Available Sections
+
+| Category | Examples | Demo |
+|---|---:|---|
+| Login | 12 designs | [Browse login examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/) |
+| Navbar | 12 designs | [Browse navbar examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/) |
+| Register | 12 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
+| Footer | 2 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
+
+All examples are built with vanilla HTML, CSS, and JavaScript. Use the individual demo links in the Persian section above to open a specific design.
+
+## 🚀 Usage
+
+1. Clone the repository or download the example you need.
+2. Open the example folder.
+3. Open `index.html` directly in your browser.
+4. Customize colors and styling through the `:root` variables in `style.css`.
+
+```bash
+git clone https://github.com/mahyardanesfahani/A_library_from_Frontend.git
+cd A_library_from_Frontend
+```
+
+## 🗺️ Project Status
+
+- [x] 12 Login examples
+- [x] 12 Navbar examples
+- [x] 12 Register examples
+- [x] 2 Footer examples
+- [ ] React and Vue versions
+- [ ] Pricing section
+
+## 📄 License
+
+This project is released under the [MIT License](LICENSE).
