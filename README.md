@@ -100,3 +100,75 @@ A collection of ready-to-use front-end sections with multiple designs.
 
 ## 📄 لایسنس
 MIT
+
+---
+
+# 🎨 Frontend UI Library — English
+
+A collection of ready-to-use, interactive frontend sections built with vanilla HTML, CSS, and JavaScript.
+
+## ✨ Features
+
+- Independent, copy-ready examples
+- No framework or dependency installation required
+- Responsive layouts
+- Persian and RTL support where applicable
+- Interactive animations with vanilla JavaScript
+
+## 📁 Project Structure
+
+```text
+sections/
+├── footer/    # Interactive footers
+├── login/     # Login forms and pages
+├── navbar/    # Navigation bars and headers
+└── register/  # Registration forms and pages
+```
+
+Each example lives in its own folder and usually contains `index.html`, `style.css`, and `script.js`.
+
+## 🧩 Available Sections
+
+| Category | Examples | Demo |
+|---|---:|---|
+| Login | 12 designs | [Browse login examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/) |
+| Navbar | 12 designs | [Browse navbar examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/) |
+| Register | 12 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
+| Footer | 5 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
+
+All examples are built with vanilla HTML, CSS, and JavaScript. Use the individual demo links in the Persian section above to open a specific design.
+
+## 🚀 Usage
+
+1. Clone the repository or download the example you need.
+2. Open the example folder.
+3. Open `index.html` directly in your browser.
+4. Customize colors and styling through the `:root` variables in `style.css`.
+
+```bash
+git clone https://github.com/mahyardanesfahani/A_library_from_Frontend.git
+cd A_library_from_Frontend
+```
+
+## 🗺️ Project Status
+
+- [x] 12 Login examples
+- [x] 12 Navbar examples
+- [x] 12 Register examples
+- [x] 5 Footer examples
+- [ ] React and Vue versions
+- [ ] Pricing section
+
+### Footer concepts
+
+- **01 — HACK//VIBE:** فوتر ترمینالی با باران کد، درخت مسیرها و کنسول تعاملی.
+- **02 — برق‌یار:** فوتر فروشگاهی با مدار الکتریکی، نوار اعتماد و شارژ کد تخفیف.
+- **03 — اتاق شکوفه:** فوتر گل‌فروشی با حال‌وهوای باغ، پیشنهاد گل روز و عضویت در «نامه‌ای از باغ».
+- **04 — رادیو نیمه‌شب:** فوتر روایی با موج رادیویی، کنترل فرکانس و پخش نمایشی زنده.
+- **05 — ایستگاه مدار:** فوتر فضایی با ستاره‌ها، مدارهای چرخان و فرم اتصال خدمه.
+
+هر کانسپت در پوشه‌ی جداگانه‌ی `sections/footer/` قرار دارد و با باز کردن `index.html` قابل مشاهده است.
+
+## 📄 License
+
+This project is released under the [MIT License](LICENSE).
