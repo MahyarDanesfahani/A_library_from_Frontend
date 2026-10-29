@@ -45,8 +45,6 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Register | 07 - Boarding Ticket (Passenger transport) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/07-boarding-ticket/) |
 | Register | 08 - Rocket Launch (Fuel gauge + countdown) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/08-rocket-launch/) |
 | Register | 09 - Cube Steps (3D rotating cube) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/09-cube-steps/) |
-
-
 | Footer | 01 - Hack Vibe (Matrix rain + interactive terminal) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/01-hack-vibe/) |
 | Footer | 02 - Electro Store (Circuit spark + battery coupon) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/02-electro-store/) |
 ## 🚀 نحوه‌ی استفاده
