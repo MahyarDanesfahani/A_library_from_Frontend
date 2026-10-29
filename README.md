@@ -47,6 +47,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Register | 09 - Cube Steps (3D rotating cube) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/09-cube-steps/) |
 | Footer | 01 - Hack Vibe (Matrix rain + interactive terminal) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/01-hack-vibe/) |
 | Footer | 02 - Electro Store (Circuit spark + battery coupon) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/02-electro-store/) |
+| Footer | 03 - Bloom Room (Flower of the day + garden letter) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/03-bloom-room/) |
+| Footer | 04 - Night Radio (Live wave + frequency dial) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/04-night-radio/) |
+| Footer | 05 - Orbit Station (Space footer + crew connection) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/05-orbit-station/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -94,6 +97,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 
 - [x] Footer 01 - Hack Vibe
 - [x] Footer 02 - Electro Store
+- [x] Footer 03 - Bloom Room
+- [x] Footer 04 - Night Radio
+- [x] Footer 05 - Orbit Station
 - [ ] Pricing
 
 ## 📄 لایسنس
@@ -103,7 +109,7 @@ MIT
 
 # 🎨 Frontend UI Library — English
 
-A collection of ready-to-use, interactive frontend sections built with vanilla HTML, CSS, and JavaScript.
+A collection of ready-to-use frontend sections with multiple designs, built with vanilla HTML, CSS, and JavaScript.
 
 ## ✨ Features
 
@@ -123,7 +129,7 @@ sections/
 └── register/  # Registration forms and pages
 ```
 
-Each example lives in its own folder and usually contains `index.html`, `style.css`, and `script.js`.
+Each example usually contains `index.html`, `style.css`, and `script.js`.
 
 ## 🧩 Available Sections
 
@@ -131,15 +137,13 @@ Each example lives in its own folder and usually contains `index.html`, `style.c
 |---|---:|---|
 | Login | 12 designs | [Browse login examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/) |
 | Navbar | 12 designs | [Browse navbar examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/) |
-| Register | 12 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
+| Register | 9 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
 | Footer | 5 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
-
-All examples are built with vanilla HTML, CSS, and JavaScript. Use the individual demo links in the Persian section above to open a specific design.
 
 ## 🚀 Usage
 
-1. Clone the repository or download the example you need.
-2. Open the example folder.
+1. Clone the repository or download the example folder.
+2. Open the folder you want to use.
 3. Open `index.html` directly in your browser.
 4. Customize colors and styling through the `:root` variables in `style.css`.
 
@@ -152,20 +156,10 @@ cd A_library_from_Frontend
 
 - [x] 12 Login examples
 - [x] 12 Navbar examples
-- [x] 12 Register examples
+- [x] 9 Register examples
 - [x] 5 Footer examples
 - [ ] React and Vue versions
 - [ ] Pricing section
-
-### Footer concepts
-
-- **01 — HACK//VIBE:** فوتر ترمینالی با باران کد، درخت مسیرها و کنسول تعاملی.
-- **02 — برق‌یار:** فوتر فروشگاهی با مدار الکتریکی، نوار اعتماد و شارژ کد تخفیف.
-- **03 — اتاق شکوفه:** فوتر گل‌فروشی با حال‌وهوای باغ، پیشنهاد گل روز و عضویت در «نامه‌ای از باغ».
-- **04 — رادیو نیمه‌شب:** فوتر روایی با موج رادیویی، کنترل فرکانس و پخش نمایشی زنده.
-- **05 — ایستگاه مدار:** فوتر فضایی با ستاره‌ها، مدارهای چرخان و فرم اتصال خدمه.
-
-هر کانسپت در پوشه‌ی جداگانه‌ی `sections/footer/` قرار دارد و با باز کردن `index.html` قابل مشاهده است.
 
 ## 📄 License
 
