@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>فوتر | حساب‌یار، حسابداری</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="demo">
+    <h1>حساب‌یار، نرم‌افزار و خدمات حسابداری</h1>
+    <p>برای دیدن فوتر اسکرول کن ↓</p>
+</main>
+
+<footer class="ft" id="ft">
+    <div class="stats" id="stats">
+        <div><b data-n="12000" data-s="+">۰</b><span>کسب‌وکار فعال</span></div>
+        <div><b data-n="2500000">۰</b><span>فاکتور صادرشده در ماه</span></div>
+        <div><b data-n="99.9" data-d="1" data-s="٪">۰</b><span>در دسترس بودن سرویس</span></div>
+        <div><b data-n="15">۰</b><span>سال تجربه‌ی مالی</span></div>
+    </div>
+
+    <div class="in">
+        <div class="top">
+            <div class="about">
+                <a class="logo" href="#"><span class="mark">▤</span>حساب‌یار</a>
+                <p>نرم‌افزار حسابداری، انبارداری و حقوق و دستمزد، همراه با خدمات دفترداری و مشاوره‌ی مالیاتی.</p>
+                <div class="chips"><span>🔒 رمزنگاری بانکی</span><span>☁ پشتیبان‌گیری روزانه</span><span>✓ مطابق قوانین مالیاتی</span></div>
+
+                <svg class="spark" viewBox="0 0 300 70" aria-label="نمودار رشد" role="img">
+                    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19c37d" stop-opacity=".4"/><stop offset="1" stop-color="#19c37d" stop-opacity="0"/></linearGradient></defs>
+                    <path class="area" d="M0 62 L40 54 L80 58 L120 40 L160 44 L200 26 L240 30 L300 8 V70 H0Z" fill="url(#g)"/>
+                    <path class="line" pathLength="100" d="M0 62 L40 54 L80 58 L120 40 L160 44 L200 26 L240 30 L300 8"/>
+                </svg>
+            </div>
+
+            <nav class="links" aria-label="پیوندهای فوتر">
+                <div><h3>نرم‌افزارها</h3><a href="#">حسابداری</a><a href="#">انبارداری</a><a href="#">حقوق و دستمزد</a><a href="#">فاکتور آنلاین</a></div>
+                <div><h3>خدمات</h3><a href="#">دفترداری</a><a href="#">مشاوره‌ی مالیاتی</a><a href="#">حسابرسی</a><a href="#">تنظیم اظهارنامه</a></div>
+                <div><h3>منابع</h3><a href="#">آموزش‌ها</a><a href="#">وبلاگ مالی</a><a href="#">پرسش‌های متداول</a><a href="#">تماس با ما</a></div>
+            </nav>
+
+            <div class="side">
+                <form class="vat" id="vat" novalidate>
+                    <h3>🧾 ماشین‌حساب مالیات</h3>
+                    <label>مبلغ (تومان)<input id="amt" inputmode="numeric" placeholder="مثلاً ۱٬۰۰۰٬۰۰۰" dir="ltr"></label>
+                    <div class="row">
+                        <label>نرخ (٪)<input id="rate" inputmode="decimal" value="10" dir="ltr"></label>
+                        <div class="mode" id="mode" role="radiogroup" aria-label="حالت محاسبه">
+                            <button type="button" role="radio" aria-checked="true" data-m="add">+ افزودن</button>
+                            <button type="button" role="radio" aria-checked="false" data-m="ext">− استخراج</button>
+                        </div>
+                    </div>
+                    <dl>
+                        <div><dt>مبلغ پایه</dt><dd id="base">-</dd></div>
+                        <div><dt>مالیات</dt><dd id="tax">-</dd></div>
+                        <div class="tot"><dt>مبلغ نهایی</dt><dd id="total">-</dd></div>
+                    </dl>
+                    <small>نمونه‌ی آموزشی است؛ نرخ را طبق قانون جاری تنظیم کن و برای کار رسمی با حسابدار مشورت کن.</small>
+                </form>
+
+                <form class="news" id="news" novalidate>
+                    <h3>📅 تقویم مهلت‌های مالی</h3>
+                    <div class="nr"><input id="em" type="email" placeholder="you@company.com" dir="ltr" aria-label="ایمیل"><button type="submit">ارسال</button></div>
+                    <p id="msg" role="alert"></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <span id="cp"></span>
+            <span class="legal"><a href="#">شرایط استفاده</a><a href="#">حریم خصوصی</a><a href="#">قرارداد خدمات</a></span>
+            <button type="button" id="up">↑ بالا</button>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
