@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>فوتر | رنگین‌رزین، رنگ و رزین</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="demo">
+    <h1>فروشگاه رنگین‌رزین 🎨</h1>
+    <p>برای دیدن فوتر اسکرول کن ↓ (توی فوتر یه رنگ انتخاب کن!)</p>
+</main>
+
+<footer class="ft" id="ft" style="--c:#ff4d6d">
+    <div class="drips" id="drips" aria-hidden="true"></div>
+
+    <div class="in">
+        <div class="top">
+            <div class="about">
+                <a class="logo" href="#"><span class="blob"></span>رنگین‌رزین</a>
+                <p>رنگ ساختمانی و صنعتی، رزین اپوکسی، پیگمنت و گلیتر برای هنرمندان و پیمانکاران.</p>
+
+                <div class="picker">
+                    <span>رنگ امروز: <b id="cname">گل‌سرخ</b></span>
+                    <div class="sw" id="sw" role="radiogroup" aria-label="انتخاب رنگ"></div>
+                    <button type="button" class="hex" id="hex" dir="ltr"><b id="hx">#FF4D6D</b> <small>کپی کد رنگ</small></button>
+                </div>
+            </div>
+
+            <nav class="links" aria-label="پیوندهای فوتر">
+                <div><h3>محصولات</h3><a href="#">رنگ ساختمانی</a><a href="#">رنگ صنعتی</a><a href="#">رزین اپوکسی</a><a href="#">پیگمنت و گلیتر</a><a href="#">ابزار نقاشی</a></div>
+                <div><h3>خدمات</h3><a href="#">مشاوره‌ی رنگ</a><a href="#">ترکیب رنگ سفارشی</a><a href="#">آموزش رزین‌کاری</a><a href="#">گارانتی و بازگشت</a><a href="#">تماس با ما</a></div>
+            </nav>
+
+            <form class="calc" id="calc" novalidate>
+                <h3>🧮 چند لیتر رنگ لازم دارم؟</h3>
+                <label>مساحت دیوار (متر مربع)<input id="area" inputmode="decimal" placeholder="مثلاً ۴۵" dir="ltr"></label>
+                <label>تعداد دست رنگ
+                    <select id="coats"><option value="1">۱ دست</option><option value="2" selected>۲ دست</option><option value="3">۳ دست</option></select>
+                </label>
+                <output id="res" aria-live="polite">مساحت را وارد کن</output>
+                <small>محاسبه با پوشش فرضی ≈ ۱۰ مترمربع در هر لیتر است؛ مقدار دقیق را از برچسب محصول بگیر.</small>
+            </form>
+        </div>
+
+        <div class="resin" id="resin" aria-hidden="true"></div>
+
+        <div class="bottom">
+            <span id="cp"></span>
+            <span class="soc"><a href="#">اینستاگرام</a><a href="#">تلگرام</a><a href="#">آپارات</a></span>
+            <button type="button" id="up">↑ بالا</button>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

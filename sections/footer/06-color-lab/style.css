@@ -1,0 +1,56 @@
+:root { --bg: #0f0f15; --txt: #ecebf5; --dim: #8f8ea8; --line: #25243a; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; display: flex; flex-direction: column; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: #17171f; }
+a { color: inherit; text-decoration: none; }
+.demo { flex: 1; min-height: 80vh; display: grid; place-content: center; text-align: center; padding: 2rem; } .demo p { margin-top: .8rem; color: var(--dim); }
+
+.ft { --c: #ff4d6d; position: relative; padding-top: 3.6rem; background: radial-gradient(ellipse at 20% 0%, color-mix(in srgb, var(--c) 18%, transparent), transparent 55%), var(--bg); transition: background .5s; }
+/* قطره‌های رنگ از لبه‌ی بالا */
+.drips { position: absolute; inset: 0 0 auto 0; height: 4.2rem; pointer-events: none; overflow: hidden; }
+.drips::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 14px; background: linear-gradient(90deg, #ff4d6d, #ffb703, #06d6a0, #118ab2, #8338ec, #f15bb5); }
+.dr { position: absolute; top: 8px; width: 20px; height: 20px; border-radius: 0 0 10px 10px; background: var(--k); animation: drip var(--d) ease-in-out infinite alternate; }
+@keyframes drip { to { height: var(--h); } }
+
+.in { max-width: 1200px; margin: auto; padding: 1.5rem 1.2rem 1rem; }
+.top { display: grid; grid-template-columns: 1.2fr 1.1fr 1fr; gap: 2rem; }
+.logo { display: inline-flex; align-items: center; gap: .6rem; font-size: 1.6rem; font-weight: 900; }
+.blob { width: 1.6rem; height: 1.6rem; background: var(--c); animation: morph 6s ease-in-out infinite; box-shadow: 0 0 20px var(--c); transition: background .4s; }
+@keyframes morph { 0%, 100% { border-radius: 50%; } 33% { border-radius: 60% 40% 55% 45%; } 66% { border-radius: 40% 60% 45% 55%; } }
+.about p { margin: .8rem 0; color: var(--dim); font-size: .88rem; line-height: 2; }
+
+.picker { display: grid; gap: .6rem; padding: 1rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.03); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.picker span { font-size: .85rem; color: var(--dim); } .picker b { color: var(--c); }
+.sw { display: flex; gap: .55rem; }
+.sw button { width: 2.2rem; height: 2.2rem; border: 3px solid transparent; border-radius: 50%; background: var(--k); cursor: pointer; transition: transform .2s; box-shadow: inset 0 -3px 6px rgba(0,0,0,.25), inset 0 3px 6px rgba(255,255,255,.35); }
+.sw button:hover { transform: translateY(-3px) scale(1.1); }
+.sw button[aria-checked="true"] { border-color: #fff; transform: scale(1.15); }
+.hex { display: flex; justify-content: space-between; align-items: center; padding: .5rem .8rem; border: 1px dashed var(--c); border-radius: 10px; background: color-mix(in srgb, var(--c) 10%, transparent); color: var(--txt); font: inherit; cursor: pointer; transition: .2s; }
+.hex b { font: 800 .9rem "Courier New", monospace; } .hex small { color: var(--dim); font-size: .72rem; }
+.hex:hover { background: color-mix(in srgb, var(--c) 22%, transparent); }
+
+.links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.links h3, .calc h3 { margin-bottom: .6rem; font-size: 1rem; }
+.links a { display: block; width: fit-content; padding: .2rem 0; color: var(--dim); font-size: .88rem; transition: .2s; }
+.links a:hover { color: var(--c); transform: translateX(-4px); }
+
+.calc { display: grid; gap: .6rem; padding: 1.1rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.04); align-content: start; }
+.calc label { display: grid; gap: .25rem; font-size: .8rem; color: var(--dim); }
+.calc input, .calc select { width: 100%; padding: .6rem .8rem; font: inherit; font-size: .9rem; color: var(--txt); background: #0b0b11; border: 1px solid var(--line); border-radius: 10px; outline: none; transition: .2s; }
+.calc input:focus, .calc select:focus { border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 25%, transparent); }
+output { display: block; padding: .6rem .8rem; border-radius: 10px; background: color-mix(in srgb, var(--c) 14%, transparent); font-size: .88rem; font-weight: 700; min-height: 2.6rem; }
+.calc small { color: var(--dim); font-size: .7rem; line-height: 1.8; }
+
+/* باند رزین با حباب‌های بالارونده */
+.resin { position: relative; height: 3rem; margin: 1.6rem 0 1rem; border-radius: 16px; overflow: hidden; background: linear-gradient(180deg, color-mix(in srgb, var(--c) 40%, transparent), color-mix(in srgb, var(--c) 10%, transparent)); box-shadow: inset 0 3px 10px rgba(255,255,255,.3), inset 0 -4px 12px rgba(0,0,0,.35); transition: background .5s; }
+.resin::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.28) 48%, transparent 66%); transform: translateX(120%); animation: shine 6s ease-in-out infinite; }
+@keyframes shine { 40%, 100% { transform: translateX(-120%); } }
+.bub { position: absolute; bottom: -12px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,.15)); animation: rise var(--d) linear infinite; }
+@keyframes rise { to { transform: translateY(-4.5rem); opacity: 0; } }
+
+.bottom { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; padding-top: .8rem; border-top: 1px solid var(--line); font-size: .8rem; color: var(--dim); }
+.soc { display: flex; gap: 1rem; } .soc a:hover { color: var(--c); }
+#up { padding: .35rem 1rem; border: 1px solid var(--c); border-radius: 999px; background: none; color: var(--c); font: inherit; font-size: .78rem; cursor: pointer; transition: .2s; }
+#up:hover { background: var(--c); color: #111; }
+
+@media (max-width: 960px) { .top { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .dr { height: var(--h); } }
