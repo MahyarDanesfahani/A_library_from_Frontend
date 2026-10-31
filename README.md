@@ -45,13 +45,14 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Register | 07 - Boarding Ticket (Passenger transport) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/07-boarding-ticket/) |
 | Register | 08 - Rocket Launch (Fuel gauge + countdown) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/08-rocket-launch/) |
 | Register | 09 - Cube Steps (3D rotating cube) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/09-cube-steps/) |
-
-
 | Footer | 01 - Hack Vibe (Matrix rain + interactive terminal) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/01-hack-vibe/) |
 | Footer | 02 - Electro Store (Circuit spark + battery coupon) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/02-electro-store/) |
 | Footer | 03 - Bloom Room (Flower of the day + garden letter) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/03-bloom-room/) |
 | Footer | 04 - Night Radio (Live wave + frequency dial) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/04-night-radio/) |
 | Footer | 05 - Orbit Station (Space footer + crew connection) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/05-orbit-station/) |
+| Footer | 06 - Paint & Resin (Color picker + resin bubbles) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/03-paint-resin/) |
+| Footer | 07 - Accounting (Count-up stats + VAT calculator) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/04-accounting/) |
+| Footer | 08 - Plant Shop (Growing plant) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/05-plant-shop/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -102,6 +103,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Footer 03 - Bloom Room
 - [x] Footer 04 - Night Radio
 - [x] Footer 05 - Orbit Station
+- [x] Footer 06 - Paint & Resin
+- [x] Footer 07 - Accounting
+- [x] Footer 08 - Plant Shop
 - [ ] Pricing
 
 ## 📄 لایسنس
@@ -140,7 +144,7 @@ Each example usually contains `index.html`, `style.css`, and `script.js`.
 | Login | 12 designs | [Browse login examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/) |
 | Navbar | 12 designs | [Browse navbar examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/) |
 | Register | 9 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
-| Footer | 5 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
+| Footer | 8 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
 
 ## 🚀 Usage
 
@@ -159,7 +163,7 @@ cd A_library_from_Frontend
 - [x] 12 Login examples
 - [x] 12 Navbar examples
 - [x] 9 Register examples
-- [x] 5 Footer examples
+- [x] 8 Footer examples
 - [ ] React and Vue versions
 - [ ] Pricing section
 
