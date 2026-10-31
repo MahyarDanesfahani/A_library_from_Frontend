@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>فوتر | سبزینه، گیاهان آپارتمانی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="demo">
+    <h1>گیاه‌فروشی سبزینه 🌿</h1>
+    <p>برای دیدن فوتر اسکرول کن ↓ (به گیاه آب بده!)</p>
+</main>
+
+<footer class="ft">
+    <div class="grass" id="grass" aria-hidden="true"></div>
+
+    <div class="in">
+        <div class="top">
+            <div class="grow">
+                <svg id="plant" class="s0" viewBox="0 0 120 170" role="img" aria-label="گیاه در حال رشد">
+                    <g class="stem"><path d="M60 128V36" stroke="#3a9d5d" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+                    <g class="leaf l1"><path d="M60 102C40 102 28 90 26 76 44 78 58 88 60 102Z" fill="#4cbf74"/></g>
+                    <g class="leaf l2"><path d="M60 84C80 84 92 72 94 58 76 60 62 70 60 84Z" fill="#3fae68"/></g>
+                    <g class="leaf l3"><path d="M60 64C44 64 34 54 33 42 48 44 59 52 60 64Z" fill="#57cf80"/></g>
+                    <g class="bloom">
+                        <ellipse cx="60" cy="19" rx="7" ry="12" fill="#ff7aa8"/>
+                        <ellipse cx="60" cy="19" rx="7" ry="12" fill="#ff7aa8" transform="rotate(60 60 33)"/>
+                        <ellipse cx="60" cy="19" rx="7" ry="12" fill="#ff7aa8" transform="rotate(120 60 33)"/>
+                        <ellipse cx="60" cy="19" rx="7" ry="12" fill="#ff93b8" transform="rotate(180 60 33)"/>
+                        <ellipse cx="60" cy="19" rx="7" ry="12" fill="#ff93b8" transform="rotate(240 60 33)"/>
+                        <ellipse cx="60" cy="19" rx="7" ry="12" fill="#ff93b8" transform="rotate(300 60 33)"/>
+                        <circle cx="60" cy="33" r="7" fill="#ffd23f"/>
+                    </g>
+                    <path d="M36 126H84L78 164H42Z" fill="#c8693a"/><rect x="33" y="122" width="54" height="9" rx="3" fill="#d9794a"/>
+                </svg>
+                <div class="water">
+                    <p id="stage">دانه‌ای در خاک 🌱</p>
+                    <div class="pg" id="pg"><i></i><i></i><i></i><i></i></div>
+                    <button type="button" id="wbtn">💧 آب بده</button>
+                </div>
+            </div>
+
+            <div class="mid">
+                <a class="logo" href="#">🌿 سبزینه</a>
+                <p>گیاهان آپارتمانی، کاکتوس، ساکولنت و گل‌های فصلی با مشاوره‌ی نگهداری.</p>
+                <nav class="links" aria-label="پیوندهای فوتر">
+                    <div><h3>گیاهان</h3><a href="#">آپارتمانی</a><a href="#">کاکتوس و ساکولنت</a><a href="#">گل‌های فصلی</a><a href="#">درختچه</a></div>
+                    <div><h3>خدمات</h3><a href="#">گلدان و خاک</a><a href="#">کود و سم</a><a href="#">گلدان‌آرایی</a><a href="#">مشاوره‌ی نگهداری</a></div>
+                </nav>
+            </div>
+
+            <div class="side">
+                <div class="tip">
+                    <h3>🌤 نکته‌ی امروز</h3>
+                    <p id="tip"></p>
+                    <button type="button" id="next">نکته‌ی بعدی ↻</button>
+                </div>
+                <form class="seed" id="seed" novalidate>
+                    <h3>🌱 یک دانه بکار</h3>
+                    <p>ایمیلت رو بده تا هر هفته نکته‌های نگهداری برات بیاد.</p>
+                    <div class="sr"><input id="em" type="email" placeholder="you@mail.com" dir="ltr" aria-label="ایمیل"><button type="submit">بکار</button></div>
+                    <p class="msg" id="msg" role="alert"></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <span id="cp"></span>
+            <span class="soc"><a href="#">اینستاگرام</a><a href="#">تلگرام</a><a href="#">آپارات</a></span>
+            <button type="button" id="up">↑ بالا</button>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

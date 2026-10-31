@@ -1,0 +1,64 @@
+:root { --bg: #f6f3e8; --soil: #3a2a1d; --g1: #2f8f55; --g2: #6fcf8f; --txt: #26382c; --dim: #6b7d70; --line: #dcd8c4; --pink: #ff7aa8; --err: #d9475c; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; display: flex; flex-direction: column; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: #fffdf5; }
+a { color: inherit; text-decoration: none; }
+.demo { flex: 1; min-height: 80vh; display: grid; place-content: center; text-align: center; padding: 2rem; } .demo p { margin-top: .8rem; color: var(--dim); }
+
+.ft { position: relative; padding-top: 2.6rem; background: linear-gradient(#e9f4dd, var(--bg) 40%); }
+/* علف‌های تکان‌خوردن لبه‌ی بالا */
+.grass { position: absolute; inset: 0 0 auto 0; height: 36px; overflow: hidden; pointer-events: none; }
+.blade { position: absolute; top: 0; width: 14px; background: linear-gradient(var(--g1), var(--g2)); clip-path: polygon(50% 100%, 100% 0, 0 0); transform-origin: top; animation: sway var(--d) ease-in-out infinite alternate; }
+@keyframes sway { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
+.grass::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 8px; background: var(--g1); }
+
+.in { max-width: 1200px; margin: auto; padding: 1.4rem 1.2rem 1rem; }
+.top { display: grid; grid-template-columns: .9fr 1.3fr 1fr; gap: 2rem; align-items: start; }
+
+/* گیاه در حال رشد */
+.grow { display: grid; justify-items: center; gap: .6rem; }
+#plant { width: 150px; overflow: visible; }
+.stem { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(0.02); transition: transform 1s cubic-bezier(.3,1.2,.5,1); }
+.leaf { transform-box: fill-box; transform: scale(0); transition: transform .8s cubic-bezier(.3,1.7,.5,1) .3s; }
+.l1, .l3 { transform-origin: 100% 100%; } .l2 { transform-origin: 0 100%; }
+.bloom { transform-box: fill-box; transform-origin: center; transform: scale(0) rotate(-120deg); transition: transform 1s cubic-bezier(.3,1.6,.5,1) .4s; }
+.s1 .stem { transform: scaleY(.3); }
+.s2 .stem { transform: scaleY(.6); } .s2 .l1 { transform: scale(1); }
+.s3 .stem, .s4 .stem { transform: scaleY(1); } .s3 .leaf, .s4 .leaf { transform: scale(1); }
+.s4 .bloom { transform: scale(1) rotate(0); }
+.s4 { animation: bob 3s ease-in-out infinite; transform-origin: 50% 100%; } @keyframes bob { 50% { transform: rotate(2deg); } }
+.water { display: grid; justify-items: center; gap: .4rem; }
+#stage { font-size: .88rem; font-weight: 700; min-height: 1.5em; }
+.pg { display: flex; gap: .35rem; } .pg i { width: 1.4rem; height: 6px; border-radius: 6px; background: var(--line); transition: background .4s; } .pg i.on { background: var(--g1); }
+#wbtn { padding: .5rem 1.2rem; border: 0; border-radius: 999px; background: #3b9de8; color: #fff; font: inherit; font-weight: 800; cursor: pointer; box-shadow: 0 6px 16px rgba(59,157,232,.35); transition: transform .15s; }
+#wbtn:hover { transform: translateY(-2px); }
+.drop { position: fixed; z-index: 20; width: 8px; height: 12px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; background: #5bb5f0; pointer-events: none; animation: fall .7s ease-in forwards; }
+@keyframes fall { to { transform: translateY(var(--dy)); opacity: .2; } }
+
+.logo { font-size: 1.6rem; font-weight: 900; color: var(--g1); }
+.mid > p { margin: .6rem 0 1rem; color: var(--dim); font-size: .88rem; line-height: 2; }
+.links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.links h3, .tip h3, .seed h3 { margin-bottom: .5rem; font-size: 1rem; }
+.links a { display: block; width: fit-content; padding: .2rem 0; color: var(--dim); font-size: .88rem; transition: .2s; }
+.links a:hover { color: var(--g1); transform: translateX(-4px); }
+
+.side { display: grid; gap: 1rem; }
+.tip, .seed { padding: 1.1rem; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 6px 18px rgba(60,90,60,.07); }
+.tip p { min-height: 4.2em; font-size: .86rem; line-height: 2; color: var(--dim); }
+.tip button { margin-top: .4rem; padding: .3rem .9rem; border: 1px solid var(--g1); border-radius: 999px; background: none; color: var(--g1); font: inherit; font-size: .78rem; cursor: pointer; transition: .2s; }
+.tip button:hover { background: var(--g1); color: #fff; }
+.seed > p { color: var(--dim); font-size: .82rem; margin-bottom: .6rem; }
+.sr { display: flex; gap: .5rem; }
+.sr input { flex: 1; min-width: 0; padding: .6rem .8rem; font: inherit; font-size: .88rem; color: var(--txt); background: #faf8ef; border: 1.5px solid var(--line); border-radius: 12px; outline: none; transition: .2s; }
+.sr input:focus { border-color: var(--g1); box-shadow: 0 0 0 3px rgba(47,143,85,.15); }
+.sr input.invalid { border-color: var(--err); }
+.sr button { padding: .6rem 1.1rem; border: 0; border-radius: 12px; background: var(--g1); color: #fff; font: inherit; font-weight: 800; cursor: pointer; transition: .2s; }
+.sr button:hover { background: #26784a; }
+.msg { margin: .5rem 0 0 !important; min-height: 1.3em; font-size: .8rem !important; color: var(--err) !important; } .msg.ok { color: var(--g1) !important; font-weight: 700; }
+
+.bottom { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; margin-top: 1.6rem; padding-top: .9rem; border-top: 1px solid var(--line); font-size: .8rem; color: var(--dim); }
+.soc { display: flex; gap: 1rem; } .soc a:hover { color: var(--g1); }
+#up { padding: .35rem 1rem; border: 1px solid var(--g1); border-radius: 999px; background: none; color: var(--g1); font: inherit; font-size: .78rem; cursor: pointer; transition: .2s; }
+#up:hover { background: var(--g1); color: #fff; }
+
+@media (max-width: 960px) { .top { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
