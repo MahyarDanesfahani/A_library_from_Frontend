@@ -1,0 +1,36 @@
+:root { --bg: #f4f6fc; --card: #fff; --ink: #1b2240; --muted: #6b7596; --line: #e3e8f5; --pri: #4f5bff; --ok: #14a363; --no: #c3c9dd; --gold: #ffb020; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--ink); background: linear-gradient(#e9edff, var(--bg) 40%); }
+.wrap { max-width: 980px; margin: auto; padding: 2.2rem 1rem 3rem; }
+header { text-align: center; } h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 900; } header p { margin: .4rem 0 1.2rem; color: var(--muted); }
+.ctrl { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: center; margin-bottom: 1.4rem; }
+.bill { display: inline-flex; padding: .25rem; border: 1px solid var(--line); border-radius: 999px; background: #fff; }
+.bill button { padding: .5rem 1.2rem; border: 0; border-radius: 999px; background: none; color: var(--muted); font: inherit; font-size: .88rem; cursor: pointer; transition: .25s; }
+.bill [aria-checked="true"] { background: var(--pri); color: #fff; font-weight: 800; box-shadow: 0 6px 16px rgba(79,91,255,.35); }
+.bill em { font-style: normal; font-size: .68rem; padding: .1rem .5rem; margin-inline-start: .3rem; border-radius: 99px; background: var(--gold); color: #3a2a00; }
+.sw { display: inline-flex; align-items: center; gap: .6rem; font-size: .88rem; cursor: pointer; }
+.sw input { position: absolute; opacity: 0; }
+.knob { position: relative; width: 2.8rem; height: 1.5rem; border-radius: 99px; background: var(--no); transition: .25s; }
+.knob::after { content: ""; position: absolute; top: 3px; inset-inline-start: 3px; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25); transition: .25s; }
+.sw input:checked + .knob { background: var(--pri); } .sw input:checked + .knob::after { inset-inline-start: calc(100% - 1.1rem - 3px); }
+.sw input:focus-visible + .knob { outline: 2px solid var(--pri); outline-offset: 3px; }
+
+.scroll { overflow-x: auto; border-radius: 22px; box-shadow: 0 20px 50px rgba(60,70,160,.14); background: var(--card); }
+table { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; }
+th, td { padding: .8rem 1rem; text-align: center; border-bottom: 1px solid var(--line); transition: background .2s; }
+th:first-child, td:first-child { text-align: start; width: 34%; }
+thead th { position: sticky; top: 0; z-index: 2; background: var(--card); padding-block: 1.4rem 1.1rem; vertical-align: top; }
+thead .nm { font-size: 1.1rem; font-weight: 900; }
+thead .pr { display: block; margin: .3rem 0; font-size: 1.5rem; font-weight: 900; font-variant-numeric: tabular-nums; } thead .pr small { font-size: .7rem; color: var(--muted); font-weight: 400; }
+thead .cta { padding: .5rem 1.2rem; border: 2px solid var(--pri); border-radius: 12px; background: #fff; color: var(--pri); font: inherit; font-weight: 800; font-size: .85rem; cursor: pointer; transition: .2s; }
+thead .cta:hover, thead .rec .cta { background: var(--pri); color: #fff; }
+.rec { position: relative; } thead .rec::before { content: "محبوب‌ترین"; position: absolute; top: 0; inset-inline: 0; padding: .1rem; background: var(--gold); color: #3a2a00; font-size: .7rem; font-weight: 800; }
+.cat th { text-align: start; background: #f0f3ff; font-size: .82rem; color: var(--pri); padding-block: .55rem; cursor: pointer; user-select: none; }
+.cat button { all: unset; display: flex; align-items: center; gap: .5rem; width: 100%; cursor: pointer; } .cat button::before { content: "▾"; transition: transform .25s; } .cat.closed button::before { transform: rotate(90deg); }
+.cat button:focus-visible { outline: 2px solid var(--pri); outline-offset: 4px; }
+tr.row.hide, tr.row.dsame { display: none; }
+.y { color: var(--ok); font-weight: 900; } .n { color: var(--no); }
+td.hl, th.hl { background: rgba(79,91,255,.07); }
+.rec-col { background: rgba(255,176,32,.06); }
+.msg { min-height: 1.5em; margin-top: 1rem; text-align: center; color: var(--pri); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

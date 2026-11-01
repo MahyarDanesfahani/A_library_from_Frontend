@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>قیمت‌گذاری | جدول مقایسه‌ی پلن‌ها</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <h1>پلن‌ها را کنار هم مقایسه کن</h1>
+        <p>موس را روی هر ستون ببر تا برجسته شود.</p>
+        <div class="ctrl">
+            <div class="bill" id="bill" role="radiogroup" aria-label="دوره">
+                <button type="button" role="radio" aria-checked="true" data-y="0">ماهانه</button>
+                <button type="button" role="radio" aria-checked="false" data-y="1">سالانه <em>۲۰٪ تخفیف</em></button>
+            </div>
+            <label class="sw"><input type="checkbox" id="diff"><span class="knob"></span> فقط تفاوت‌ها</label>
+        </div>
+    </header>
+
+    <div class="scroll"><table id="tbl" aria-label="مقایسه‌ی پلن‌ها"></table></div>
+    <p class="msg" id="msg" role="status"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
