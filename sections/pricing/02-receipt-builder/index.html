@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>قیمت‌گذاری | پکیج خودت را بساز</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <section class="build">
+        <h1>پکیج خودت رو بساز 🧩</h1>
+        <p class="sub">هر چی لازم داری انتخاب کن؛ رسید کنارش زنده حساب میشه.</p>
+
+        <div class="blk">
+            <span class="t">دوره‌ی پرداخت</span>
+            <div class="seg" id="bill" role="radiogroup" aria-label="دوره">
+                <button type="button" role="radio" aria-checked="true" data-y="0">ماهانه</button>
+                <button type="button" role="radio" aria-checked="false" data-y="1">سالانه <em>۲۰٪ تخفیف</em></button>
+            </div>
+        </div>
+
+        <div class="blk">
+            <span class="t">تعداد کاربر</span>
+            <div class="step"><button type="button" id="minus" aria-label="کمتر">−</button><output id="uc">۳</output><button type="button" id="plus" aria-label="بیشتر">+</button><small>۴۹٬۰۰۰ تومان برای هر نفر</small></div>
+        </div>
+
+        <div class="blk">
+            <span class="t">فضای ذخیره‌سازی</span>
+            <div class="seg" id="store" role="radiogroup" aria-label="فضا">
+                <button type="button" role="radio" aria-checked="true" data-v="10">۱۰ گیگ</button>
+                <button type="button" role="radio" aria-checked="false" data-v="50">۵۰ گیگ</button>
+                <button type="button" role="radio" aria-checked="false" data-v="200">۲۰۰ گیگ</button>
+            </div>
+        </div>
+
+        <div class="blk">
+            <span class="t">پشتیبانی</span>
+            <div class="seg" id="sup" role="radiogroup" aria-label="پشتیبانی">
+                <button type="button" role="radio" aria-checked="true" data-v="email">ایمیل</button>
+                <button type="button" role="radio" aria-checked="false" data-v="chat">چت زنده</button>
+                <button type="button" role="radio" aria-checked="false" data-v="phone">تلفنی ۲۴ ساعته</button>
+            </div>
+        </div>
+
+        <div class="blk">
+            <span class="t">افزونه‌ها</span>
+            <div class="adds" id="adds">
+                <label><input type="checkbox" data-k="report"><span>📊 گزارش‌های پیشرفته</span></label>
+                <label><input type="checkbox" data-k="api"><span>🔌 دسترسی API</span></label>
+                <label><input type="checkbox" data-k="brand"><span>🎨 برند سفارشی</span></label>
+                <label><input type="checkbox" data-k="sso"><span>🔐 ورود یکپارچه SSO</span></label>
+            </div>
+        </div>
+    </section>
+
+    <aside class="paper-wrap">
+        <div class="paper" id="paper">
+            <div class="head"><b>🧾 رسید پکیج</b><small id="meta"></small></div>
+            <ul class="lines" id="lines"></ul>
+            <div class="sum">
+                <div><span>جمع ماهانه</span><b id="sub"></b></div>
+                <div id="dRow" hidden><span>تخفیف سالانه (۲۰٪)</span><b id="dis"></b></div>
+                <div class="tot"><span id="tl">قابل پرداخت</span><b id="tot"></b></div>
+                <small id="eq"></small>
+            </div>
+            <div class="bars" id="bars" aria-hidden="true"></div>
+            <button type="button" class="pay" id="pay">پرداخت</button>
+            <div class="stamp" id="stamp">پرداخت شد ✓</div>
+        </div>
+    </aside>
+</main>
+<script src="script.js"></script>
+</body>
+</html>mmi.
