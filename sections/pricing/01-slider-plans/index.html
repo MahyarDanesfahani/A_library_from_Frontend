@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>قیمت‌گذاری | پلن هوشمند با اسلایدر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <h1>پلنی که اندازه‌ی تیم توئه</h1>
+        <p>تعداد اعضای تیم رو تنظیم کن؛ پلن مناسب خودش انتخاب میشه.</p>
+        <div class="bill" id="bill" role="radiogroup" aria-label="دوره‌ی پرداخت">
+            <button type="button" role="radio" aria-checked="true" data-y="0">ماهانه</button>
+            <button type="button" role="radio" aria-checked="false" data-y="1">سالانه <em>۲۰٪ تخفیف</em></button>
+        </div>
+    </header>
+
+    <section class="slider">
+        <label for="team">تعداد اعضای تیم: <b id="tv">۵</b> نفر</label>
+        <input type="range" id="team" min="1" max="100" value="5" style="--p:4%">
+        <div class="ticks"><span>۱</span><span>۲۵</span><span>۵۰</span><span>۷۵</span><span>۱۰۰</span></div>
+    </section>
+
+    <section class="plans" id="plans">
+        <article class="plan" data-p="free">
+            <h2>رایگان</h2><p class="for">برای شروع و آزمایش</p>
+            <div class="price"><b class="amt">۰</b><span>تومان / ماه</span></div>
+            <p class="per"></p><p class="yr"></p>
+            <ul><li>تا ۳ عضو</li><li>۵ پروژه</li><li>۱ گیگابایت فضا</li><li>پشتیبانی ایمیلی</li></ul>
+            <button type="button" class="pick">انتخاب پلن</button>
+        </article>
+        <article class="plan" data-p="pro">
+            <h2>حرفه‌ای</h2><p class="for">برای تیم‌های در حال رشد</p>
+            <div class="price"><b class="amt">۰</b><span>تومان / ماه</span></div>
+            <p class="per"></p><p class="yr"></p>
+            <ul><li>تا ۲۵ عضو</li><li>پروژه‌ی نامحدود</li><li>۵۰ گیگابایت فضا</li><li>چت زنده</li><li>نقش‌ها و دسترسی‌ها</li></ul>
+            <button type="button" class="pick">انتخاب پلن</button>
+        </article>
+        <article class="plan" data-p="biz">
+            <h2>سازمانی</h2><p class="for">برای شرکت‌ها و سازمان‌ها</p>
+            <div class="price"><b class="amt">۰</b><span>تومان / ماه</span></div>
+            <p class="per"></p><p class="yr"></p>
+            <ul><li>تا ۱۰۰ عضو</li><li>ورود یکپارچه (SSO)</li><li>۵۰۰ گیگابایت فضا</li><li>مدیر حساب اختصاصی</li><li>گزارش ممیزی</li></ul>
+            <button type="button" class="pick">انتخاب پلن</button>
+        </article>
+    </section>
+    <p class="msg" id="msg" role="status"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
