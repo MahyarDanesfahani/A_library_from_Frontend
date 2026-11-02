@@ -1,0 +1,40 @@
+:root { --bg: #0e1424; --txt: #eaf0ff; --dim: #8f9cc4; --line: #26325a; --gold: #ffc857; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: radial-gradient(circle at 80% 0%, rgba(66,133,255,.22), transparent 45%), radial-gradient(circle at 5% 80%, rgba(255,200,87,.1), transparent 40%), var(--bg); }
+.wrap { max-width: 960px; margin: auto; padding: 2.4rem 1.2rem 3rem; text-align: center; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; } header p { margin: .5rem 0 1.2rem; color: var(--dim); font-size: .9rem; }
+.bill { display: inline-flex; padding: .25rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.04); }
+.bill button { padding: .5rem 1.2rem; border: 0; border-radius: 999px; background: none; color: var(--dim); font: inherit; font-size: .88rem; cursor: pointer; transition: .25s; }
+.bill [aria-checked="true"] { background: var(--gold); color: #3a2a00; font-weight: 800; }
+.bill em { font-style: normal; font-size: .68rem; padding: .1rem .5rem; margin-inline-start: .3rem; border-radius: 99px; background: #fff; color: #3a2a00; }
+
+/* پله‌ها: ارتفاع هر پله از قبلی بیشتر است */
+.stairs { position: relative; display: flex; align-items: flex-end; gap: 6px; height: 330px; margin: 1.6rem 0; padding-top: 70px; direction: rtl; }
+.step { position: relative; flex: 1; height: var(--h); display: grid; align-content: start; gap: .2rem; padding: .9rem .4rem; border: 0; border-radius: 14px 14px 0 0; color: #fff; font: inherit; cursor: pointer;
+    background: linear-gradient(hsl(var(--hue) 78% 58%), hsl(var(--hue) 70% 36%)); box-shadow: inset 0 3px 0 rgba(255,255,255,.35), 0 10px 30px rgba(0,0,0,.35); transition: filter .25s, transform .25s; }
+.step:hover { filter: brightness(1.15); transform: translateY(-4px); }
+.step[aria-checked="true"] { filter: brightness(1.25) saturate(1.2); box-shadow: inset 0 3px 0 rgba(255,255,255,.5), 0 0 40px hsl(var(--hue) 90% 60% / .55); }
+.step:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.step b { font-size: 1rem; } .step span { font-size: .78rem; opacity: .9; font-variant-numeric: tabular-nums; }
+.step::before { content: attr(data-n); position: absolute; bottom: .6rem; inset-inline: 0; font-size: 2.6rem; font-weight: 900; opacity: .18; }
+
+/* قهرمان که بین پله‌ها می‌پرد */
+.hero { position: absolute; top: 0; left: 0; z-index: 3; width: 56px; height: 56px; display: grid; place-items: center; font-size: 2.3rem; pointer-events: none; transition: transform .65s cubic-bezier(.35,.1,.25,1); }
+.hero span { display: block; filter: drop-shadow(0 6px 8px rgba(0,0,0,.5)); }
+.hero.hop span { animation: hop .65s ease-out; }
+@keyframes hop { 40% { transform: translateY(-34px) rotate(-10deg); } 100% { transform: none; } }
+
+.detail { text-align: start; padding: 1.5rem; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.04); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.dh { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: center; padding-bottom: 1rem; border-bottom: 1px dashed var(--line); }
+.dh h2 { font-size: 1.5rem; } .dh p { color: var(--dim); font-size: .86rem; margin-top: .2rem; }
+.dp { text-align: end; } .dp b { font-size: 2.2rem; font-weight: 900; font-variant-numeric: tabular-nums; } .dp span { color: var(--dim); font-size: .8rem; margin-inline-start: .3rem; } .dp small { display: block; min-height: 1.3em; color: var(--gold); font-size: .78rem; }
+#df { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1.5rem; margin: 1.1rem 0; font-size: .9rem; }
+#df li { animation: in .4s both; animation-delay: calc(var(--i) * 60ms); }
+#df li::before { content: "✓"; display: inline-grid; place-items: center; width: 1.3rem; height: 1.3rem; margin-inline-end: .5rem; border-radius: 50%; background: hsl(var(--hue) 70% 45% / .35); color: #fff; font-size: .72rem; }
+@keyframes in { from { opacity: 0; transform: translateY(8px); } }
+.cta { width: 100%; padding: .9rem; border: 0; border-radius: 14px; color: #fff; font: inherit; font-weight: 800; cursor: pointer; background: linear-gradient(90deg, hsl(var(--hue) 78% 55%), hsl(calc(var(--hue) + 25) 80% 55%)); box-shadow: 0 10px 26px hsl(var(--hue) 80% 50% / .4); transition: transform .15s; }
+.cta:hover { transform: translateY(-2px); }
+.msg { min-height: 1.5em; margin-top: 1.2rem; color: var(--gold); font-weight: 700; }
+
+@media (max-width: 640px) { .stairs { height: 290px; gap: 4px; } .step b { font-size: .85rem; } .step span { font-size: .68rem; } #df { grid-template-columns: 1fr; } .hero { font-size: 1.8rem; width: 44px; height: 44px; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

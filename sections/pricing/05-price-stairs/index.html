@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>قیمت‌گذاری | پله‌های رشد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <h1>با هر پله، یه سطح بالاتر 🪜</h1>
+        <p>روی پله‌ها بزن تا قهرمان بالا برود. (با فلش‌های کیبورد هم کار می‌کند)</p>
+        <div class="bill" id="bill" role="radiogroup" aria-label="دوره">
+            <button type="button" role="radio" aria-checked="true" data-y="0">ماهانه</button>
+            <button type="button" role="radio" aria-checked="false" data-y="1">سالانه <em>۲۰٪ تخفیف</em></button>
+        </div>
+    </header>
+
+    <section class="stairs" id="stairs" role="radiogroup" aria-label="انتخاب پلن">
+        <div class="hero" id="hero" aria-hidden="true"><span id="hi">🚶</span></div>
+    </section>
+
+    <section class="detail" id="detail" aria-live="polite">
+        <div class="dh">
+            <div><h2 id="dn"></h2><p id="dd"></p></div>
+            <div class="dp"><b id="dprice"></b><span id="dunit"></span><small id="dyear"></small></div>
+        </div>
+        <ul id="df"></ul>
+        <button type="button" class="cta" id="cta"></button>
+    </section>
+    <p class="msg" id="msg" role="status"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
