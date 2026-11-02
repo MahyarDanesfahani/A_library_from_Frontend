@@ -56,6 +56,8 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Pricing | 01 - Slider Plans (Auto-recommended tier) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/01-slider-plans/) |
 | Pricing | 02 - Receipt Builder (Live itemized receipt) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/02-receipt-builder/) |
 | Pricing | 03 - Compare Table (Column highlight + differences only) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/03-compare-table/) |
+| Pricing | 04 - Metal Tiers (3D tilt + flip details) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/04-metal-tiers/) |
+| Pricing | 05 - Price Stairs (Climbing hero) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/05-price-stairs/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -114,7 +116,8 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Pricing 01 - Slider Plans
 - [x] Pricing 02 - Receipt Builder
 - [x] Pricing 03 - Compare Table
-
+- [x] Pricing 04 -  Metal Tiers
+- [x] Pricing 05 - Price Stairs
 ## 📄 لایسنس
 MIT
 
@@ -152,7 +155,7 @@ Each example usually contains `index.html`, `style.css`, and `script.js`.
 | Navbar | 12 designs | [Browse navbar examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/) |
 | Register | 9 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
 | Footer | 8 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
-| Pricing | 3 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
+| Pricing | 5 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
 
 ## 🚀 Usage
 
@@ -172,7 +175,7 @@ cd A_library_from_Frontend
 - [x] 12 Navbar examples
 - [x] 9 Register examples
 - [x] 8 Footer examples
-- [x] 3 Pricing section
+- [x] 5 Pricing section
 - [ ] React and Vue versions
 
 
