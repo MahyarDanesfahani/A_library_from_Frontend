@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>نظرات مشتریان | دیوار متحرک</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div class="score">
+            <b id="avg">۴٫۹</b>
+            <div><div class="stars" aria-hidden="true">★★★★★</div><small id="tot">از ۲۱۰ نظر</small></div>
+            <ul class="bars" id="bars" aria-label="توزیع امتیازها"></ul>
+        </div>
+        <div class="txt">
+            <h1>مشتری‌ها درباره‌ی ما چی می‌گن؟</h1>
+            <p>موس رو روی نظرها ببر تا بایستن؛ روی هر کدوم بزنی کامل باز میشه.</p>
+            <div class="chips" id="chips" role="radiogroup" aria-label="فیلتر نظرها"></div>
+        </div>
+    </header>
+
+    <section class="rows" id="rows" aria-label="نظرات مشتریان"></section>
+</main>
+
+<dialog id="dlg" aria-label="نظر کامل">
+    <button type="button" class="x" id="x" aria-label="بستن">✕</button>
+    <div class="top"><span class="av" id="dav"></span><div><b id="dn"></b><small id="dr"></small></div></div>
+    <div class="stars" id="ds"></div>
+    <p id="dt"></p>
+    <span class="ver">✔ مشتری تأیید‌شده</span>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
