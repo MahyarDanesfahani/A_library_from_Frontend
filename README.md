@@ -58,6 +58,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Pricing | 03 - Compare Table (Column highlight + differences only) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/03-compare-table/) |
 | Pricing | 04 - Metal Tiers (3D tilt + flip details) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/04-metal-tiers/) |
 | Pricing | 05 - Price Stairs (Climbing hero) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/05-price-stairs/) |
+| Testimonials | 01 - Chat Wall (Typing + reactions) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/01-chat-wall/) |
+| Testimonials | 02 - Swipe Stack (Drag + undo) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/02-swipe-stack/) |
+| Testimonials | 03 - Marquee Wall (Rating summary + filters) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/03-marquee-wall/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -118,6 +121,11 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Pricing 03 - Compare Table
 - [x] Pricing 04 -  Metal Tiers
 - [x] Pricing 05 - Price Stairs
+
+
+- [x] Testimonials 01 - Chat Wall
+- [x] Testimonials 02 - Swipe Stack
+- [x] Testimonials 03 - Marquee Wall
 ## 📄 لایسنس
 MIT
 
@@ -155,7 +163,8 @@ Each example usually contains `index.html`, `style.css`, and `script.js`.
 | Navbar | 12 designs | [Browse navbar examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/) |
 | Register | 9 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
 | Footer | 8 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
-| Pricing | 5 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
+| Pricing | 5 designs | [Browse pricing examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
+| Testimonials | 3 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/) |
 
 ## 🚀 Usage
 
@@ -175,7 +184,8 @@ cd A_library_from_Frontend
 - [x] 12 Navbar examples
 - [x] 9 Register examples
 - [x] 8 Footer examples
-- [x] 5 Pricing section
+- [x] 5 Pricing examples
+- [x] 3 Testimonials examples
 - [ ] React and Vue versions
 
 
