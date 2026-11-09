@@ -1,0 +1,29 @@
+:root { --bg: #0f0b24; --txt: #f2efff; --dim: #a29cc9; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; overflow-x: hidden; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: radial-gradient(circle at 20% 0%, rgba(124,92,255,.35), transparent 45%), radial-gradient(circle at 90% 100%, rgba(255,79,163,.25), transparent 45%), var(--bg); }
+.wrap { min-height: 100vh; display: grid; place-content: center; justify-items: center; gap: 1rem; padding: 2rem 1rem; text-align: center; }
+h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 900; } .sub { color: var(--dim); font-size: .88rem; }
+
+.stack { position: relative; width: min(88vw, 380px); height: 400px; margin: 1.2rem 0 .6rem; outline: none; touch-action: pan-y; }
+.stack:focus-visible { outline: 2px dashed #ff8ac4; outline-offset: 12px; border-radius: 28px; }
+.card { position: absolute; inset: 0; display: grid; align-content: start; gap: .7rem; padding: 1.6rem 1.4rem; text-align: start; border-radius: 26px; user-select: none; cursor: grab; touch-action: none;
+    background: linear-gradient(160deg, var(--a), var(--b)); box-shadow: 0 24px 50px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.25); transition: transform .45s cubic-bezier(.3,1.3,.5,1), opacity .3s; }
+.card.drag { transition: none; cursor: grabbing; }
+.card.fly { transition: transform .4s ease-in, opacity .4s; }
+.card::before { content: "❝"; position: absolute; top: .4rem; inset-inline-end: 1.1rem; font-size: 4.5rem; line-height: 1; opacity: .18; }
+.top { display: flex; align-items: center; gap: .8rem; }
+.av { display: grid; place-items: center; flex: none; width: 3.2rem; height: 3.2rem; border-radius: 50%; background: rgba(255,255,255,.25); font-size: 1.4rem; font-weight: 800; border: 2px solid rgba(255,255,255,.5); }
+.top b { display: block; font-size: 1.05rem; } .top small { opacity: .85; font-size: .8rem; }
+.stars { color: #ffe27a; letter-spacing: 2px; font-size: 1.05rem; }
+.quote { font-size: 1.02rem; line-height: 2.1; }
+.tag { align-self: end; justify-self: start; margin-top: auto; padding: .25rem .8rem; border-radius: 99px; background: rgba(0,0,0,.25); font-size: .75rem; }
+.card { grid-template-rows: auto auto 1fr auto; }
+
+.ctl { display: flex; align-items: center; gap: 1.2rem; margin-top: 1rem; }
+.ctl button { width: 3.2rem; height: 3.2rem; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; background: rgba(255,255,255,.08); color: var(--txt); font-size: 1.3rem; cursor: pointer; transition: .2s; }
+.ctl button:hover { background: #fff; color: #1a1040; transform: scale(1.08); }
+.ctl button:focus-visible { outline: 2px solid #ff8ac4; outline-offset: 3px; }
+.cnt { min-width: 4rem; color: var(--dim); font-size: .9rem; font-variant-numeric: tabular-nums; }
+.dots { display: flex; gap: .4rem; } .dots i { width: .5rem; height: .5rem; border-radius: 50%; background: rgba(255,255,255,.2); transition: .3s; } .dots i.on { width: 1.5rem; border-radius: 6px; background: #fff; }
+
+@media (prefers-reduced-motion: reduce) { .card, .card.fly { transition: none; } }
