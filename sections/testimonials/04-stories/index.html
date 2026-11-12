@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>نظرات مشتریان | استوری</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <h1>نظر مشتری‌ها، به سبک استوری 📱</h1>
+    <p class="hint">کنار چپ بزن: بعدی | کنار راست: قبلی | نگه دار: توقف | فلش‌ها و Space هم کار می‌کنن</p>
+
+    <section class="story" id="story" tabindex="0" aria-label="نظرات مشتریان به شکل استوری">
+        <div class="prog" id="prog" aria-hidden="true"></div>
+        <header>
+            <span class="av" id="av"></span>
+            <div><b id="nm"></b><small id="rl"></small></div>
+            <button type="button" id="pp" aria-label="توقف">⏸</button>
+        </header>
+        <div class="body">
+            <div class="stars" id="st"></div>
+            <p class="q" id="q"></p>
+            <span class="tag" id="tg"></span>
+        </div>
+        <div class="emo" id="emo" aria-hidden="true"></div>
+        <p class="cnt" id="cnt" aria-live="polite"></p>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
