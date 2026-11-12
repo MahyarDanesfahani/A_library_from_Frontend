@@ -61,6 +61,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Testimonials | 01 - Chat Wall (Typing + reactions) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/01-chat-wall/) |
 | Testimonials | 02 - Swipe Stack (Drag + undo) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/02-swipe-stack/) |
 | Testimonials | 03 - Marquee Wall (Rating summary + filters) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/03-marquee-wall/) |
+| Testimonials | 04 - Stories (Tap + hold to pause) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/04-stories/) |
+| Testimonials | 05 - Orbit Avatars (Rotating ring) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/05-orbit-avatars/) |
+| Testimonials | 06 - Pinboard (Draggable notes) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/06-pinboard/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -126,6 +129,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Testimonials 01 - Chat Wall
 - [x] Testimonials 02 - Swipe Stack
 - [x] Testimonials 03 - Marquee Wall
+- [x] Testimonials 04 - Stories
+- [x] Testimonials 05 - Orbit Avatars
+- [x] Testimonials 06 - Pinboard
 ## 📄 لایسنس
 MIT
 
@@ -157,14 +163,14 @@ Each example usually contains `index.html`, `style.css`, and `script.js`.
 
 ## 🧩 Available Sections
 
-| Category | Examples | Demo |
-|---|---:|---|
+| Category |   Examples | Demo |
+|---|-----------:|---|
 | Login | 12 designs | [Browse login examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/login/) |
 | Navbar | 12 designs | [Browse navbar examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/navbar/) |
-| Register | 9 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
-| Footer | 8 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
-| Pricing | 5 designs | [Browse pricing examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
-| Testimonials | 3 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/) |
+| Register |  9 designs | [Browse register examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/register/) |
+| Footer |  8 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
+| Pricing |  5 designs | [Browse pricing examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
+| Testimonials |  6 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/) |
 
 ## 🚀 Usage
 
@@ -185,7 +191,7 @@ cd A_library_from_Frontend
 - [x] 9 Register examples
 - [x] 8 Footer examples
 - [x] 5 Pricing examples
-- [x] 3 Testimonials examples
+- [x] 6 Testimonials examples
 - [ ] React and Vue versions
 
 
