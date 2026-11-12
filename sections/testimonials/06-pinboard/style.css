@@ -1,0 +1,36 @@
+:root { --ink: #2a2118; --muted: #7a6a58; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--ink); background: #f3e9d8; }
+.wrap { max-width: 1060px; margin: auto; padding: 2rem 1rem 3rem; text-align: center; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 900; } .sub { margin: .4rem 0 1rem; color: var(--muted); font-size: .9rem; }
+.tools { display: flex; justify-content: center; gap: .6rem; margin-bottom: 1rem; }
+.tools button { padding: .5rem 1.2rem; border: 2px solid var(--ink); border-radius: 12px; background: #fff; font: inherit; font-weight: 700; cursor: pointer; box-shadow: 3px 3px 0 var(--ink); transition: .12s; }
+.tools button:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+
+/* تخته‌ی چوب پنبه‌ای */
+.board { position: relative; height: 720px; border: 12px solid #6b4423; border-radius: 10px; overflow: hidden; touch-action: none;
+    background: radial-gradient(rgba(70,40,10,.28) 1px, transparent 1.3px) 0 0 / 9px 9px, radial-gradient(rgba(255,235,200,.22) 1px, transparent 1.3px) 4px 4px / 12px 12px, #b98a5a;
+    box-shadow: inset 0 0 40px rgba(60,30,5,.5), 0 18px 40px rgba(80,50,20,.3); }
+.board.anim .note { transition: left .6s cubic-bezier(.3,1.2,.4,1), top .6s cubic-bezier(.3,1.2,.4,1), transform .6s; }
+
+.note { --r: 0deg; position: absolute; width: 235px; padding: 1.3rem 1rem 1rem; text-align: start; cursor: grab; user-select: none; touch-action: none;
+    transform: rotate(var(--r)); box-shadow: 2px 6px 14px rgba(40,20,0,.35); transition: transform .25s, box-shadow .25s; }
+.note::before { content: ""; position: absolute; top: -9px; left: 50%; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #ff8a80, #c62828 60%, #7f1515); box-shadow: 1px 4px 4px rgba(0,0,0,.4); }
+.note:hover { transform: rotate(calc(var(--r) * .4)) scale(1.03); }
+.note.drag { cursor: grabbing; transform: rotate(0) scale(1.07); box-shadow: 8px 18px 30px rgba(40,20,0,.45); transition: none; }
+.note:focus-visible { outline: 3px dashed #fff; outline-offset: 4px; }
+
+.sticky { background: var(--bg); }
+.polaroid { padding-bottom: 1.2rem; background: #fffdf8; }
+.polaroid .ph { display: grid; place-items: center; height: 100px; margin-bottom: .7rem; font-size: 3rem; background: linear-gradient(135deg, var(--bg), #fff); }
+.card { background: repeating-linear-gradient(#fffef9 0 27px, #cfe3f5 27px 28px); padding-top: 1.6rem; }
+.card::after { content: ""; position: absolute; top: 0; bottom: 0; inset-inline-start: 1.2rem; width: 2px; background: #f4a7a7; }
+.card .q { padding-inline-start: 1.2rem; }
+
+.q { font-size: .88rem; line-height: 2; }
+.who { margin-top: .6rem; font-size: .8rem; font-weight: 800; } .who small { display: block; font-weight: 400; color: var(--muted); font-size: .72rem; }
+.stars { color: #e08a00; font-size: .8rem; letter-spacing: 1px; }
+.res { display: inline-block; margin-top: .5rem; padding: .15rem .6rem; border-radius: 99px; background: rgba(0,0,0,.08); font-size: .72rem; font-weight: 800; }
+
+@media (max-width: 700px) { .board { height: 1020px; } .note { width: 170px; padding-inline: .8rem; } .q { font-size: .8rem; } .polaroid .ph { height: 70px; font-size: 2.2rem; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
