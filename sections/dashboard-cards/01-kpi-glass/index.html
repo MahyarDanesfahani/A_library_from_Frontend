@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | KPI شیشه‌ای</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>نمای کلی کسب‌وکار</h1><p id="stamp"></p></div>
+        <div class="per" id="per" role="radiogroup" aria-label="بازه‌ی زمانی">
+            <button type="button" role="radio" aria-checked="true" data-p="today">امروز</button>
+            <button type="button" role="radio" aria-checked="false" data-p="week">هفته</button>
+            <button type="button" role="radio" aria-checked="false" data-p="month">ماه</button>
+        </div>
+    </header>
+
+    <section class="grid" id="grid">
+        <article class="card goal">
+            <h2>پیشرفت هدف ماهانه</h2>
+            <div class="ringbox">
+                <svg viewBox="0 0 110 110" aria-hidden="true"><circle class="bg" cx="55" cy="55" r="44"/><circle class="fg" id="ring" cx="55" cy="55" r="44"/></svg>
+                <div class="rt"><b id="gp">۰</b><span>٪</span></div>
+            </div>
+            <p class="note" id="gn"></p>
+        </article>
+
+        <article class="card bars">
+            <h2>فروش روزهای هفته</h2>
+            <div class="bchart" id="bchart" role="list"></div>
+            <div class="tip" id="tip" role="status" aria-live="polite"></div>
+        </article>
+
+        <article class="card live">
+            <h2>کاربران آنلاین <i class="dot"></i></h2>
+            <div class="lv"><b id="lv">۰</b><span>نفر الان</span></div>
+            <svg viewBox="0 0 200 50" preserveAspectRatio="none" aria-hidden="true"><polyline id="lline" points=""/></svg>
+        </article>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
