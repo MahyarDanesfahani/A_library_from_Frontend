@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | مدیریت ساختمان</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>🏢 مجتمع نیلوفر، بلوک A</h1><p>داشبورد مدیر ساختمان | شارژ همین ماه</p></div>
+        <div class="chips" id="stats" aria-live="polite"></div>
+    </header>
+
+    <section class="layout">
+        <article class="card map">
+            <div class="ch"><h2>نقشه‌ی واحدها</h2>
+                <div class="flt" id="flt" role="radiogroup" aria-label="فیلتر وضعیت">
+                    <button type="button" role="radio" aria-checked="true" data-f="all">همه</button>
+                    <button type="button" role="radio" aria-checked="false" data-f="paid">پرداخت‌شده</button>
+                    <button type="button" role="radio" aria-checked="false" data-f="unpaid">پرداخت‌نشده</button>
+                    <button type="button" role="radio" aria-checked="false" data-f="vacant">خالی</button>
+                </div>
+            </div>
+            <div class="facade" id="facade"></div>
+            <div class="sel" id="sel" aria-live="polite"><p class="ph">روی یک واحد بزن تا جزئیاتش را ببینی.</p></div>
+        </article>
+
+        <article class="card ring">
+            <h2>وصول شارژ</h2>
+            <div class="rbox">
+                <svg viewBox="0 0 110 110" aria-hidden="true"><circle class="bg" cx="55" cy="55" r="44"/><circle class="fg" id="ring" cx="55" cy="55" r="44"/></svg>
+                <div class="rt"><b id="pct">۰</b><span>٪</span></div>
+            </div>
+            <p class="amt" id="amt"></p>
+        </article>
+
+        <article class="card unpaid">
+            <h2>بدهکاران <small id="ucount"></small></h2>
+            <ul id="ulist"></ul>
+        </article>
+
+        <article class="card maint">
+            <h2>درخواست‌های تعمیر</h2>
+            <div class="stk" id="stk" aria-hidden="true"><i class="o"></i><i class="p"></i><i class="d"></i></div>
+            <ul class="leg" id="leg"></ul>
+            <button type="button" class="add" id="addReq">＋ درخواست جدید (نمونه)</button>
+        </article>
+
+        <article class="card notes">
+            <h2>اطلاعیه‌ها 📌</h2>
+            <ul id="nlist"></ul>
+            <form id="nform"><input id="ntext" maxlength="90" placeholder="اطلاعیه‌ی جدید..." aria-label="متن اطلاعیه"><button type="submit">ثبت</button></form>
+        </article>
+    </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
