@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | گلخانه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>🌱 گلخانه‌ی سبزآفرین</h1><p id="stamp"></p></div>
+        <label class="auto"><input type="checkbox" id="auto" checked><span class="knob"></span> حالت خودکار</label>
+    </header>
+
+    <section class="layout">
+        <article class="card house">
+            <h2>نمای گلخانه <small>(یک بخش را انتخاب کن)</small></h2>
+            <div class="roof" aria-hidden="true"></div>
+            <div class="zones" id="zones" role="radiogroup" aria-label="بخش‌های گلخانه"></div>
+        </article>
+
+        <section class="gauges" id="gauges" aria-live="polite"></section>
+
+        <article class="card ctl">
+            <h2>کنترل تجهیزات <small id="zname"></small></h2>
+            <div class="acts" id="acts"></div>
+            <label class="th">دمای شروع تهویه در حالت خودکار: <b id="tv">۳۰</b>°
+                <input type="range" id="tmax" min="24" max="36" value="30"></label>
+            <p class="hint" id="hint"></p>
+        </article>
+
+        <article class="card batch"><h2>چرخه‌ی رشد محصولات</h2><ul id="batch"></ul></article>
+        <article class="card alerts"><h2>هشدارها <i class="dot"></i></h2><ul id="alerts"></ul></article>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
