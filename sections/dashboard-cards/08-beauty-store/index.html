@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | لوازم آرایشی و بهداشتی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header><div><h1>💄 فروشگاه گلبرگ</h1><p>داشبورد لوازم آرایشی و بهداشتی</p></div></header>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="layout">
+        <article class="card shades">
+            <h2>موجودی رنگ‌های کرم‌پودر <small>(روی یک رنگ بزن)</small></h2>
+            <div class="pal" id="pal" role="radiogroup" aria-label="رنگ‌های کرم‌پودر"></div>
+            <div class="sel" id="sel" aria-live="polite"></div>
+        </article>
+
+        <article class="card camp">
+            <h2>🎁 کمپین ویژه‌ی پاییزی</h2>
+            <div class="cd" id="cd" aria-live="off"></div>
+            <div class="gp"><i id="cfill"></i></div>
+            <p class="cn" id="cn"></p>
+        </article>
+
+        <article class="card exp"><h2>⏳ پیگیری تاریخ انقضا <small>(نزدیک‌ترین‌ها اول)</small></h2><ul id="exp"></ul></article>
+
+        <article class="card cat"><h2>موجودی دسته‌ها</h2><ul id="cat"></ul></article>
+    </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
