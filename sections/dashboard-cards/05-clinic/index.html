@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | کلینیک پزشکی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>🩺 کلینیک مهر</h1><p id="date"></p></div>
+        <svg class="ecg" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M0 20H40L48 20L54 6L62 34L68 20H100L108 20L114 6L122 34L128 20H160L168 20L174 6L182 34L188 20H200"/></svg>
+        <div class="clock" id="clock"></div>
+    </header>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="layout">
+        <article class="card queue">
+            <div class="qh"><h2>صف انتظار</h2>
+                <div class="act"><button type="button" id="arrive">＋ ورود بیمار (نمونه)</button><button type="button" id="call" class="main">📣 فراخوانی بعدی</button></div></div>
+            <ul id="queue"></ul>
+            <p class="sr" id="announce" role="status" aria-live="polite"></p>
+        </article>
+
+        <article class="card rooms"><h2>اتاق‌ها</h2><div class="rg" id="rooms"></div></article>
+
+        <article class="card plan"><h2>برنامه‌ی امروز</h2>
+            <div class="tl" id="tl"></div>
+            <div class="lg"><span><i class="done"></i>انجام‌شده</span><span><i class="visit"></i>در ویزیت</span><span><i class="waiting"></i>در انتظار</span><span><i class="upcoming"></i>آینده</span><span><i class="cancel"></i>لغو</span></div>
+            <p class="tip" id="tip"></p>
+        </article>
+
+        <article class="card docs"><h2>پزشکان حاضر</h2><ul id="docs"></ul></article>
+
+        <article class="card sat"><h2>رضایت بیماران</h2>
+            <div class="sc"><b>۴٫۷</b><div><div class="stars" aria-hidden="true">★★★★★</div><small>از ۱۸۴ نظر</small></div></div>
+            <ul id="sbars"></ul>
+        </article>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
