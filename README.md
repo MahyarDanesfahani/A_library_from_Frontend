@@ -66,6 +66,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Testimonials | 06 - Pinboard (Draggable notes) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/06-pinboard/) |
 | Dashboard Cards | 01 - KPI Glass (Period switch + sparklines + live) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/01-kpi-glass/) |
 | Dashboard Cards | 02 - Building Admin (Interactive unit map) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/02-building-admin/) |
+| Dashboard Cards | 03 - Ticket Sales (Funnel + live seat map) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/03-ticket-sales/) |
+| Dashboard Cards | 04 - Warehouse Paint (Filling paint cans) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/04-warehouse-paint/) |
+| Dashboard Cards | 05 - Clinic (Live patient queue) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/05-clinic/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -138,6 +141,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 
 - [x] Dashboard Cards 01 - KPI Glass
 - [x] Dashboard Cards 02 - Building Admin
+- [x] Dashboard Cards 03 - Ticket Sales
+- [x] Dashboard Cards 04 - Warehouse Paint
+- [x] Dashboard Cards 05 - Clinic
 ## 📄 لایسنس
 MIT
 
@@ -179,7 +185,7 @@ Each example usually contains `index.html`, `style.css`, and `script.js`.
 | Footer |  8 designs | [Browse footer examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/footer/) |
 | Pricing |  5 designs | [Browse pricing examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
 | Testimonials |  6 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/) |
-| Dashboard Cards |  2 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/) |
+| Dashboard Cards |  5 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/) |
 
 
 ## 🚀 Usage
@@ -202,7 +208,7 @@ cd A_library_from_Frontend
 - [x] 8 Footer examples
 - [x] 5 Pricing examples
 - [x] 6 Testimonials examples
-- [x] 2 dashboard cards
+- [x] 5 dashboard cards
 - [ ] React and Vue versions
 
 
