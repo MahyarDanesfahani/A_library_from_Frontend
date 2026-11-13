@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | عطرفروشی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header><div><h1>✦ عطر شب‌بو</h1><p>داشبورد فروش و رایحه‌ها</p></div><span class="live"><i class="dot"></i> فروش زنده</span></header>
+
+    <section class="kpis" id="kpis" aria-live="polite"></section>
+
+    <section class="layout">
+        <article class="card wheel">
+            <h2>چرخ رایحه‌ها <small>(سهم فروش هر خانواده)</small></h2>
+            <div class="wbox">
+                <svg viewBox="0 0 100 100" id="wsvg" aria-hidden="true"></svg>
+                <div class="wc"><b id="wn"></b><span id="wp"></span></div>
+            </div>
+            <div class="leg" id="leg" role="radiogroup" aria-label="خانواده‌ی رایحه"></div>
+        </article>
+
+        <article class="card plist"><h2 id="pt">پرفروش‌ها</h2><ul id="plist"></ul></article>
+
+        <article class="card pyr"><h2 id="pyt">هرم رایحه</h2><div class="pyramid" id="pyramid" aria-live="polite"></div></article>
+
+        <article class="card smp"><h2>درخواست نمونه‌ی رایگان <small id="spend"></small></h2><ul id="slist"></ul></article>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
