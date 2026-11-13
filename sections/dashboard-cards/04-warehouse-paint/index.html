@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | انبار و شرکت رنگ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>🎨 انبار شرکت رنگ‌آفرین</h1><p>موجودی لحظه‌ای کالاها و گردش انبار</p></div>
+        <div class="chips" id="chips" aria-live="polite"></div>
+    </header>
+
+    <section class="cans" id="cans" aria-label="موجودی کالاها"></section>
+
+    <section class="layout">
+        <article class="card cap"><h2>ظرفیت انبار</h2>
+            <div class="rbox"><svg viewBox="0 0 110 110" aria-hidden="true"><circle class="bg" cx="55" cy="55" r="44"/><circle class="fg" id="ring" cx="55" cy="55" r="44"/></svg><div class="rt"><b id="cp">۰</b><span>٪</span></div></div>
+            <p class="note" id="cnote"></p>
+        </article>
+
+        <article class="card flow"><h2>گردش ۷ روز اخیر <small>(ورودی و خروجی، گالن)</small></h2>
+            <div class="chart" id="chart" role="list"></div>
+            <div class="lg"><span><i class="in"></i>ورودی</span><span><i class="out"></i>خروجی</span><b id="tip" role="status"></b></div>
+        </article>
+
+        <article class="card log"><h2>آخرین تراکنش‌ها</h2><ul id="log"></ul></article>
+    </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
