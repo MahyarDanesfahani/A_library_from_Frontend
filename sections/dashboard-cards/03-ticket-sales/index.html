@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | بلیت‌فروشی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>🎟 داشبورد بلیت‌فروشی</h1><p>بررسی عملکرد سایت و فروش رویدادها</p></div>
+        <div class="per" id="per" role="radiogroup" aria-label="بازه‌ی زمانی">
+            <button type="button" role="radio" aria-checked="true" data-p="today">امروز</button>
+            <button type="button" role="radio" aria-checked="false" data-p="week">هفته</button>
+            <button type="button" role="radio" aria-checked="false" data-p="month">ماه</button>
+        </div>
+    </header>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="layout">
+        <article class="card funnel"><h2>قیف خرید بازدیدکننده‌ها</h2><div id="funnel"></div></article>
+
+        <article class="card events"><h2>رویدادها <small>(برای دیدن سالن انتخاب کن)</small></h2><ul id="events"></ul></article>
+
+        <article class="card seats">
+            <div class="sh"><h2 id="evname"></h2><span class="pc" id="pc"></span></div>
+            <div class="stage">صحنه</div>
+            <div class="hall" id="hall" aria-hidden="true"></div>
+            <div class="lg"><span><i class="s free"></i>خالی</span><span><i class="s sold"></i>فروخته‌شده</span></div>
+            <p class="sr" id="srsum" aria-live="polite"></p>
+        </article>
+
+        <article class="card feed"><h2>فروش زنده <i class="dot"></i></h2><ul id="feed"></ul></article>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
