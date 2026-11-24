@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | پیک و ارسال</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>🛵 پیک‌سریع</h1><p>رهگیری زنده‌ی پیک‌ها و سفارش‌ها</p></div>
+        <button type="button" id="newOrder">＋ سفارش جدید (نمونه)</button>
+    </header>
+
+    <section class="kpis" id="kpis" aria-live="off"></section>
+
+    <section class="layout">
+        <article class="card map">
+            <h2>نقشه‌ی زنده <small>(روی یک پیک بزن)</small></h2>
+            <svg id="map" viewBox="0 0 600 350" role="img" aria-label="نقشه‌ی شهر و موقعیت پیک‌ها"></svg>
+            <div class="sel" id="sel" aria-live="polite"></div>
+        </article>
+        <article class="card pipe"><h2>مراحل سفارش‌ها</h2><div class="cols" id="cols"></div></article>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

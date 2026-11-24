@@ -1,0 +1,27 @@
+:root { --bg: #eef4fb; --card: #fff; --ink: #14284b; --muted: #6b7b99; --line: #dde7f5; --pri: #2457d6; --ok: #1fa56a; --warn: #f0a30a; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--ink); background: linear-gradient(#e0ebfb, var(--bg) 40%); }
+.wrap { max-width: 1120px; margin: auto; padding: 1.8rem 1.2rem 3rem; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+h1 { font-size: 1.5rem; font-weight: 900; } header p { color: var(--muted); font-size: .8rem; margin-top: .2rem; }
+#newOrder { padding: .55rem 1.2rem; border: 2px solid var(--ink); border-radius: 12px; background: #fff; font: inherit; font-weight: 800; font-size: .85rem; cursor: pointer; box-shadow: 3px 3px 0 var(--ink); transition: .1s; } #newOrder:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+button:focus-visible { outline: 3px solid var(--pri); outline-offset: 2px; }
+
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1rem; }
+.card { padding: 1.2rem; border: 1px solid var(--line); border-radius: 22px; background: var(--card); box-shadow: 0 8px 22px rgba(36,87,214,.08); }
+.card h2 { font-size: .92rem; font-weight: 800; margin-bottom: .8rem; } .card h2 small { color: var(--muted); font-weight: 400; font-size: .72rem; }
+.kpi { display: grid; grid-template-columns: auto 1fr; gap: .1rem .8rem; align-items: center; } .kpi .ic { grid-row: span 2; display: grid; place-items: center; width: 2.8rem; height: 2.8rem; border-radius: 14px; background: #e9f0ff; font-size: 1.4rem; } .kpi .lb { color: var(--muted); font-size: .76rem; } .kpi b { font-size: 1.45rem; font-weight: 900; font-variant-numeric: tabular-nums; } .kpi b small { font-size: .68rem; color: var(--muted); font-weight: 500; }
+
+.layout { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; } .map { grid-column: span 8; } .pipe { grid-column: span 4; }
+#map { display: block; width: 100%; height: auto; border-radius: 16px; background: #dbe5f2; }
+#map .blk { fill: #eef3fa; } #map .park { fill: #cfeedd; } #map .depot circle { fill: var(--ink); } #map .depot text { text-anchor: middle; }
+.pin { animation: pop .4s cubic-bezier(.3,1.8,.5,1); transform-box: fill-box; transform-origin: bottom center; } .pin.gone { opacity: 0; transition: opacity .6s; } @keyframes pop { from { transform: scale(0); } }
+.cr { cursor: pointer; } .cr circle { fill: #fff; stroke: var(--pri); stroke-width: 3; transition: r .2s, fill .2s; } .cr.on circle { fill: #ffe9a8; stroke: var(--warn); stroke-width: 4; } .cr text { font-size: 17px; text-anchor: middle; dominant-baseline: central; pointer-events: none; } .cr:focus-visible circle { stroke: var(--ink); stroke-width: 4; } .cr:focus { outline: none; }
+.sel { margin-top: .8rem; padding: .8rem 1rem; border: 1px dashed var(--line); border-radius: 14px; background: #f8fbff; font-size: .82rem; min-height: 3.4rem; } .sel b { font-size: .9rem; } .sel small { display: block; color: var(--muted); font-size: .74rem; margin-top: .15rem; }
+
+.cols { display: grid; gap: .8rem; } .col h3 { display: flex; justify-content: space-between; align-items: center; font-size: .8rem; margin-bottom: .4rem; } .col h3 span { padding: .05rem .6rem; border-radius: 99px; background: var(--c); color: #fff; font-size: .72rem; }
+.col ul { list-style: none; display: grid; gap: .35rem; min-height: 1.6rem; } .col li { display: flex; justify-content: space-between; padding: .4rem .7rem; border-radius: 10px; background: #f4f8ff; font-size: .76rem; animation: in .35s both; } .col li small { color: var(--muted); } .col .none { color: var(--muted); font-size: .72rem; background: none; }
+@keyframes in { from { opacity: 0; transform: translateY(-8px); } }
+
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, 1fr); } .map, .pipe { grid-column: span 12; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
