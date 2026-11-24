@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | انرژی خورشیدی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>☀️ خورشیدنو</h1><p>پایش نیروگاه خورشیدی خانگی | ساعت روز را تغییر بده یا پخش کن</p></div>
+        <div class="tm">
+            <button type="button" id="play" aria-label="پخش خودکار روز">▶</button>
+            <input type="range" id="hour" min="0" max="24" step="0.25" value="12" aria-label="ساعت روز">
+            <output id="hv" for="hour"></output>
+        </div>
+    </header>
+
+    <section class="kpis" id="kpis" aria-live="off"></section>
+
+    <section class="layout">
+        <article class="card flow">
+            <h2>مسیر جریان انرژی</h2>
+            <svg id="fsvg" viewBox="0 0 600 330" role="img" aria-label="نمودار جریان انرژی بین پنل، خانه، باتری و شبکه">
+                <path class="sp" id="p-s" d="M300 52L300 165"/>
+                <path class="sp" id="p-h" d="M520 165L300 165"/>
+                <path class="sp" id="p-b" d="M300 280L300 165"/>
+                <path class="sp" id="p-g" d="M80 165L300 165"/>
+                <g class="hub"><rect x="268" y="148" width="64" height="34" rx="10"/><text x="300" y="171" text-anchor="middle">⚡ اینورتر</text></g>
+                <g class="nd" transform="translate(300 52)"><circle r="34"/><text class="e" y="9">☀️</text><text class="n" y="-46">پنل‌های خورشیدی</text><text class="v" id="v-s" x="52" y="5"></text></g>
+                <g class="nd" transform="translate(520 165)"><circle r="34"/><text class="e" y="9">🏠</text><text class="n" y="-46">مصرف خانه</text><text class="v" id="v-h" y="62" text-anchor="middle"></text></g>
+                <g class="nd" transform="translate(300 280)"><circle r="34"/><text class="e" y="9">🔋</text><text class="n" y="58">باتری</text><text class="v" id="v-b" x="52" y="5"></text></g>
+                <g class="nd" transform="translate(80 165)"><circle r="34"/><text class="e" y="9">🏭</text><text class="n" y="-46">شبکه‌ی برق</text><text class="v" id="v-g" y="62" text-anchor="middle"></text></g>
+            </svg>
+        </article>
+
+        <article class="card batt">
+            <h2>باتری ذخیره</h2>
+            <div class="rbox"><svg viewBox="0 0 110 110" aria-hidden="true"><circle class="bg" cx="55" cy="55" r="44"/><circle class="fg" id="ring" cx="55" cy="55" r="44"/></svg><div class="rt"><b id="soc">۰</b><span>٪</span></div></div>
+            <p class="bs" id="bstate"></p>
+        </article>
+
+        <article class="card chart">
+            <h2>تولید و مصرف ۲۴ ساعته <small>(کیلووات)</small></h2>
+            <svg id="csvg" viewBox="0 0 600 190" preserveAspectRatio="none" role="img" aria-label="نمودار تولید و مصرف"></svg>
+            <div class="lg"><span><i class="s"></i>تولید پنل</span><span><i class="l"></i>مصرف خانه</span></div>
+        </article>
+    </section>
+    <p class="note">همه‌ی عددها بر اساس یه مدل ساده‌ی نمونه محاسبه می‌شن، نه داده‌ی واقعی.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

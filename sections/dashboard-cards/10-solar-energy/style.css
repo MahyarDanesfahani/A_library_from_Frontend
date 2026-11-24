@@ -1,0 +1,34 @@
+:root { --bg: #fff8e8; --card: #fff; --ink: #2a2412; --muted: #8b7e5c; --line: #f1e6c6; --sun: #f5a524; --grn: #25a05a; --blue: #2f8cf0; --red: #e0483f; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--ink); background: radial-gradient(circle at 85% 0%, #ffe6a8, transparent 45%), linear-gradient(#fff1cc, var(--bg) 40%); }
+.wrap { max-width: 1120px; margin: auto; padding: 1.8rem 1.2rem 3rem; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+h1 { font-size: 1.5rem; font-weight: 900; } header p { color: var(--muted); font-size: .8rem; margin-top: .2rem; }
+.tm { display: flex; align-items: center; gap: .7rem; padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 99px; background: #fff; }
+#play { width: 2.2rem; height: 2.2rem; border: 0; border-radius: 50%; background: var(--sun); color: #fff; font-size: .85rem; cursor: pointer; } #play:focus-visible, #hour:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+#hour { width: min(46vw, 260px); accent-color: var(--sun); direction: ltr; } output { min-width: 3.2rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1rem; }
+.card { padding: 1.2rem; border: 1px solid var(--line); border-radius: 22px; background: var(--card); box-shadow: 0 8px 22px rgba(160,110,10,.08); }
+.card h2 { font-size: .92rem; font-weight: 800; margin-bottom: .8rem; } .card h2 small { color: var(--muted); font-weight: 400; font-size: .72rem; }
+.kpi { display: grid; grid-template-columns: auto 1fr; gap: .1rem .8rem; align-items: center; } .kpi .ic { grid-row: span 2; display: grid; place-items: center; width: 2.8rem; height: 2.8rem; border-radius: 14px; background: #fff3d2; font-size: 1.4rem; } .kpi .lb { color: var(--muted); font-size: .76rem; } .kpi b { font-size: 1.45rem; font-weight: 900; font-variant-numeric: tabular-nums; } .kpi b small { font-size: .68rem; color: var(--muted); font-weight: 500; }
+
+.layout { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; } .flow { grid-column: span 8; } .batt { grid-column: span 4; } .chart { grid-column: span 12; }
+#fsvg { display: block; width: 100%; height: auto; }
+.sp { fill: none; stroke: var(--sun); stroke-linecap: round; stroke-dasharray: .1 15; stroke-width: 6; animation: flow 1s linear infinite; transition: opacity .4s, stroke .4s; } .sp.rev { animation-direction: reverse; } .sp.off { opacity: .12; animation: none; }
+#p-h { stroke: var(--blue); } #p-b { stroke: var(--grn); } #p-g { stroke: var(--red); }
+@keyframes flow { to { stroke-dashoffset: -15.1; } }
+.hub rect { fill: #2a2412; } .hub text { fill: #fff; font: 700 12px Vazirmatn; }
+.nd circle { fill: #fff; stroke: var(--line); stroke-width: 3; } .nd .e { font-size: 28px; text-anchor: middle; } .nd .n { fill: var(--muted); font: 600 12px Vazirmatn; text-anchor: middle; } .nd .v { fill: var(--ink); font: 800 14px Vazirmatn; }
+
+.rbox { position: relative; width: 150px; margin: .3rem auto; } .rbox svg { display: block; transform: rotate(-90deg); } .rbox circle { fill: none; stroke-width: 10; } .rbox .bg { stroke: #f3ead0; }
+.rbox .fg { stroke: var(--grn); stroke-linecap: round; stroke-dasharray: 276.46; stroke-dashoffset: 276.46; transition: stroke-dashoffset .5s, stroke .4s; }
+.rt { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; } .rt b { font-size: 2rem; font-weight: 900; font-variant-numeric: tabular-nums; } .rt span { color: var(--muted); font-size: .8rem; }
+.bs { text-align: center; font-size: .82rem; color: var(--muted); min-height: 2.6em; margin-top: .5rem; }
+
+#csvg { display: block; width: 100%; height: 190px; } #csvg .grid { stroke: var(--line); stroke-width: 1; vector-effect: non-scaling-stroke; } #csvg .sa { fill: rgba(245,165,36,.28); } #csvg .sl { fill: none; stroke: var(--sun); stroke-width: 2.5; vector-effect: non-scaling-stroke; } #csvg .ll { fill: none; stroke: var(--blue); stroke-width: 2.5; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; } #csvg .now { stroke: var(--ink); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.lg { display: flex; gap: 1.2rem; font-size: .75rem; color: var(--muted); margin-top: .5rem; } .lg i { display: inline-block; width: .8rem; height: .8rem; margin-inline-end: .35rem; border-radius: 4px; vertical-align: middle; } .lg .s { background: var(--sun); } .lg .l { background: var(--blue); }
+.note { margin-top: 1rem; text-align: center; color: var(--muted); font-size: .76rem; }
+
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, 1fr); } .flow, .batt { grid-column: span 12; } }
+@media (prefers-reduced-motion: reduce) { .sp { animation: none; } * { transition: none !important; } }
