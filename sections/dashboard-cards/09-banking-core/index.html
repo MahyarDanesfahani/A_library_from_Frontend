@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کارت‌های داشبورد | سامانه‌های بانکی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <div><h1>🏦 بانک نیلگون</h1><p>مرکز پایش سامانه‌های بانکی | <span id="clk"></span></p></div>
+        <div class="hd"><span class="live"><i class="dot"></i> زنده</span><button type="button" id="incident">⚡ شبیه‌سازی اختلال</button></div>
+    </header>
+
+    <section class="kpis" id="kpis" aria-live="off"></section>
+
+    <section class="layout">
+        <article class="card tps">
+            <h2>تراکنش در ثانیه</h2>
+            <div class="gbox">
+                <svg viewBox="0 0 120 70" aria-hidden="true"><path class="bg" pathLength="100" d="M10 62A50 50 0 0 1 110 62"/><path class="fg" id="gfg" pathLength="100" d="M10 62A50 50 0 0 1 110 62"/></svg>
+                <div class="gv"><b id="tps">۰</b><small>TPS</small></div>
+            </div>
+            <div class="hist" id="hist" aria-hidden="true"></div>
+        </article>
+
+        <article class="card chn">
+            <h2>سهم کانال‌ها</h2>
+            <div class="dbox"><svg viewBox="0 0 100 100" id="dsvg" aria-hidden="true"></svg><div class="dc"><b id="dn"></b><span id="dp"></span></div></div>
+            <ul class="dl" id="dl"></ul>
+        </article>
+
+        <article class="card fr"><h2>🛡 هشدارهای تقلب <small id="frc"></small></h2><ul id="fraud"></ul></article>
+        <article class="card hl"><h2>سلامت سرویس‌ها</h2><ul id="health"></ul></article>
+        <article class="card st"><h2>جریان تراکنش‌ها <i class="dot"></i></h2><ul id="stream"></ul></article>
+    </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
