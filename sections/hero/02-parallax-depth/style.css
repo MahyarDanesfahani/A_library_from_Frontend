@@ -1,0 +1,30 @@
+:root { --bg: #0c0a1f; --txt: #f3efff; --dim: #a9a1d6; --a: #7c5cff; --b: #ff4fa3; --c: #19d3c5; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: var(--bg); overflow-x: hidden; }
+.hero { position: relative; min-height: 100vh; display: grid; place-items: center; overflow: hidden; perspective: 900px; }
+.scene { position: absolute; inset: 0; pointer-events: none; }
+.ly { position: absolute; inset: 0; will-change: transform; }
+
+.orb { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .6; }
+.o1 { width: 46vmax; height: 46vmax; background: var(--a); top: -18%; left: -12%; } .o2 { width: 40vmax; height: 40vmax; background: var(--b); bottom: -20%; right: -10%; opacity: .5; } .o3 { width: 22vmax; height: 22vmax; background: var(--c); top: 30%; left: 48%; opacity: .35; }
+
+/* کارت‌های شیشه‌ای شناور */
+.gl { position: absolute; display: flex; align-items: center; gap: .6rem; padding: .7rem 1.1rem; border: 1px solid rgba(255,255,255,.2); border-radius: 18px; background: rgba(255,255,255,.08); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 18px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.25); font-size: .85rem; font-weight: 700; animation: float 6s ease-in-out infinite; }
+.gl b { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 12px; background: rgba(255,255,255,.12); font-size: 1.3rem; }
+.c1 { top: 16%; right: 9%; } .c2 { top: 62%; right: 14%; animation-delay: -2s; } .c3 { top: 22%; left: 8%; animation-delay: -3.4s; } .c4 { top: 68%; left: 11%; animation-delay: -1.2s; }
+@keyframes float { 50% { translate: 0 -14px; } }
+.pt { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #fff; box-shadow: 0 0 14px #fff; opacity: .6; } .p1 { top: 12%; left: 30%; } .p2 { top: 30%; left: 62%; width: 5px; height: 5px; } .p3 { top: 78%; left: 40%; } .p4 { top: 50%; left: 88%; width: 5px; height: 5px; } .p5 { top: 85%; left: 70%; } .p6 { top: 44%; left: 6%; width: 5px; height: 5px; }
+
+.ct { position: relative; z-index: 2; max-width: 760px; padding: 2rem 1.4rem; text-align: center; }
+.tag { display: inline-block; padding: .35rem 1.1rem; border: 1px solid rgba(255,255,255,.18); border-radius: 99px; background: rgba(255,255,255,.07); font-size: .8rem; color: var(--dim); }
+h1 { margin: 1.2rem 0; font-size: clamp(2rem, 5.6vw, 3.9rem); line-height: 1.6; font-weight: 900; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
+.gr { background: linear-gradient(90deg, var(--a), var(--b), var(--c), var(--a)); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shine 6s linear infinite; } @keyframes shine { to { background-position: 250% 0; } }
+.ct > p { max-width: 36rem; margin: 0 auto; color: var(--dim); line-height: 2.1; }
+.cta { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin: 2rem 0 1rem; }
+.btn { display: inline-block; padding: .9rem 1.8rem; border: 1px solid rgba(255,255,255,.25); border-radius: 16px; color: var(--txt); text-decoration: none; font-weight: 800; background: rgba(255,255,255,.06); transition: background .2s, box-shadow .3s; } .btn:hover { background: rgba(255,255,255,.14); } .btn:focus-visible { outline: 3px solid var(--c); outline-offset: 3px; }
+.btn.pri { border: 0; background: linear-gradient(135deg, var(--a), var(--b)); box-shadow: 0 12px 34px rgba(124,92,255,.5); } .btn.pri:hover { box-shadow: 0 18px 46px rgba(255,79,163,.55); } .btn span { display: inline-block; transition: transform .2s; }
+.btn.mv { transition: background .2s, box-shadow .3s, transform .15s ease-out; }
+.hint { margin-top: 1.4rem; color: var(--dim); font-size: .78rem; }
+
+@media (max-width: 760px) { .c2, .c4 { display: none; } .c1 { top: 8%; right: 5%; } .c3 { top: 8%; left: 5%; } .gl { font-size: .72rem; padding: .5rem .8rem; } .gl b { width: 1.9rem; height: 1.9rem; font-size: 1rem; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
