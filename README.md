@@ -75,6 +75,9 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Dashboard Cards | 09 - Banking Core (Live transactions + incident simulation) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/09-banking-core/) |
 | Dashboard Cards | 10 - Solar Energy (Animated power flow) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/10-solar-energy/) |
 | Dashboard Cards | 11 - Courier Live (Moving couriers on map) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/11-courier-live/) |
+| Hero | 01 - Code Typing (Live code + preview) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/01-code-typing/) |
+| Hero | 02 - Parallax Depth (Layers + magnetic CTA) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/02-parallax-depth/) |
+| Hero | 03 - Spotlight Reveal (Flashlight effect) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/03-spotlight-reveal/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -156,6 +159,11 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Dashboard Cards 09 - Banking Core
 - [x] Dashboard Cards 10 - Solar Energy
 - [x] Dashboard Cards 11 - Courier Live
+
+
+- [x] Hero 01 - Code Typing
+- [x] Hero 02 - Parallax Depth
+- [x] Hero 03 - Spotlight Reveal
 ## 📄 لایسنس
 MIT
 
@@ -180,9 +188,10 @@ sections/
 ├── footer/    # Interactive footers
 ├── login/     # Login forms and pages
 ├── navbar/    # Navigation bars and headers
-└── register/  # Registration forms and pages
-└── Testimonials/  # Testimonials
-└── Dashboard Cards/  # Dashboard Cards
+├── register/  # Registration forms and pages
+├── Testimonials/  # Testimonials
+├── Dashboard Cards/  # Dashboard Cards
+├── hero/    
 ```
 
 Each example usually contains `index.html`, `style.css`, and `script.js`.
@@ -198,6 +207,7 @@ Each example usually contains `index.html`, `style.css`, and `script.js`.
 | Pricing |  5 designs | [Browse pricing examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
 | Testimonials |  6 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/) |
 | Dashboard Cards |  11 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/) |
+| Hero |  3 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/) |
 
 
 ## 🚀 Usage
@@ -221,6 +231,7 @@ cd A_library_from_Frontend
 - [x] 5 Pricing examples
 - [x] 6 Testimonials examples
 - [x] 11 dashboard cards
+- [x] 3 hero
 - [ ] React and Vue versions
 
 
