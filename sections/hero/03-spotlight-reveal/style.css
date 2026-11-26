@@ -1,0 +1,25 @@
+:root { --bg: #05050b; --txt: #f2f2fa; --dim: #7a7a96; --a: #7c5cff; --b: #ff4fa3; --c: #ffc857; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: var(--bg); overflow: hidden; }
+.hero { position: relative; min-height: 100vh; display: grid; place-items: center; overflow: hidden; cursor: none; }
+@media (hover: none) { .hero { cursor: auto; } }
+
+/* لایه‌ی پنهان: فقط داخل دایره‌ی نور دیده می‌شود */
+.rv { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 20% 30%, rgba(124,92,255,.55), transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,79,163,.5), transparent 50%), radial-gradient(circle at 60% 20%, rgba(255,200,87,.35), transparent 40%), #0e0b24;
+    -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y), #000 35%, transparent 100%); mask-image: radial-gradient(circle var(--r) at var(--x) var(--y), #000 35%, transparent 100%); }
+.gridbg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 44px 44px; }
+.w { position: absolute; padding: .3rem .9rem; border: 1px solid rgba(255,255,255,.35); border-radius: 99px; background: rgba(255,255,255,.1); color: #fff; font: 700 .9rem "Courier New", monospace; }
+.w1 { top: 14%; left: 12%; } .w2 { top: 22%; left: 70%; } .w3 { top: 68%; left: 18%; } .w4 { top: 76%; left: 64%; } .w5 { top: 40%; left: 5%; } .w6 { top: 12%; left: 44%; } .w7 { top: 56%; left: 78%; } .w8 { top: 84%; left: 38%; }
+.w9, .w10, .w11, .w12 { border: 0; background: none; font-size: 2.2rem; } .w9 { top: 30%; left: 28%; } .w10 { top: 62%; left: 50%; } .w11 { top: 18%; left: 86%; } .w12 { top: 48%; left: 90%; }
+.big { position: absolute; inset: auto 0 6%; text-align: center; font-size: clamp(2.4rem, 9vw, 7rem); font-weight: 900; letter-spacing: -.02em; color: transparent; background: linear-gradient(90deg, var(--a), var(--b), var(--c)); -webkit-background-clip: text; background-clip: text; opacity: .9; }
+
+/* محتوای اصلی: همیشه خوانا */
+.ct { position: relative; z-index: 2; max-width: 700px; padding: 2rem 1.4rem; text-align: center; }
+.eyebrow { color: var(--dim); font-size: .85rem; letter-spacing: .02em; }
+h1 { margin: .8rem 0; font-size: clamp(2.3rem, 7vw, 4.6rem); line-height: 1.5; font-weight: 900; text-shadow: 0 4px 30px rgba(0,0,0,.8); } h1 span { color: var(--c); text-shadow: 0 0 30px rgba(255,200,87,.6); }
+.sub { color: #a8a8c4; line-height: 2; }
+.cta { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin-top: 2rem; }
+.btn { padding: .9rem 1.8rem; border: 1px solid rgba(255,255,255,.3); border-radius: 14px; background: rgba(5,5,11,.6); color: var(--txt); text-decoration: none; font-weight: 800; cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); } .btn:hover { transform: translateY(-3px); background: rgba(255,255,255,.12); } .btn:focus-visible { outline: 3px solid var(--c); outline-offset: 3px; }
+.btn.pri { border: 0; background: linear-gradient(135deg, var(--a), var(--b)); box-shadow: 0 10px 30px rgba(124,92,255,.5); }
+@media (hover: none) { .hero { cursor: auto; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
