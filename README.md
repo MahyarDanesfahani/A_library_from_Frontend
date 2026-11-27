@@ -78,6 +78,8 @@ A collection of ready-to-use front-end sections with multiple designs.
 | Hero | 01 - Code Typing (Live code + preview) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/01-code-typing/) |
 | Hero | 02 - Parallax Depth (Layers + magnetic CTA) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/02-parallax-depth/) |
 | Hero | 03 - Spotlight Reveal (Flashlight effect) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/03-spotlight-reveal/) |
+| Hero | 04 - Kinetic Marquee (Scroll-reactive typography) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/04-kinetic-marquee/) |
+| Hero | 05 - 3D Devices (CSS laptop + phone) | HTML/CSS/JS | [مشاهده](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/05-3d-devices/) |
 ## 🚀 نحوه‌ی استفاده
 1. ریپو را کلون کنید یا پوشه‌ی طرح مورد نظر را دانلود کنید
 2. فایل `index.html` را در مرورگر باز کنید
@@ -164,6 +166,8 @@ A collection of ready-to-use front-end sections with multiple designs.
 - [x] Hero 01 - Code Typing
 - [x] Hero 02 - Parallax Depth
 - [x] Hero 03 - Spotlight Reveal
+- [x] Hero 04 - Kinetic Marquee
+- [x] Hero 05 - 3D Devices
 ## 📄 لایسنس
 MIT
 
@@ -207,7 +211,7 @@ Each example usually contains `index.html`, `style.css`, and `script.js`.
 | Pricing |  5 designs | [Browse pricing examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/pricing/) |
 | Testimonials |  6 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/testimonials/) |
 | Dashboard Cards |  11 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/dashboard-cards/) |
-| Hero |  3 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/) |
+| Hero |  5 designs | [Browse testimonials examples](https://mahyardanesfahani.github.io/A_library_from_Frontend/sections/hero/) |
 
 
 ## 🚀 Usage
@@ -231,7 +235,7 @@ cd A_library_from_Frontend
 - [x] 5 Pricing examples
 - [x] 6 Testimonials examples
 - [x] 11 dashboard cards
-- [x] 3 hero
+- [x] 5 hero
 - [ ] React and Vue versions
 
 
