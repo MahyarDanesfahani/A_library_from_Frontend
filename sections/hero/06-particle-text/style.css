@@ -1,0 +1,13 @@
+:root { --bg: #070812; --txt: #f1f0ff; --dim: #9896bd; --a: #6c8bff; --b: #19d3c5; --c: #ff5ca8; }
+* { box-sizing: border-box; margin: 0; }
+body { min-height: 100vh; font-family: Vazirmatn, Tahoma, sans-serif; color: var(--txt); background: radial-gradient(ellipse at 50% 40%, #151a45, transparent 65%), var(--bg); overflow-x: hidden; }
+.hero { min-height: 100vh; display: grid; place-content: center; justify-items: center; gap: 1rem; padding: 2rem 1rem; text-align: center; }
+.eyebrow { font-size: clamp(1.1rem, 3vw, 1.7rem); font-weight: 700; color: var(--dim); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.cvbox { width: min(94vw, 1000px); height: clamp(180px, 34vw, 320px); }
+#cv { display: block; width: 100%; height: 100%; touch-action: pan-y; }
+.sub { max-width: 30rem; color: var(--dim); font-size: .9rem; line-height: 2; }
+.cta { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin-top: .6rem; }
+.btn { padding: .9rem 1.8rem; border: 1px solid rgba(255,255,255,.22); border-radius: 14px; color: var(--txt); text-decoration: none; font-weight: 800; background: rgba(255,255,255,.05); transition: transform .2s, background .2s; } .btn:hover { transform: translateY(-3px); background: rgba(255,255,255,.12); } .btn:focus-visible { outline: 3px solid var(--b); outline-offset: 3px; }
+.btn.pri { border: 0; background: linear-gradient(135deg, var(--a), #8a5cff); box-shadow: 0 12px 32px rgba(108,139,255,.45); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
