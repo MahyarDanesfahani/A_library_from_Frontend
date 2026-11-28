@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>هیرو | تخمین سریع پروژه</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="hero">
+    <div class="aur" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <section class="ct">
+        <span class="tag"><i class="dot"></i> بدون تعهد | پاسخ در ۲۴ ساعت</span>
+        <h1>هزینه‌ی پروژه‌ات را <span>همین الان</span> تخمین بزن</h1>
+        <p>نوع پروژه و امکاناتی که می‌خوای رو انتخاب کن تا یه برآورد اولیه از هزینه و زمان ببینی. بعدش با هم دقیق‌ترش می‌کنیم.</p>
+        <ul class="pts"><li>✓ طراحی اختصاصی و ریسپانسیو</li><li>✓ کد تمیز و مستندشده</li><li>✓ پشتیبانی بعد از تحویل</li></ul>
+    </section>
+
+    <form class="quote" id="q" novalidate>
+        <h2>تخمین سریع پروژه</h2>
+
+        <div class="grp"><span class="lb">نوع پروژه</span>
+            <div class="types" id="types" role="radiogroup" aria-label="نوع پروژه"></div></div>
+
+        <div class="grp"><label class="lb" for="pg">تعداد صفحه یا بخش: <b id="pgv"></b></label>
+            <input type="range" id="pg" min="1" max="30" value="5"></div>
+
+        <div class="grp"><span class="lb">امکانات اضافه</span><div class="opts" id="opts"></div></div>
+
+        <div class="res" aria-live="polite">
+            <div><small>بازه‌ی تقریبی هزینه</small><b id="price"></b></div>
+            <div><small>زمان تقریبی تحویل</small><b id="days"></b></div>
+        </div>
+
+        <button type="submit" class="go">درخواست مشاوره‌ی رایگان</button>
+        <p class="note">این برآورد نمونه و غیرالزام‌آوره؛ قیمت نهایی بعد از بررسی نیازها مشخص میشه.</p>
+        <p class="msg" id="msg" role="status"></p>
+    </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
